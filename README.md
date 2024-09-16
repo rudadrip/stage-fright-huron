@@ -4,7 +4,7 @@
 
 Our website serves as the ultimate hub for everything Stage Fright. Designed to reflect our bold, edgy vibe, it's not just a place to learn about our music—it's where fans can immerse themselves in our world. Whether you're checking out our latest releases, grabbing tickets for upcoming shows, or exploring exclusive backstage content, the site is your gateway to all things Stage Fright. Plus, our merch section is front and center, showcasing our unique gear and apparel. We aim to sell out every item by offering limited-edition designs that capture the spirit of our music, giving fans a way to wear their love for the band proudly.
 
-# Topic
+## Topic
 
 A local up-and-coming rock band, Stage Fright, has contracted your team to create a website for them.
 Your site must include, but is not limited to:
