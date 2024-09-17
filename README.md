@@ -25,7 +25,7 @@ gh repo clone rudadrip/stage-fright-huron
 
 ## Contributing
 
-We are not going to except push requests from users outside the team
+We are not going to accept push requests from users outside the team
 
 ## License
 
