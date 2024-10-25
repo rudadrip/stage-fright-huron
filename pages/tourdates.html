@@ -251,8 +251,9 @@
       for (let i = 0; i < tourDates.length; i++) {
         const card = tourDates[i];
         const title = card.getElementsByClassName('card-title')[0].textContent.toLowerCase();
+        const location = card.getElementsByClassName('card-text')[0].textContent.toLowerCase();
         const date = card.getElementsByClassName('card-text')[1].textContent.toLowerCase();
-        if (title.includes(filter) || date.includes(filter)) {
+        if (title.includes(filter) || date.includes(filter) || location.includes(filter)) {
           card.parentElement.style.display = '';
         } else {
           card.parentElement.style.display = 'none';
