@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour Dates</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+      background-color: #121212;
+      color: #fff;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+    }
+
+    .btn-primary {
+      background-color: #6200ea;
+      border-color: #6200ea;
+    }
+
+    .btn-primary:hover {
+      background-color: #3700b3;
+      border-color: #3700b3;
+    }
+
+    .navbar,
+    footer {
+      background-color: #1e1e1e;
+    }
+
+    .form-control {
+      background-color: #2a2a2a;
+      color: #fff;
+      border: 1px solid #444;
+    }
+
+    .form-control:focus {
+      background-color: #333;
+      color: #fff;
+      border-color: #6200ea;
+      box-shadow: none;
+    }
+    
+    * {
+        color: #fff
+    }
+  </style>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Tour Dates</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container mt-5 text-center">
+    <h1 class="display-4">Upcoming Tour Dates</h1>
+    <p class="lead">Catch us live in your city! Check out the dates below.</p>
+    <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by city or date">
+  </div>
+
+  <!-- Tour Dates List -->
+  <div class="container mt-4">
+    <div class="row" id="tourDates">
+      <!-- Tour Date Card 1 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">New York, NY</h5>
+            <p class="card-text">Madison Square Garden</p>
+            <p class="card-text">November 10, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 2 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Los Angeles, CA</h5>
+            <p class="card-text">The Forum</p>
+            <p class="card-text">November 20, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 3 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Chicago, IL</h5>
+            <p class="card-text">United Center</p>
+            <p class="card-text">December 1, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 4 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Houston, TX</h5>
+            <p class="card-text">Toyota Center</p>
+            <p class="card-text">December 5, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 5 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Dallas, TX</h5>
+            <p class="card-text">American Airlines Center</p>
+            <p class="card-text">December 10, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 6 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Atlanta, GA</h5>
+            <p class="card-text">State Farm Arena</p>
+            <p class="card-text">December 15, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 7 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Miami, FL</h5>
+            <p class="card-text">Kaseya Center</p>
+            <p class="card-text">December 20, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 8 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Orlando, FL</h5>
+            <p class="card-text">Amway Center</p>
+            <p class="card-text">December 22, 2024</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 9 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Boston, MA</h5>
+            <p class="card-text">TD Garden</p>
+            <p class="card-text">January 5, 2025</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 10 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Philadelphia, PA</h5>
+            <p class="card-text">Wells Fargo Center</p>
+            <p class="card-text">January 10, 2025</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 11 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Washington, DC</h5>
+            <p class="card-text">Capital One Arena</p>
+            <p class="card-text">January 15, 2025</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Date Card 12 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-white">Seattle, WA</h5>
+            <p class="card-text">Climate Pledge Arena</p>
+            <p class="card-text">January 20, 2025</p>
+            <a href="#" class="btn btn-primary">Buy Tickets</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional tour dates can be added here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Stage. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Search functionality
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', function () {
+      const filter = searchInput.value.toLowerCase();
+      const tourDates = document.getElementById('tourDates').getElementsByClassName('card');
+      for (let i = 0; i < tourDates.length; i++) {
+        const card = tourDates[i];
+        const title = card.getElementsByClassName('card-title')[0].textContent.toLowerCase();
+        const date = card.getElementsByClassName('card-text')[1].textContent.toLowerCase();
+        if (title.includes(filter) || date.includes(filter)) {
+          card.parentElement.style.display = '';
+        } else {
+          card.parentElement.style.display = 'none';
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
