@@ -7,7 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kalam">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Julius+Sans+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
   </head>
+  <style>
+    .card{
+      --bs-card-cap-padding-y: 0px;
+    }
+  </style>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
       <div class="container-fluid">
@@ -23,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/pages/index">Home</a>
+              <a class="nav-link active" aria-current="page" href="/pages/index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Merch</a>
@@ -32,7 +39,7 @@
               <a class="nav-link" href="">Tour Dates</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/pages/members">About Us</a>
+              <a class="nav-link" href="/pages/members.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">More</a>
@@ -44,54 +51,168 @@
         </div>
       </div>
     </nav>
-    <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="
-  background-position: center;
-  background-size:cover;  
-  background-repeat:no-repeat">
-    <div class="container">
-      <div class="container text-center">
-        <div class="row justify-content-md-center">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Popcat</h5>
-                <p class="card-text"> pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop pop</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  Boppin
-                </button>
-                <a href="/pages/profiles/member1.html" class="btn btn-primary">Alt Boppin</a>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-xl">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Popcat!</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="float-start">
-                          <img class="round" src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
-                          <p class="text-center" style="width: 310px">
-                            Popcat popping their best pop
+    <div lc-helper="background" class="container-fluid py-5 h-100 d-flex justify-content-center" style="  background-image: url('https://images.pexels.com/photos/416831/pexels-photo-416831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+      background-position: center;
+      background-size:cover;  
+      background-repeat:no-repeat;">
+      <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
+        <div class="lc-block">
+          <div editable="rich">
+            <h2 class="fw-bolder display-3" style="font-family: Monoton; color: crimson;">Meet The Band!</h2>
+          </div>
+        </div>
+        <div class="lc-block col-md-12">
+          <div editable="rich" style="font-family: Monoton; color: deeppink">
+            <p class="lead">Insert like 14 thousand lines of lorem ipsum here
+            </p>
+          </div>
+        </div>
+	  </div>
+    </div>
+    <div class="bg-info-subtle">
+      <div class="container">
+        <div class="container text-center">
+          <div class="row pt-3 mb-5">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Popcat</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">Popcat!</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              Popcat popping their best pop
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
                           </p>
                         </div>
-                        <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                      
-                      Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                      
-                      Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                      
-                      Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                      
-                      Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                      
-                      Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
-                        </p>
-                      </div>
 
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP.A1PnKjFqsQtf_BnlCmkw4gHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Anon</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">Anon</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP.A1PnKjFqsQtf_BnlCmkw4gHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              King of Greentext
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP.lyIsUCIpjgbeidkfjgsNOQHaG-?w=212&h=200&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%;">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Angy Cat</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">Angy Cat</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              Their Fury is Irresistable
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                          </p>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -99,59 +220,152 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.A1PnKjFqsQtf_BnlCmkw4gHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Anon</h5>
-                <p class="card-text">> Brand new cool looking website <br>> I wonder what they used to make this <br>> Look inside <br>> Bootstrap spaghetti</p>
-                <a href="#" class="btn btn-primary">Green text</a>
+          <div class="row mt-5">
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP.qpD1AX7OzNYQiFJMywHckgHaE4?w=263&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">...</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">...</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP.qpD1AX7OzNYQiFJMywHckgHaE4?w=263&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              You Better Pick a God and Start Praying Boy
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                          </p>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.lyIsUCIpjgbeidkfjgsNOQHaG-?w=212&h=200&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Angy Cat</h5>
-                <p class="card-text">No talk, me angy</p>
-                <a href="#" class="btn btn-primary">rawr</a>
+            <div class="col">
+              <div class="card w-auto h-auto">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP.f0Y1UvjYAFYizRH-Px_TTQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Real Cat</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">(It's actually Doge)</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              Very Meow, Much Milk, Lots sleep
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                          </p>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <br><br>
-        <div class="row justify-content-md-center">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.qpD1AX7OzNYQiFJMywHckgHaE4?w=263&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">...</h5>
-                <p class="card-text">...</p>
-                <a href="#" class="btn btn-primary">...</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.f0Y1UvjYAFYizRH-Px_TTQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Real cat</h5>
-                <p class="card-text">Real cat. Much wow. Very cool. Many disguise</p>
-                <a href="#" class="btn btn-primary">Meow?</a>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-              <img src="https://th.bing.com/th/id/OIP.FEPekKPswmHLFh86zsyuxgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Chipi Chapa</h5>
-                <p class="card-text">Chipi chipi chapa chapa
-                  Dubi dubi daba daba
-                  Mágico mi dubi dubi
-                  Bum, bum, bum, bum</p>
-                <a href="#" class="btn btn-primary">Panic! at the disco</a>
+            <div class="col">
+              <div class="card w-auto h-auto">
+                <div class="card-header">
+                  <img src="https://th.bing.com/th/id/OIP.FEPekKPswmHLFh86zsyuxgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Chipi Chapa</h5>
+                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Learn More!
+                  </button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5 text-center" id="exampleModalLabel" style="font-family: Julius Sans One">Dubi Dubi</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="float-start">
+                            <img class="round" src="https://th.bing.com/th/id/OIP.FEPekKPswmHLFh86zsyuxgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3" style="margin-top: 15px; margin-left: 10px; margin-right: 20px; margin-bottom: 20x;">
+                            <p class="text-center" style="width: 310px">
+                              Boykisser Supremacy
+                            </p>
+                          </div>
+                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
+                        
+                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
+                        
+                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
+                        
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
+                        
+                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
+                        
+                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                          </p>
+                        </div>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
