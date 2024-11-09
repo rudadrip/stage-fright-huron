@@ -34,12 +34,51 @@
     color: #fff;
   }
 </style>
-
 <body>
+<div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <table class="table table-sm table-dark" style="background: #000;">
+      <tbody>
+        <thead>
+          <tr>
+            <th style="width: 30%"></th>
+            <th style="width: 40%"></th>
+            <th style="width: 30%"></th>
+          </tr>
+        </thead>
+        <tr>
+          <td><img src="../assets/merch-img/beanie.jpg" alt="" srcset="" class="img-fluid"></td>
+          <td>
+            <p>Band Beanie</p>
+            <p class="py-2">$5.00</p>
+          </td>
+          <td>
+            <input type="number" id="foodQtyC" onchange="editVal(this)" class="form-control form-control-lg text-center align-middle bg-dark" value="1" min="1">
+            <p class="text-center py-1">Remove</p>
+          </td>
+        </tr>
+        <tr>
+          <td>lorem</td>
+          <td>lorem</td>
+          <td>lorem</td>
+        </tr>
+        <tr>
+          <td>lorem</td>
+          <td>lorem</td>
+          <td>lorem</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Merch</a>
+      <a class="navbar-brand" href="#">Stage Fright</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -62,7 +101,7 @@
             <a class="nav-link" href="#">More</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Cart</a>
+            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Cart</a>
           </li>
         </ul>
       </div>
