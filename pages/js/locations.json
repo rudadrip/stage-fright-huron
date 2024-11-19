@@ -1,8 +1,51 @@
 [
     {
-        "loc": "chicago",
-        "date": 
+        "city": "New York, NY",
+        "loc": "Madison Square Garden",
+        "date": "November 10, 2024"
     }, {
-
+        "city": "Los Angeles, CA",
+        "loc": "The Forum",
+        "date": "November 20, 2024"
+    }, {
+        "city": "Chicago, IL",
+        "loc": "United Center",
+        "date": "December 1, 2024"
+    }, {
+        "city": "Houston, TX",
+        "loc": "Toyota Center",
+        "date": "December 5, 2024"
+    }, {
+        "city": "Dallas, TX",
+        "loc": "American Airlines Center",
+        "date": "December 10, 2024"
+    }, {
+        "city": "Atlanta, GA",
+        "loc": "State Farm Arena",
+        "date": "December 15, 2024"
+    }, {
+        "city": "Miami, FL",
+        "loc": "Kaseya Center",
+        "date": "December 20, 2024"
+    }, {
+        "city": "Orlando, FL",
+        "loc": "Amway Center",
+        "date": "December 22, 2024"
+    }, {
+        "city": "Boston, MA",
+        "loc": "TD Garden",
+        "date": "January 5, 2025"
+    }, {
+        "city": "Philadelphia, PA",
+        "loc": "Wells Fargo Center",
+        "date": "January 10, 2025"
+    }, {
+        "city": "Washington, DC",
+        "loc": "Capital One Arena",
+        "date": "January 15, 2025"
+    }, {
+        "city": "Seattle, WA",
+        "loc": "Climate Pledge Arena",
+        "date": "January 20, 2025"
     }
 ]
