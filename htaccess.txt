@@ -1,0 +1,5 @@
+Changed into a txt file because python http.server won't work with htaccess for some reason and I arbitrarily decided being able to serve the site on local network is a feature I should have lol
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
