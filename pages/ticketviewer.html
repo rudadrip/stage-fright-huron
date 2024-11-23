@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stage Fright</title>
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <style>
+        body {
+            color: white;
+        }
+
+        #alt-gutter-x .g-5, .gx-5{
+            --bs-gutter-x: 7rem;
+        }
+    </style>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="/pages/index.html">
+                <img src="https://i.pinimg.com/474x/a6/88/ed/a688ed959f6807916e0b509f0b9be69a.jpg" 
+                alt="Stage Fright" width="18" height="24">
+                Stage Fright
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/pages/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/merch.html">Merch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/tourdates.html">Tour Dates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/members.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">More</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/merch.html">Cart</a>
+                </li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+        <div class="bg-dark">
+            <!--
+            <div>
+                <h2 style="padding-right: 2.5%; padding-top: 1%; text-align: right;">
+                    Tickets for [insert location here] on [date here]
+                </h1>
+            </div>
+            <hr style="height: 3px; border-color: var(--bs-danger); background-color: var(--bs-danger); opacity: 1;">
+            -->
+            <div class="container text-left">
+                <div class="row gx-5" style="margin-top: 1rem">
+                    <!--<div class="col col-5 border-end border-4 border-danger">-->
+                    <div style="display: inline-block;">
+                        <a href="#" style="text-decoration: none; color: white; display: inline-block; vertical-align: middle;">
+                            <img src="/assets/left-arrow.png" width="24" height="24">
+                        </a>
+                        <a href="#" style="text-decoration: none; color: white; display: inline-block; font-size: 28px; vertical-align: middle;">
+                            All Tours
+                        </a>
+                    </div>
+                    <div class="col col-5">
+                        <img src="https://i.redd.it/uar6v0qau8ny.jpg" style="width: 100%; padding-top: 15%;">
+                    </div>
+                    <div class="col">
+                        <div class="row">
+                            <h2>
+                                Tickets for [location] on [date]
+                            </h2>
+                            <hr style="height: 3px; border-color: var(--bs-danger); background-color: var(--bs-danger); opacity: 1;">
+                            <h4 style="padding-bottom: 0.5rem;">
+                                Seat Type
+                            </h4>
+                            <select class="form-select" aria-label="Default select example" style="margin-left: 2%; width: 25%; margin-bottom: 1rem;">
+                                <option selected>Select One</option>
+                                <option value="1">General Admission</option>
+                                <option value="2">Premium Admission</option>
+                                <option value="3">VIP Admission</option>
+                              </select>
+                            <h4 style="padding-bottom: 0.5rem;">
+                                Quantity
+                            </h4>
+                            <input type="number" id="foodQtyC" onchange="editVal(this)" class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" max="10" style="color: white; width: 25%; margin-left: 2%; margin-bottom: 0.75rem;">
+                            <p>
+                                x tickets available
+                            </p>
+                        </div>
+                        <div class="row" style="text-align: left;">
+                            <h5 style="padding-bottom: 1%;">
+                                Venue Details
+                            </h5>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quam mauris, porta id accumsan sed, venenatis nec urna. Phasellus metus velit, congue eget lobortis sit amet, ultricies non est. Donec ornare porta tempus. Etiam at pretium dui. Aenean commodo ipsum semper nunc tristique, molestie suscipit metus volutpat. Suspendisse sed gravida turpis. Morbi a dolor id diam lobortis dapibus eget id magna. Sed vestibulum luctus neque. Nam tincidunt laoreet nisl ac faucibus.
+                            </p>
+                        </div>
+                        <div class="row" style="text-align: left;">
+                            <button type="button" class="btn btn-danger" data-bs-target="#">
+                                Buy Tickets!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Roundicons - Flaticon</a>
+    </body>
+</html>
