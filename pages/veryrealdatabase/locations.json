@@ -2,50 +2,62 @@
     {
         "city": "New York, NY",
         "loc": "Madison Square Garden",
-        "date": "November 10, 2024"
+        "date": "November 10, 2024",
+        "image": null
     }, {
         "city": "Los Angeles, CA",
         "loc": "The Forum",
-        "date": "November 20, 2024"
+        "date": "November 20, 2024",
+        "image": null
     }, {
         "city": "Chicago, IL",
         "loc": "United Center",
-        "date": "December 1, 2024"
+        "date": "December 1, 2024",
+        "image": null
     }, {
         "city": "Houston, TX",
         "loc": "Toyota Center",
-        "date": "December 5, 2024"
+        "date": "December 5, 2024",
+        "image": null
     }, {
         "city": "Dallas, TX",
         "loc": "American Airlines Center",
-        "date": "December 10, 2024"
+        "date": "December 10, 2024",
+        "image": null
     }, {
         "city": "Atlanta, GA",
         "loc": "State Farm Arena",
-        "date": "December 15, 2024"
+        "date": "December 15, 2024",
+        "image": null
     }, {
         "city": "Miami, FL",
         "loc": "Kaseya Center",
-        "date": "December 20, 2024"
+        "date": "December 20, 2024",
+        "image": null
     }, {
         "city": "Orlando, FL",
         "loc": "Amway Center",
-        "date": "December 22, 2024"
+        "date": "December 22, 2024",
+        "image": null
     }, {
         "city": "Boston, MA",
         "loc": "TD Garden",
-        "date": "January 5, 2025"
+        "date": "January 5, 2025",
+        "image": null
     }, {
         "city": "Philadelphia, PA",
         "loc": "Wells Fargo Center",
-        "date": "January 10, 2025"
+        "date": "January 10, 2025",
+        "image": null
     }, {
         "city": "Washington, DC",
         "loc": "Capital One Arena",
-        "date": "January 15, 2025"
+        "date": "January 15, 2025",
+        "image": null
     }, {
         "city": "Seattle, WA",
         "loc": "Climate Pledge Arena",
-        "date": "January 20, 2025"
+        "date": "January 20, 2025",
+        "image": null
     }
 ]
