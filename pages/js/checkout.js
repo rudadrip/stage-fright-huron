@@ -14,3 +14,7 @@
       }, false)
     })
   })()
+
+  function printHemmlo () {
+    console.log("hemmlo");
+  }

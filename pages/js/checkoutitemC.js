@@ -9,13 +9,13 @@ class checkoutitemC extends HTMLElement {
       this.querySelector("#nameX").innerHTML=`${itemName}`;
 
       const extraInfo = this.getAttribute('extra');
-      this.querySelector("#extraX").innerHTML = `${extraX}`
-      
-      const price = this.getAttribute('price');
-      this.querySelector("#priceX").innerHTML=`$${Math.abs(parseFloat(this.getAttribute('price')) * parseFloat( this.getAttribute('qty') ) ).toFixed(2)}`;
+      this.querySelector("#extraX").innerHTML = `${extraInfo}`
       
       const qty = this.getAttribute('qty');
       this.querySelector("#qtyX").innerHTML=`Qty: ${qty}`;
+
+      const price = this.getAttribute('price');
+      this.querySelector("#priceX").innerHTML=`$${Math.abs(parseFloat(price) * parseFloat(qty) ).toFixed(2)}`;
       
     }
     render(){
@@ -24,6 +24,7 @@ class checkoutitemC extends HTMLElement {
           <div>
             <h6 class="my-0" id="nameX"></h6>
             <small class="text-muted" id="extraX"></small>
+            <br>
             <small class="text-muted" id="qtyX"></small>
           </div>
           <span class="text-muted" id="priceX"></span>
