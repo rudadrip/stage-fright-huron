@@ -15,6 +15,10 @@
     })
   })()
 
-  function printHemmlo () {
-    console.log("hemmlo");
+  async function insertItems () {
+    //const ins = document.getElementById("insert-items");
+    var keyValuePairs = document.cookie
+    console.log(keyValuePairs)
   }
+
+insertItems()

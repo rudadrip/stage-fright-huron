@@ -22,7 +22,7 @@ class checkoutitemC extends HTMLElement {
       this.innerHTML=`
         <li class="list-group-item d-flex justify-content-between lh-condensed">
           <div>
-            <h6 class="my-0" id="nameX"></h6>
+            <h6 class="my-0 py-1" id="nameX"></h6>
             <small class="text-muted" id="extraX"></small>
             <br>
             <small class="text-muted" id="qtyX"></small>
