@@ -1,5 +1,4 @@
 ```
-just a test
 type: TICKET or ITEM
 name: NAME
 city: CITY NAME
