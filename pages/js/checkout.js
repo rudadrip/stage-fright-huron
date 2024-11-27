@@ -19,10 +19,8 @@ async function insertStuffs () {
   const ins = document.getElementById("insert-items");
   var keyValuePairs = document.cookie.split(";");
   for (var i=0;i<keyValuePairs.length;i++) {
-    console.log("hello");
     if (keyValuePairs[i].split("=")[0].trim() == "items") {
       arrS = keyValuePairs[i].split("=")[1];
-      console.log(arrS);
       arr = arrS.split(",");
       for (var j=0;j<arr.length;j++) {
         ii = arr[j]
@@ -34,10 +32,8 @@ async function insertStuffs () {
         item.setAttribute("price", sep[3].trim());
         ins.insertAdjacentElement("afterend",item);
       }
-      console.log(arrS);
     } else if (keyValuePairs[i].split("=")[0].trim() == "concerts") {
       arrS = keyValuePairs[i].split("=")[1];
-      console.log(arrS);
       arr = arrS.split(",");
       for (var j=0;j<arr.length;j++) {
         ii = arr[j]
@@ -49,7 +45,6 @@ async function insertStuffs () {
         item.setAttribute("price", sep[3].trim());
         ins.insertAdjacentElement("afterend",item);
       }
-      console.log(arrS);
     }
   }
 }
@@ -61,7 +56,6 @@ async function grabNumberItems () {
   for (var i=0;i<keyValuePairs.length;i++) {
     if (keyValuePairs[i].split("=")[0].trim() == "items" || keyValuePairs[i].split("=")[0].trim() == "concerts") {
       val = keyValuePairs[i].trim()
-      console.log(`val: ${val}`)
       for (var j=0;j<val.length;j++) {
         if (val[j] == ',') {
           totC+=1
@@ -70,9 +64,27 @@ async function grabNumberItems () {
       totC+=1;
     }
   }
-  console.log(totC);
-  ins.innerHTML = `${totC}`
+  ins.innerHTML = `${totC}`;
+}
+
+async function insertTotPrice () {
+  const ins = document.getElementById("tot-price");
+  var keyValuePairs = document.cookie.split(";");
+  totP = 0;
+  for (var i=0;i<keyValuePairs.length;i++) {
+    if (keyValuePairs[i].split("=")[0].trim() == "items" || keyValuePairs[i].split("=")[0].trim() == "concerts") {
+      arrS = keyValuePairs[i].split("=")[1];
+      arr = arrS.split(",");
+      for (var j=0;j<arr.length;j++) {
+        ii = arr[j];
+        sep = ii.split("/");
+        totP+=sep[2].trim()*sep[3].trim()
+      }
+    }
+  }
+  ins.innerHTML = `\$${totP.toFixed(2)}`;
 }
 
 insertStuffs ()
 grabNumberItems()
+insertTotPrice()
