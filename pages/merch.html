@@ -34,7 +34,7 @@
     color: #fff;
   }
 </style>
-<body>
+<body class="bg-black">
 <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
@@ -54,10 +54,46 @@
           <td><img src="../assets/merch-img/beanie.jpg" alt="" srcset="" class="img-fluid"></td>
           <td>
             <p>Band Beanie</p>
-            <p class="py-2">$5.00</p>
+            <p class="py-2">$5.99</p>
+            <p></p>
           </td>
           <td>
-            <input type="number" id="foodQtyC" onchange="editVal(this)" class="form-control form-control-lg text-center align-middle bg-dark" value="1" min="1">
+            <div class="input-group">
+              <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
+              <input type="number" class="form-control text-center" id="number-input" min="1" max="9" value="1">
+              <button class="btn btn-outline-secondary" type="button" id="button-plus">+</button>
+            </div>
+            <style>
+              /* Increase input width and hide native increment/decrement buttons */
+              #number-input {
+                -moz-appearance: textfield; /* Hide increment/decrement buttons in Firefox */
+              }
+              #number-input::-webkit-outer-spin-button,
+              #number-input::-webkit-inner-spin-button {
+                -webkit-appearance: none; /* Hide increment/decrement buttons in Webkit browsers */
+                margin: 0; /* Remove margin for alignment */
+              }
+            </style>
+            <script>
+              // JavaScript to handle button clicks
+              const input = document.getElementById('number-input');
+              const buttonMinus = document.getElementById('button-minus');
+              const buttonPlus = document.getElementById('button-plus');
+            
+              buttonMinus.addEventListener('click', () => {
+                let value = parseInt(input.value, 10) || 0;
+                if (value > parseInt(input.min, 10)) {
+                  input.value = value - 1;
+                }
+              });
+            
+              buttonPlus.addEventListener('click', () => {
+                let value = parseInt(input.value, 10) || 0;
+                if (value < parseInt(input.max, 10)) {
+                  input.value = value + 1;
+                }
+              });
+            </script>            
             <p class="text-center py-1">Remove</p>
           </td>
         </tr>
@@ -141,11 +177,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2025 Stage. All rights reserved.</p>
-  </footer>
-
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
@@ -166,6 +197,8 @@
       }
     });
   </script>
+  <footer-c></footer-c>
+  <script src="js/footerC.js"></script>
 </body>
 
 </html>
