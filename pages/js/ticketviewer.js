@@ -19,7 +19,7 @@ async function display_venue(){
     for (let i = 0; i < all_locations.length; i++){
         if (all_locations[i].loc === cookies.venue){
             document.getElementById("title").innerHTML = `Tickets for ${cookies["venue"]} in ${all_locations[i].city} on ${all_locations[i].date}`;
-            document.getElementById("venue-image").src = all_locations[i].image;
+            //document.getElementById("venue-image").src = all_locations[i].image;
             return;
         }
     }
