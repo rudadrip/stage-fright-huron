@@ -15,6 +15,10 @@
     })
   })()
 
+
+//Chicago Concert/Mezzanine/2/300,Pheonix Concert/Box/1/4000
+//Band Hoodie/High Quality/5/10.99,Band Beanie/High Quality/8/8.99
+
 async function insertStuffs () {
   const ins = document.getElementById("insert-items");
   var keyValuePairs = document.cookie.split(";");
