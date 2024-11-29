@@ -1,5 +1,3 @@
-<!--TODO: Set the world on fire-->
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -12,6 +10,11 @@
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <style>
+    @font-face {
+      font-family: "Julius Sans One";
+      src: url("/assets/fonts/JuliusSansOne-Regular.ttf");
+    }
+
     .card{
       --bs-card-cap-padding-y: 0px;
       color: #eeeeee !important;
@@ -48,36 +51,30 @@
   <body class="bg-black">
     <nav-bar></nav-bar>
     <script src="js/navBar.js"></script>
-    <div lc-helper="background" class="container-fluid py-5 h-100 d-flex justify-content-center" style="  background-image: url('https://images.pexels.com/photos/416831/pexels-photo-416831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    <div lc-helper="background" class="container-fluid py-5 h-100 d-flex justify-content-center" style="  background-image: url('/assets/cover.jpg');
       background-position: center;
       background-size:cover;  
       background-repeat:no-repeat;">
       <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
         <div class="lc-block">
           <div editable="rich">
-            <h2 class="fw-bolder display-3" style="font-family: Monoton; color: crimson;">Meet The Band!</h2>
+            <h2 class="fw-bolder display-3" style="font-family: Julius Sans One; color: crimson;">Meet The Band!</h2>
           </div>
         </div>
-        <div class="lc-block col-md-12">
-          <div editable="rich" style="font-family: Monoton; color: deeppink">
-            <p class="lead">Insert like 14 thousand lines of lorem ipsum here
-            </p>
-          </div>
-        </div>
-	  </div>
+	    </div>
     </div>
-    <div class="bg-dark pb-5">
+    <div class="bg-black pb-5">
       <div id="base-container" class="container">
         <div class="container text-center">
           <div class="row pb-5 gx-5 gy-5"  style="overflow: hidden;">
             <div class="col-md-12 col-lg-6" id="topLeft">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%">
+                  <img src="/assets/members/Singer.jpg" class="center" alt="..." style="max-width: 100%">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Popcat</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Sarah Hartley</h5>
+                  <p class="card-text"> Sarah, the powerhouse lead singer of Stage Fright, captivates audiences with her dynamic vocal range and magnetic stage presence. Her journey from local clubs to rock stardom is marked by heartfelt performances and deeply personal lyrics. Offstage, she's an advocate for mental health awareness, making her a true inspiration both on and off the stage.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo1">
                     Learn More!
                   </button>
@@ -85,28 +82,28 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content text-bg-dark" data-bs-theme="dark">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo1Label" style="font-family: Julius Sans One">Popcat!</h1>
+                          <h1 class="modal-title fs-5 text-center" id="MemberInfo1Label" style="font-family: Julius Sans One">Sarah</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP._WSfiwb3R5qr3NZMGyqI_gHaHa?w=155&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/Singer.jpg" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              Popcat popping their best pop
+                              Sarah backstage preparing for show
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Meet Sarah Hartley, the electrifying female lead singer of Stage Fright. With a voice that can both soothe and shatter, Sarah's vocal range and emotional delivery have captured the hearts of fans far and wide. Her journey from the humble beginnings of singing in her hometown's local clubs to leading one of the most dynamic rock bands has been nothing short of meteoric.
+
+From an early age, Sarah was drawn to music as a form of expression and escapism. Her passion for singing was evident when she performed in her school choir and community theater. By her teenage years, she was writing her own songs and performing at local open mics, where her raw talent and unique voice quickly made her a standout. Influenced by rock legends such as Janis Joplin and Stevie Nicks, Sarah developed a style that blends the grittiness of rock with the soulfulness of blues.
+
+On stage, Sarah is a force to be reckoned with. Her presence is a spectacle in itself—effortlessly blending raw energy with poignant vulnerability, creating a magnetic aura that draws in the audience from the very first note. Whether she's belting out an anthem or delivering a soft ballad, her performances are charged with an intensity that leaves a lasting impression.
+
+Beyond her captivating performances, Sarah is also the creative force behind many of Stage Fright's most beloved songs. Her lyrics, often introspective and deeply personal, resonate with listeners on a profound level. She writes from the heart, drawing inspiration from her own experiences and emotions, as well as the stories of those around her. Her songwriting prowess, combined with her powerful voice, has helped define the band's distinctive sound.
+
+Offstage, Sarah is known for her down-to-earth personality and genuine connection with fans. She is an advocate for mental health awareness, using her platform to encourage others to seek help and support when needed. Sarah often shares her own struggles with anxiety and depression, hoping to break the stigma and inspire others to open up about their mental health. Her authenticity and passion make her not only a phenomenal artist but also a role model and inspiration to many.
+
+Sarah's journey with Stage Fright has been filled with unforgettable moments, from their first sold-out show to recording their debut album. Each performance is a testament to her dedication and love for music, and she continues to push boundaries and explore new creative avenues. With her unwavering commitment to her craft and her genuine desire to connect with others, Sarah is more than just a lead singer—she's the heart and soul of Stage Fright.
                           </p>
                         </div>
 
@@ -122,11 +119,11 @@
             <div class="col-md-12 col-lg-6" id="topRight">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP.A1PnKjFqsQtf_BnlCmkw4gHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%">
+                  <img src="/assets/members/Drummer.png" class="center" alt="..." style="max-width: 100%">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Anon</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Alex Thompson</h5>
+                  <p class="card-text"> Alex Johnson, our dynamic drummer, brings a blend of technical skill and fiery passion to Stage Fright. From childhood rhythms to professional prowess, Alex’s drumming fuels our sound with energy and precision, making every performance unforgettable. Beyond the stage, Alex’s dedication to the craft and involvement in production, as well as their role as a mentor, make them an indispensable part of our band and the broader music community.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo2">
                     Learn More!
                   </button>
@@ -134,28 +131,24 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content text-bg-dark" data-bs-theme="dark">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo2Label" style="font-family: Julius Sans One">Anon</h1>
+                          <h1 class="modal-title fs-5 text-center" id="MemberInfo2Label" style="font-family: Julius Sans One">Alex Thompson</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.A1PnKjFqsQtf_BnlCmkw4gHaEK?w=303&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/Drummer.png" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              King of Greentext
+                              Alex in his studio getting ready to record a track
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Meet Alex Thompson, our electrifying drummer, is the pulse and energy that drives Stage Fright. With sticks in hand, Alex commands the kit with a perfect blend of technical precision and raw passion. Born with a natural talent for rhythm, Alex began drumming at a young age, turning pots and pans into a symphony of beats. Over the years, Alex has honed this innate skill, drawing inspiration from legendary drummers and diverse musical genres.
+
+Known for explosive performances and an infectious energy on stage, Alex doesn’t just keep time; they elevate it. Whether it's a thunderous rock anthem or a soulful ballad, Alex's drumming adds a unique texture and dynamism to our sound. Each strike on the drum set is not just a beat, but a heartbeat that resonates through the crowd, creating a connection that’s both powerful and intimate.
+
+Off stage, Alex is the glue that holds the band together, bringing a sense of camaraderie and fun to every rehearsal and performance. Their commitment to the craft extends beyond just playing; Alex is deeply involved in the production process, ensuring that every track reflects the band’s vision. With a deep love for music and an unwavering dedication to perfection, Alex is always looking to push boundaries and explore new sonic landscapes.
+
+When not behind the drum set, Alex enjoys teaching drumming to aspiring musicians, sharing the joy and discipline of the art. Their charismatic personality and natural ability to inspire make them a beloved mentor in the music community. Alex’s journey with Stage Fright is not just about the music; it’s about creating unforgettable experiences and inspiring others to find their own rhythm in life.
                           </p>
                         </div>
                         <div class="modal-footer">
@@ -173,11 +166,11 @@
             <div class="col-md-12 col-lg-6 make-me-short" id="middleLeft">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP.lyIsUCIpjgbeidkfjgsNOQHaG-?w=212&h=200&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="max-width: 100%;">
+                  <img src="/assets/members/Guitar1.jpg" class="center" alt="..." style="max-width: 100%;">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Angy Cat</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Sam Taylor</h5>
+                  <p class="card-text">Sam "Riffmaster" Taylor, the lead guitarist of Stage Fright, is known for their unique fusion of classic rock, blues, and modern metal. Inspired by legends like Hendrix and Slash, Sam captivates audiences with intricate solos and deep emotional expression. Offstage, Sam is a dedicated musician, constantly honing their craft, sharing knowledge with others, and drawing inspiration from a wide range of genres. Their dynamic stage presence makes every live show unforgettable.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo3">
                     Learn More!
                   </button>
@@ -185,28 +178,26 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content text-bg-dark" data-bs-theme="dark">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo3Label" style="font-family: Julius Sans One">Angy Cat</h1>
+                          <h1 class="modal-title fs-5 text-center" id="MemberInfo3Label" style="font-family: Julius Sans One">Sam Taylor</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.lyIsUCIpjgbeidkfjgsNOQHaG-?w=212&h=200&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/Guitar1.jpg" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              Their Fury is Irresistable
+                              Sam performing at one of our concerts
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Meet Sam "Riffmaster" Taylor, the electrifying lead guitarist of Stage Fright. Sam's journey with the guitar began in the heart of Michigan's music scene, where they were captivated by the sounds of legends like Jimi Hendrix and Slash. From a young age, Sam showed an exceptional talent for the instrument, quickly mastering complex riffs and solos that left listeners in awe.
+
+Sam's playing style is a unique fusion of classic rock, blues, and modern metal, creating a sound that is unmistakably their own. Their intricate solos and technical prowess are a highlight of every Stage Fright performance, but what truly sets Sam apart is their ability to convey deep emotion and raw intensity through their music. Each note Sam plays is a testament to their passion and dedication to the craft.
+
+Offstage, Sam is a humble and dedicated musician who constantly pushes the boundaries of their abilities. They spend countless hours writing new material, practicing, and perfecting their technique. Sam is also deeply committed to sharing their knowledge and passion with others, often hosting guitar workshops and mentoring aspiring musicians. Their generosity and willingness to help others have made them a beloved figure in the local music community.
+
+Sam's dedication to music extends beyond just playing the guitar. They are an avid music historian, drawing inspiration from a wide range of genres and artists. This broad musical knowledge allows Sam to bring fresh perspectives and innovative ideas to Stage Fright's sound, keeping the band's music evolving and exciting.
+
+A true performer at heart, Sam lives for the thrill of the live show. Their dynamic stage presence and ability to connect with the audience make every concert an unforgettable experience. Whether playing in a small club or a large festival, Sam's energy and passion shine through, leaving fans eagerly anticipating the next performance.
                       </p>
                         </div>
 
@@ -222,11 +213,11 @@
             <div class="col-md-12 col-lg-6 make-me-short" id="middleRight">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP.qpD1AX7OzNYQiFJMywHckgHaE4?w=263&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
+                  <img src="/assets/members/Guitar2.jpg" class="center" alt="..." style="width: 100%">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">...</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Jamie Parker</h5>
+                  <p class="card-text">Jamie "J-Bass" Parker is the bass guitarist for Stage Fright, known for their deep grooves and impeccable timing. They provide the foundation of the band's sound with a unique blend of rhythmic precision and melodic creativity. Jamie's musical journey began at a young age, influenced by jazz, funk, and classic rock, and has led them to become a dedicated musician and environmental conservationist. Off-stage, Jamie is actively involved in environmental conservation, volunteering with local groups and advocating for sustainable practices. Their charismatic and approachable nature makes them a beloved figure among fans, adding to the electrifying energy of every Stage Fright performance.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo4">
                     Learn More!
                   </button>
@@ -234,28 +225,30 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content text-bg-dark" data-bs-theme="dark">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo4Label" style="font-family: Julius Sans One">...</h1>
+                          <h1 class="modal-title fs-5 text-center" id="MemberInfo4Label" style="font-family: Julius Sans One">Jamie Parker</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.qpD1AX7OzNYQiFJMywHckgHaE4?w=263&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/Guitar2.jpg" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              You Better Pick a God and Start Praying Boy
+                              Jamie playing his guitar in the recording studio
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                            
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Jamie Parker, affectionately known as "J-Bass," is the rhythmic pulse and heartbeat of Stage Fright. Ever since Jamie first picked up a bass guitar at the age of 12, it was clear that music was not merely a hobby, but a profound calling that would shape their life.
+
+Hailing from a small town with a rich musical heritage, Jamie was immersed in music from a young age. Their parents, both avid music lovers, exposed them to an eclectic mix of genres, from jazz legends like Charles Mingus to the funk grooves of Bootsy Collins, and the timeless riffs of classic rock icons like Led Zeppelin and The Rolling Stones. This diverse musical upbringing profoundly influenced Jamie's playing style, blending rhythmic precision with melodic creativity to forge a unique sound that is both technically impressive and emotionally resonant.
+
+Jamie’s journey with Stage Fright began in high school, where a shared love of music brought the band members together. Jamie's deep grooves and impeccable timing quickly became the foundation upon which the band's sound was built. Known for their ability to seamlessly weave intricate bass lines with soulful melodies, Jamie has a knack for creating musical moments that captivate audiences and elevate Stage Fright's live performances to unforgettable heights.
+
+Off-stage, Jamie is deeply committed to environmental conservation. When they’re not performing, you can often find Jamie volunteering with local conservation groups, organizing community clean-ups, and advocating for sustainable practices. Their passion for preserving the natural world is as strong as their love for music, and they believe that every individual can make a positive impact on the environment.
+
+In addition to their musical prowess, Jamie is known for their collaborative spirit. They thrive on working with fellow musicians, producers, and songwriters, always eager to exchange ideas and experiment with new sounds. This openness to collaboration has helped Stage Fright evolve and mature as a band, allowing them to explore new genres and styles while staying true to their roots.
+
+Beyond their musical talents, Jamie is a charismatic and approachable figure. They have a natural ability to connect with people, whether it's fellow band members, fans, or other musicians. Jamie is often found engaging with fans after shows, sharing their passion for music and life. Their energy and enthusiasm are infectious, making every interaction a memorable experience.
+
+Jamie’s dedication to their craft and their charismatic presence make them an indispensable part of Stage Fright. Their commitment to excellence and continuous growth ensures that the band's sound remains dynamic and ever-evolving. Jamie Parker isn't just the bass guitarist of Stage Fright; they are the soul of the band, driving its rhythm and spirit forward with every beat.
                       </p>
                         </div>
 
@@ -270,116 +263,16 @@
             </div>
           </div>
           
-          <div class="row pt-5 pb-5 gx-5 gy-5" style="overflow: hidden;">
-            <div class="col-md-12 col-lg-6 make-me-short" id="bottomLeft">
-              <div class="card text-bg-dark border-danger w-auto h-auto">
-                <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP.f0Y1UvjYAFYizRH-Px_TTQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Real Cat</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
-                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo5">
-                    Learn More!
-                  </button>
-                  <div class="modal fade" id="MemberInfo5" tabindex="-1" aria-labelledby="MemberInfo5Label" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                      <div class="modal-content text-bg-dark" data-bs-theme="dark">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo5Label" style="font-family: Julius Sans One">(It's actually Doge)</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.f0Y1UvjYAFYizRH-Px_TTQHaEK?w=308&h=180&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
-                            <p class="text-center" style="width: 100%">
-                              Very Meow, Much Milk, Lots sleep
-                            </p>
-                          </div>
-                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
-                          </p>
-                        </div>
-
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 col-lg-6 make-me-short" id="bottomRight">
-              <div class="card text-bg-dark border-danger w-auto h-auto ">
-                <div class="card-header">
-                  <img src="https://th.bing.com/th/id/OIP.FEPekKPswmHLFh86zsyuxgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7" class="center" alt="..." style="width: 100%">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Chipi Chapa</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
-                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#MemberInfo6">
-                    Learn More!
-                  </button>
-                  <div class="modal fade" id="MemberInfo6" tabindex="-1" aria-labelledby="MemberInfo6Label" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                      <div class="modal-content text-bg-dark" data-bs-theme="dark">
-                        <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="MemberInfo6Label" style="font-family: Julius Sans One">Dubi Dubi</h1>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.FEPekKPswmHLFh86zsyuxgHaEK?w=327&h=183&c=7&r=0&o=5&dpr=2&pid=1.7" alt="Popcat :3">
-                            <p class="text-center" style="width: 100%">
-                              Boykisser Supremacy
-                            </p>
-                          </div>
-                          <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
-                          </p>
-                        </div>
-
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
           <hr style="height: 5px; margin-left: -5%; margin-right: -5%; color: #dc3545; background-color: #dc3545; border: none; opacity: 100%;">
-          <div class="row pt-5 pb-5 gx-5 gy-5">
+          <div class="row pt-5 pb-5 gx-5 gy-5 justify-content-center">
             <div class="col-md-12 col-lg-8 col-xl-4">
                 <div class="card text-bg-dark border-danger w-auto h-auto">
                   <div class="card-header border-0">
-                    <img src="https://th.bing.com/th/id/OIP.BsuNA59i_b6XMieNo7SBYAHaHa?rs=1&pid=ImgDetMain" class="center" alt="..." style="max-width: 100%">
+                    <img src="/assets/members/joey.webc" class="center" alt="..." style="max-width: 100%">
                   </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">The Programmer</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Zorawar "Joey" Brar</h5>
+                  <p class="card-text">Hey there! I'm Joey, an enthusiast of programming, viola playing, and math. I enjoy learning and improving in these areas, finding joy in the journey of growth. I love to share my knowledge and approach life with a unique, multifaceted perspective.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DevInfo1">
                     Learn More!
                   </button>
@@ -391,24 +284,16 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                            <img class="resize-me" src="https://th.bing.com/th/id/OIP.BsuNA59i_b6XMieNo7SBYAHaHa?rs=1&pid=ImgDetMain" alt="Popcat :3">
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/joey.webc" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              Look at them manipulate that source code!
+                              
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                          
-                          Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                          
-                          Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                          
-                          Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                          
-                          Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                          
-                          Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Hi, I'm Joey! I have a diverse set of interests and skills that keep me constantly learning and growing. I dabble in programming, where I enjoy solving puzzles and creating small projects that challenge my thinking. Playing the viola is another passion of mine. It allows me to express myself musically and connect with others through the universal language of music. I find joy in the mathematical world too, appreciating its logic and structure.
+
+                            While I may not be a master in any one area, I love the journey of learning and improving. Whether I'm debugging code, practicing a challenging piece on my viola, or working through a tricky math problem, I find fulfillment in the process and the progress. I'm always eager to learn more and to share what I know with others. My diverse interests not only enrich my life but also enable me to approach problems and projects from unique perspectives.
                           </p>
                         </div>
                         <div class="modal-footer">
@@ -423,11 +308,11 @@
             <div class="col-md-12 col-lg-8 col-xl-4">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="https://thumbs.dreamstime.com/b/business-cat-isolated-white-55804584.jpg" class="center" alt="..." style="max-width: 100%">
+                  <img src="/assets/members/Terrain.jpg" class="center" alt="..." style="max-width: 100%">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">The Intern</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Terrian "Terry" Sun</h5>
+                  <p class="card-text">Terry is an individual passionate about programming, mathematics, and playing the cello. He enjoys video games and finds fulfillment in helping friends, always ready to lend a hand. Terry values continuous learning, growth, and meaningful connections.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DevInfo2">
                     Learn More!
                   </button>
@@ -439,24 +324,22 @@
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start">
-                          <img class="resize-me" src="https://thumbs.dreamstime.com/b/business-cat-isolated-white-55804584.jpg" alt="Popcat :3">
-                          <p class="text-center" style="width: 100%">
-                            Why do these guys drink so much coffee? At least I'm getting my steps in
-                          </p>
+                          <div class="float-start justify-content-center" style="width:50%; padding-right: 1rem;">
+                            <img class="resize-me" src="/assets/members/Terrain.jpg" alt="Popcat :3">
+                            <p class="text-center" style="width: 100%">
+                              
+                            </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                             Hello! I'm Terry and I have a passion for programming and mathematics. These fields challenge my mind and offer endless opportunities for problem-solving and innovation. I'm constantly exploring new technologies and methodologies to enhance my coding skills and mathematical understanding.
+
+When I'm not buried in code or math, you can find me playing the cello. Music has always been a significant part of my life, and the cello, with its rich tones allows me to express myself creatively and emotionally. Whether performing solo pieces or collaborating with other musicians, playing the cello brings me immense joy and fulfillment.
+
+In my free time, I love diving into the world of video games. They offer a perfect blend of entertainment and mental stimulation, providing a way to unwind and engage with immersive, interactive narratives.
+
+I also find great satisfaction in helping my friends. Whether they're facing technical issues, struggling with math problems, or need someone to talk to, I'm always ready to lend a hand. I believe in the power of community and the importance of being there for one another.
+
+Life, to me, is about continuous learning and growth, whether it's through professional pursuits, artistic endeavors, or meaningful connections with others. I'm excited about the journey ahead and all the adventures it holds.
                           </p>
                         </div>
                         <div class="modal-footer">
@@ -474,8 +357,8 @@
                   <img src="/assets/members/Rayerbans.png" class="center" alt="..." style="max-width: 100%;">
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Rudadrippy Raybans</h5>
-                  <p class="card-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum varius lobortis felis placerat interdum. Sed vitae imperdiet nulla, non malesuada eros. Pellentesque in facilisis nunc. Pellentesque eu felis quis libero aliquam tempor. Ut sed accumsan turpis, non dapibus nulla. Etiam sed odio finibus, aliquet ante vitae, condimentum metus. In quis.</p>
+                  <h5 class="card-title text-center" style="font-family: Julius Sans One;">Rudradip "Rudra" Ray</h5>
+                  <p class="card-text">Rudra is a versatile individual excelling in programming, trumpet playing, and mathematics. Their ability to tackle complex problems, create beautiful music, and explore the depths of math demonstrates their unique blend of logical thinking and creativity.</p>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DevInfo3">
                     Learn More!
                   </button>
@@ -483,28 +366,24 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content text-bg-dark" data-bs-theme="dark">
                         <div class="modal-header">
-                          <h1 class="modal-title fs-5 text-center" id="DevInfo3Label" style="font-family: Julius Sans One">Send Help</h1>
+                          <h1 class="modal-title fs-5 text-center" id="DevInfo3Label" style="font-family: Julius Sans One">Rudradip Ray</h1>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="float-start" style="width: 50%; margin-right: 2.5%;">
+                          <div class="float-start" style="width: 40%; padding-right: 1rem;">
                             <img class="resize-me" src="/assets/members/Rayerbans.png" alt="Popcat :3">
                             <p class="text-center" style="width: 100%">
-                              The other guy just has one of those fake hacker gifs going 24/7
+                              
                             </p>
                           </div>
                           <p style="text-align: left; font-family: Kalam; font-size: 20px; position: relative; margin-top:15px;">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra odio at erat aliquet cursus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in augue sit amet neque mattis egestas quis tempor sapien. Maecenas sed lorem ut odio lobortis vestibulum. Cras a enim blandit, fermentum tellus et, bibendum nisi. Vestibulum volutpat lobortis augue, in tincidunt nisi aliquet id.
-                        
-                        Aliquam id erat eleifend, accumsan magna et, accumsan neque. Nulla non neque ut lorem condimentum suscipit. Morbi pulvinar diam nec bibendum hendrerit. Pellentesque rutrum nibh vel tincidunt dignissim. Pellentesque tristique, magna sed luctus elementum, dolor ligula laoreet velit, posuere vehicula orci lacus at leo. In hac habitasse platea dictumst. Nulla facilisi. Donec maximus, ante in commodo dignissim, erat risus accumsan ex, eu porta erat eros ac metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quam turpis, venenatis pretium neque vel, interdum semper purus. Nunc egestas posuere sapien non porttitor. Quisque a rutrum odio.
-                        
-                        Sed tellus massa, ornare non placerat eget, convallis a elit. Sed eget metus nulla. Nam quam ante, tempor at urna a, ullamcorper finibus magna. Quisque eu nulla auctor, aliquam lorem quis, malesuada elit. Curabitur auctor, nisl sit amet suscipit tempor, erat nibh bibendum nisi, id facilisis metus tellus nec mi. Mauris cursus, ex in vulputate accumsan, elit eros lacinia dolor, tristique venenatis risus ligula sit amet dui. Cras ac libero feugiat, accumsan quam at, suscipit libero. Morbi quis mattis sapien. Etiam a fringilla metus, eget laoreet eros. Sed ullamcorper arcu non leo lacinia feugiat.
-                        
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam eros nisl, congue et orci non, scelerisque volutpat nulla. Duis lobortis metus ac nibh blandit mollis. Cras ac finibus odio, a hendrerit elit. Curabitur eget urna diam. Duis venenatis libero vel dui lacinia, non gravida nunc semper. Praesent ultrices purus diam, malesuada commodo ex accumsan vel. Suspendisse tincidunt euismod diam, ut efficitur augue congue vel. Nunc vel imperdiet turpis. Aenean scelerisque eros ut tellus lobortis, ut luctus massa egestas.
-                        
-                        Quisque vitae orci augue. Aliquam vulputate magna ac neque porta, in facilisis libero dignissim. Integer tempus lorem turpis, ut feugiat massa dictum vitae. Nullam non malesuada velit. Pellentesque convallis diam quis turpis mollis auctor. Nam vitae sem fermentum, rhoncus sem ut, molestie dolor. Nunc et velit ut dui consequat auctor id ac velit. Cras tortor neque, efficitur non ullamcorper vitae, rhoncus vitae elit. Nulla ornare eget felis ac luctus. Vivamus placerat risus lorem, ultricies convallis ante porttitor vitae. Praesent laoreet velit vitae ex viverra interdum. Sed sagittis sapien eu est interdum tincidunt. Cras consequat vestibulum auctor. Etiam volutpat vulputate nulla, vel ornare quam rhoncus eget. Curabitur mattis ante viverra libero luctus, ut pharetra ante aliquet. In elementum iaculis eleifend.
-                        
-                        Proin et nunc sit amet libero cursus tempor. Etiam interdum lobortis nisi, sed malesuada nisi hendrerit et. Proin congue, nibh in pulvinar tempus, nunc augue molestie velit, vel hendrerit turpis elit ac mi. Quisque pretium vitae.
+                            Hello! I'm Rudra, and I have a passion for problem-solving and creativity. With a strong foundation in programming, I enjoy tackling complex challenges and developing innovative solutions. Coding has always been a way for me to express my logical thinking and creativity.
+
+Outside of programming, I find joy in playing the trumpet. Music has been a significant part of my life, and I love how it allows me to communicate emotions and connect with others in a unique way.
+
+Mathematics is another area where I excel. The elegance and logic of math fascinate me, and I enjoy exploring its depths and applications. Whether it's solving intricate problems or discovering new mathematical concepts, I find it incredibly rewarding.
+
+In summary, I am a multifaceted individual with a passion for programming, a talent for playing the trumpet, and a deep appreciation for mathematics. I believe that my diverse interests and skills allow me to approach challenges from different angles and create innovative solutions.
                           </p>
                         </div>
                         <div class="modal-footer">
