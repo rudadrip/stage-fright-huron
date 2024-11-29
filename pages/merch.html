@@ -34,7 +34,7 @@
     color: #fff;
   }
 </style>
-<body>
+<body class="bg-black">
 <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
@@ -54,10 +54,46 @@
           <td><img src="../assets/merch-img/beanie.jpg" alt="" srcset="" class="img-fluid"></td>
           <td>
             <p>Band Beanie</p>
-            <p class="py-2">$5.00</p>
+            <p class="py-2">$5.99</p>
+            <p></p>
           </td>
           <td>
-            <input type="number" id="foodQtyC" onchange="editVal(this)" class="form-control form-control-lg text-center align-middle bg-dark" value="1" min="1">
+            <div class="input-group">
+              <button class="btn btn-outline-secondary" type="button" id="button-minus">-</button>
+              <input type="number" class="form-control text-center" id="number-input" min="1" max="9" value="1">
+              <button class="btn btn-outline-secondary" type="button" id="button-plus">+</button>
+            </div>
+            <style>
+              /* Increase input width and hide native increment/decrement buttons */
+              #number-input {
+                -moz-appearance: textfield; /* Hide increment/decrement buttons in Firefox */
+              }
+              #number-input::-webkit-outer-spin-button,
+              #number-input::-webkit-inner-spin-button {
+                -webkit-appearance: none; /* Hide increment/decrement buttons in Webkit browsers */
+                margin: 0; /* Remove margin for alignment */
+              }
+            </style>
+            <script>
+              // JavaScript to handle button clicks
+              const input = document.getElementById('number-input');
+              const buttonMinus = document.getElementById('button-minus');
+              const buttonPlus = document.getElementById('button-plus');
+            
+              buttonMinus.addEventListener('click', () => {
+                let value = parseInt(input.value, 10) || 0;
+                if (value > parseInt(input.min, 10)) {
+                  input.value = value - 1;
+                }
+              });
+            
+              buttonPlus.addEventListener('click', () => {
+                let value = parseInt(input.value, 10) || 0;
+                if (value < parseInt(input.max, 10)) {
+                  input.value = value + 1;
+                }
+              });
+            </script>            
             <p class="text-center py-1">Remove</p>
           </td>
         </tr>
@@ -76,40 +112,11 @@
   </div>
 </div>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/pages/index.html">Stage Fright</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Merch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/tourdates.html">Tour Dates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/members.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">More</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Cart</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+   <nav-bar page="merch"></nav-bar>
+  <script src="js/navBar.js"></script>
 
   <!-- Hero Section -->
-  <div class="container mt-5 text-center">
+  <div class="container mt-5 text-center text-white">
     <h1 class="display-4">Official Merch</h1>
     <p class="lead">Grab your favorite items below and represent!</p>
     <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name">
@@ -125,7 +132,7 @@
           <div class="card-body">
             <h5 class="card-title text-white">Band T-shirt</h5>
             <p class="card-text">$25.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger">View</a>
           </div>
         </div>
       </div>
@@ -137,7 +144,7 @@
           <div class="card-body">
             <h5 class="card-title text-white">Band Hoodie</h5>
             <p class="card-text">$45.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger">View</a>
           </div>
         </div>
       </div>
@@ -149,7 +156,7 @@
           <div class="card-body">
             <h5 class="card-title text-white">Band Cap</h5>
             <p class="card-text">$15.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger">View</a>
           </div>
         </div>
       </div>
@@ -161,7 +168,7 @@
           <div class="card-body">
             <h5 class="card-title text-white">Band Poster</h5>
             <p class="card-text">$10.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger">View</a>
           </div>
         </div>
       </div>
@@ -169,11 +176,6 @@
       <!-- Additional merch items can be added here -->
     </div>
   </div>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2025 Stage. All rights reserved.</p>
-  </footer>
 
   <!-- Bootstrap 5 JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
@@ -195,6 +197,8 @@
       }
     });
   </script>
+  <footer-c></footer-c>
+  <script src="js/footerC.js"></script>
 </body>
 
 </html>

@@ -1,18 +1,5 @@
-```
-type: TICKET or ITEM
-name: NAME
-city: CITY NAME
-loc: LOCATION or None
-quant: QUANTITY
-```
-
-```
-ITEM: {name};{quant}
-CONCERT: {city};{loc};{quant}
-```
-
 function addCookieItem (name, quant) {
-
+  
 }
 
 async function grabOneItemPrice (name) {
