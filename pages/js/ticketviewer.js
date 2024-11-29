@@ -1,4 +1,3 @@
-
 function to_ticket_view(event){
     document.cookie = `venue=${event.srcElement.parentNode.getElementsByTagName("p")[0].innerHTML}`;
     window.location.href = "/pages/ticketviewer.html";
