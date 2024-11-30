@@ -63,7 +63,7 @@ function addMerchItem(name, quantity) {
     let existingItem = cart.find(item => item.name === name && item.type === 'merch');
     
     if (existingItem) {
-        existingItem.quantity += quantity;
+        existingItem.quantity = parseInt(quantity) + parseInt(existingItem.quantity);
     } else {
         cart.push({
             name: item.name,
@@ -85,6 +85,8 @@ function addConcertItem(city, quantity, seatType) {
     const seat = seating.find(seat => seat.loc === seatType);
 
     if (!location || !seat) {
+      console.log(city, quantity, seatType)
+      console.log(location,seat)
         console.error("Invalid location or seat type.");
         return;
     }
@@ -239,6 +241,27 @@ function enterFiscalInfo () {
   const ins2 = document.getElementById("num-items");
   ins2.innerHTML = calculateTotalItems();
   insertStuffs();
+}
+
+function orderMerch () {
+  const input = document.getElementById("merchQuantity");
+  const inputValue = input.value;
+  const input2 = document.getElementById("title");
+  const inputValue2 = input2.innerHTML;
+  addMerchItem(inputValue2,inputValue)
+}
+
+function orderConcert () {
+  const input = document.getElementById("ticketQuantity");
+  const inputValue = input.value;
+  var e = document.getElementById("seat");
+  var text = e.options[e.selectedIndex].text;
+  const input2 = document.getElementById("title");
+  const inputValue2 = input2.innerHTML;
+  const start = inputValue2.indexOf("in")+3
+  const end = inputValue2.indexOf(",")+4
+  var city = inputValue2.substring(start,end).trim()
+  addConcertItem(city,inputValue,text)
 }
 
 /*

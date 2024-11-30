@@ -8,6 +8,7 @@
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="js/ticketviewer.js"></script>
     <script>display_venue()</script>
+    <script src="js/allthatfunstuff.js" defer></script>
     </head>
     <style>
         body {
@@ -52,7 +53,7 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Seat Type
                             </h4>
-                            <select class="form-select" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;">
+                            <select id="seat" class="form-select" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;">
                                 <option selected>Select One</option>
                                 <option value="Standing">Standing</option>
                                 <option value="Upper Bowl">Upper Bowl</option>
@@ -64,7 +65,7 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Quantity
                             </h4>
-                            <input type="number" id="ticketQuantity" onchange="editVal(this)" class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" max="10" style="color: white; width: 25%; margin-bottom: 0.75rem;">
+                            <input type="number" id="ticketQuantity"  class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" max="10" style="color: white; width: 25%; margin-bottom: 0.75rem;">
                         
                         
                             <h5 style="padding-bottom: 1%;">
@@ -75,7 +76,7 @@
                             </p>
                         
                         
-                            <button type="button" class="btn btn-danger" data-bs-target="#">
+                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderConcert()">
                                 Buy Tickets!
                             </button>
                         
