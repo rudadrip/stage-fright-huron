@@ -83,29 +83,53 @@ async function deleteSomething (name, type) {
   }
 }
 
-async function addCookieItem (name, quant) {
-  var OGkeyValuePairs = document.cookie.split(";");
-  if (OGkeyValuePairs.length == 0) {
-    document.cookie("items=");
-  }
-  var keyValuePairs = document.cookie.split(";");
-  for (var i=0;i<keyValuePairs.length;i++) {
-    if (keyValuePairs[i].split("=")[0].trim() == "items") {
-      items = keyValuePairs[i].split("=")[1].trim().split(",");
-      isFound = false;
-      for (var j=0;j<items.length();j++) {
-        if (items[j]==name) {
-          isFound = true;
-        }
-      }
-      if (isFound) {
+function addCookieItem(name, quantityAdded) {
+  // Define the key for the items cookie
+  const itemKey = "items";
 
-      } else {
+  // Retrieve the current cookie string for items
+  const cookies = document.cookie.split("; ");
+  const cookie = cookies.find(row => row.startsWith(`${itemKey}=`));
+  let items = cookie ? cookie.split("=")[1] : ""; // Do not decode
 
+  // Split the cookie string into individual items
+  let itemList = items ? items.split(",") : [];
+  let updated = false;
+
+  // Process each item
+  itemList = itemList.map(item => {
+      const [itemName, description, quantity, price] = item.split("/");
+
+      // If the item matches, update its quantity
+      if (itemName === name) {
+          updated = true;
+          const newQuantity = parseInt(quantity) + quantityAdded;
+          return `${itemName}/${description}/${newQuantity}/${price}`;
       }
-    }
+
+      // Return unchanged if it doesn't match
+      return item;
+  });
+
+  // If no matching item, log a message
+  if (!updated) {
+      console.log("Item not found in cookie, no changes made.");
+      return;
   }
+
+  // Clear the old cookie
+  document.cookie = `${itemKey}=${cookie.split("=")[1].trim()}; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;`;
+
+  // Update the cookie string
+  const updatedCookie = itemList.join(",");
+  document.cookie = `${itemKey}=${updatedCookie}; path=/`;
+  console.log("Updated cookie:", document.cookie);
 }
+
+
+
+
+
 
 function addCookieConcert (city, loc, quanty) {
 
