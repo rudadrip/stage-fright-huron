@@ -1,14 +1,46 @@
-async function grabOneItemPrice (name) {
-    const response = await fetch ('js/allthatfunstuff.js');
-    const items = await response.json();
-    for (let i=0;i<items.length;i++) {
-      let obj = items[i];
-      let qty = await grabQuantity(name);
-      if (obj.name == name) {
-        return Number(obj.price*qty);
+async function getPriceItem(productName) {
+  try {
+      // Fetch the JSON data from the file
+      const response = await fetch('/pages/veryrealdatabase/merch.json');
+      const data = await response.json();
+
+      // Find the product in the JSON data
+      const product = data.find(item => item.name.toLowerCase() === productName.toLowerCase());
+
+      if (product) {
+          return product.price; // Return the price if found
+      } else {
+          console.log("Product not found");
+          return null; // Return null if no product is found
       }
-    }
+  } catch (error) {
+      console.error("Error loading the merchandise data:", error);
+      return null; // Return null in case of an error
   }
+}
+
+async function getPriceConcert(seatType) {
+  try {
+      const response = await fetch('/pages/veryrealdatabase/seating.json');
+      const data = await response.json();
+
+      // Find the product in the JSON data
+      const product = data.find(item => item.loc.toLowerCase() === seatType.toLowerCase());
+
+      if (product) {
+          return product.price; // Return the price if found
+      } else {
+          console.log("Product not found");
+          return null; // Return null if no product is found
+      }
+  } catch (error) {
+      console.error("Error loading the merchandise data:", error);
+      return null; // Return null if there's an error
+  }
+}
+
+getPriceConcert("Club Seating").then(function(data){console.log(data)}) 
+getPriceItem("Band Beanie").then(function(data){console.log(data)})
 
 async function deleteAllItems() {
   var keyValuePairs = document.cookie.split(";");
@@ -60,14 +92,16 @@ async function addCookieItem (name, quant) {
   for (var i=0;i<keyValuePairs.length;i++) {
     if (keyValuePairs[i].split("=")[0].trim() == "items") {
       items = keyValuePairs[i].split("=")[1].trim().split(",");
+      isFound = false;
       for (var j=0;j<items.length();j++) {
-         if (items[j].split("/")[0].trim() == name) {
-          a = items[j][0];
-          b = items[j][1];
-          c = items[j][2]+quant;
-          d = items[j][3];
+        if (items[j]==name) {
+          isFound = true;
+        }
+      }
+      if (isFound) {
 
-         }
+      } else {
+
       }
     }
   }
@@ -77,10 +111,19 @@ function addCookieConcert (city, loc, quanty) {
 
 }
 
-
-
-
-
-function calculateSubtotal () {
-
+async function getTotPrice () {
+  var keyValuePairs = document.cookie.split(";");
+  totP = 0;
+  for (var i=0;i<keyValuePairs.length;i++) {
+    if (keyValuePairs[i].split("=")[0].trim() == "items" || keyValuePairs[i].split("=")[0].trim() == "concerts") {
+      arrS = keyValuePairs[i].split("=")[1];
+      arr = arrS.split(",");
+      for (var j=0;j<arr.length;j++) {
+        ii = arr[j];
+        sep = ii.split("/");
+        totP+=sep[2].trim()*sep[3].trim()
+      }
+    }
+  }
+  return totP.toFixed(2);
 }
