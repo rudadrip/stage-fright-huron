@@ -1,4 +1,3 @@
-
 function to_ticket_view(event){
     document.cookie = `venue=${event.srcElement.parentNode.getElementsByTagName("p")[0].innerHTML}`;
     window.location.href = "ticketviewer.html";
@@ -20,6 +19,7 @@ async function display_venue(){
         if (all_locations[i].loc === cookies.venue){
             document.getElementById("title").innerHTML = `Tickets for ${cookies["venue"]} in ${all_locations[i].city} on ${all_locations[i].date}`;
             document.getElementById("venue-image").src = all_locations[i].image;
+            document.getElementById("venue-details").innerHTML = all_locations[i].description;
             return;
         }
     }
