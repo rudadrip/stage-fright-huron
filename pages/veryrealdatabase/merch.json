@@ -1,19 +1,19 @@
 [
     {
         "name": "Band T-shirt",
-        "desc": "Show your love for Stage Fright with this soft, comfy T-shirt featuring our bold logo. Perfect for any fan!",
+        "desc": "Show your love for Stage Fright with this soft comfy T-shirt featuring our bold logo. Perfect for any fan!",
         "price": "12.99"
     }, {
         "name": "Band Crewneck",
-        "desc": "Stay cozy with the Stage Fright crewneck, designed for comfort and style. A must-have for cooler days!",
+        "desc": "Stay cozy with the Stage Fright crewneck designed for comfort and style. A must-have for cooler days!",
         "price": "29.99"
     }, {
         "name": "Guitar Pick",
-        "desc": "Grab a Stage Fright guitar pick for that extra touch of rock—durable, sleek, and logo branded.",
+        "desc": "Grab a Stage Fright guitar pick for that extra touch of rock—durable sleek and logo branded.",
         "price": "5.99"
     }, {
        "name": "Band Beanie",
-       "desc": "Top off your look with the Stage Fright beanie, featuring our logo for a stylish, warm fit.",
+       "desc": "Top off your look with the Stage Fright beanie featuring our logo for a stylish warm fit.",
        "price": "11.99"
     }
 ]
