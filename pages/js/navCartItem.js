@@ -4,6 +4,10 @@ class navCartItem extends HTMLElement {
     }
     connectedCallBack () {
         this.render();
+
+        const item = this.getAttribute('item');
+        item = item.trim().split("-");
+        
     }
     render() {
         this.innerHTML = 
