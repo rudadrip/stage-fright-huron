@@ -18,7 +18,7 @@
 
 //Chicago Concert/Mezzanine/2/300,Pheonix Concert/Box/1/4000
 //Band Hoodie/High Quality/5/10.99,Band Beanie/High Quality/8/8.99
-
+/*
 async function insertStuffs () {
   const ins = document.getElementById("insert-items");
   var keyValuePairs = document.cookie.split(";");
@@ -92,3 +92,54 @@ async function insertTotPrice () {
 insertStuffs ()
 grabNumberItems()
 insertTotPrice()
+*/
+
+function calculateCartTotal() {
+  let total = 0;
+
+  // Loop through each item in the cart
+  cart.forEach(item => {
+      let itemTotalPrice = 0;
+
+      // If the item is a merch item
+      if (item.type === 'merch') {
+          itemTotalPrice = parseFloat(item.price) * item.quantity;
+      }
+      // If the item is a concert ticket
+      else if (item.type === 'concert') {
+          itemTotalPrice = parseFloat(item.price) * item.quantity;
+      }
+
+      total += itemTotalPrice;  // Add the item's total price to the overall total
+  });
+
+  return total.toFixed(2);  // Return total price rounded to two decimal places
+}
+
+function calculateSalesTax() {
+  return (calculateCartTotal()*0.06).toFixed(2);
+}
+
+function calculateTotPrice () {
+  return calculateCartTotal() + calculateSalesTax();
+}
+
+function calculateTotalItems() {
+  let totalItems = 0;
+
+  // Loop through each item in the cart
+  cart.forEach(item => {
+      totalItems += 1;
+  });
+
+  return totalItems;
+}
+
+function enterFiscalInfo () {
+  const ins1 = document.getElementById("tot-price");
+  ins1.innerHTML = calculateTotPrice();
+  const ins2 = document.getElementById("num-items");
+  ins2.innerHTML = calculateTotalItems();
+}
+
+enterFiscalInfo()

@@ -148,6 +148,103 @@ function calculateCartTotal() {
   return total.toFixed(2);  // Return total price rounded to two decimal places
 }
 
+function calculateCartTotal() {
+  let total = 0;
+
+  // Loop through each item in the cart
+  cart.forEach(item => {
+      let itemTotalPrice = 0;
+
+      // If the item is a merch item
+      if (item.type === 'merch') {
+          itemTotalPrice = parseFloat(item.price) * item.quantity;
+      }
+      // If the item is a concert ticket
+      else if (item.type === 'concert') {
+          itemTotalPrice = parseFloat(item.price) * item.quantity;
+      }
+
+      total += itemTotalPrice;  // Add the item's total price to the overall total
+  });
+
+  return total.toFixed(2);  // Return total price rounded to two decimal places
+}
+
+function calculateSalesTax() {
+  return (calculateCartTotal()*0.06).toFixed(2);
+}
+
+function calculateTotPrice () {
+  return (parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2);
+}
+
+function calculateTotalItems() {
+  let totalItems = 0;
+
+  // Loop through each item in the cart
+  cart.forEach(item => {
+      totalItems += 1;
+  });
+
+  return totalItems;
+}
+
+
+async function insertStuffs() {
+  const ins = document.getElementById("insert-items");
+  var keyValuePairs = document.cookie.split(";");
+
+  // Loop through all cookies
+  for (var i = 0; i < keyValuePairs.length; i++) {
+    let cookiePair = keyValuePairs[i].split("=");
+    let key = cookiePair[0].trim();
+    console.log(key)
+
+    // Process items if the cookie is 'items' (for merch items and concerts)
+    if (key === "cart") {
+      console.log("Processing 'cart' cookie...");
+
+      let arrS = decodeURIComponent(cookiePair[1]);  // Decode the cookie value
+
+      try {
+        // Parse the cookie value into an array of objects
+        let arr = JSON.parse(arrS);
+        arr.forEach(item => {
+          // Check if the item is merch or a concert and create the appropriate element
+          if (item.type === "merch") {
+            console.log("Inserting merch item...");
+            let itemElement = document.createElement('checkout-item-c');
+            itemElement.setAttribute("name", item.name);
+            itemElement.setAttribute("extra", item.description);  // Description for merch
+            itemElement.setAttribute("qty", item.quantity);  // Quantity
+            itemElement.setAttribute("price", item.price);  // Price for the merch item
+            ins.appendChild(itemElement);  // Append it to the container
+          } else if (item.type === "concert") {
+            console.log("Inserting concert item...");
+            let concertElement = document.createElement('checkout-item-c');
+            let concertDetails = `${item.loc}, ${item.date}, ${item.seatType}`;
+            concertElement.setAttribute("name", `${item.city} Concert`);  // Concert city
+            concertElement.setAttribute("extra", concertDetails);  // Details for concert
+            concertElement.setAttribute("qty", item.quantity);  // Concert quantity
+            concertElement.setAttribute("price", item.price);  // Price for the seat type
+            ins.appendChild(concertElement);  // Append it to the container
+          }
+        });
+      } catch (e) {
+        console.error("Error parsing 'items' cookie:", e);
+      }
+    }
+  }
+}
+
+function enterFiscalInfo () {
+  const ins1 = document.getElementById("tot-price");
+  ins1.innerHTML = `$${calculateTotPrice()}`;
+  const ins2 = document.getElementById("num-items");
+  ins2.innerHTML = calculateTotalItems();
+  insertStuffs();
+}
+
 // Example Usage:
 
 // Example Usage:
@@ -172,7 +269,7 @@ console.log(viewCart());
 deleteMerchItem('Band T-shirt');
 deleteConcertItem('Los Angeles, CA', 'Lower Bowl');
 
-// Viewing the Cart after Deletion
+// Viewing the Cart after DeEletion
 console.log("view cart")
 console.log(viewCart());
 
