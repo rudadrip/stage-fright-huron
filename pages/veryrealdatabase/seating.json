@@ -1,21 +1,21 @@
 [
     {
         "loc":"VIP Box/Suite",
-        "price": 3000
+        "price": "3000"
     }, {
         "loc": "Club Seating",
-        "price": 750
+        "price": "750"
     }, {
         "loc": "Lower Bowl",
-        "price": 250
+        "price": "250"
     }, {
         "loc": "Mid-Level/Mezzanine",
-        "price": 125
+        "price": "125"
     }, {
         "loc": "Upper Bowl",
-        "price": 40
+        "price": "40"
     }, {
         "loc": "Standing Room",
-        "price": 20
+        "price": "20"
     }
 ]
