@@ -198,11 +198,9 @@ async function insertStuffs() {
   for (var i = 0; i < keyValuePairs.length; i++) {
     let cookiePair = keyValuePairs[i].split("=");
     let key = cookiePair[0].trim();
-    console.log(key)
 
     // Process items if the cookie is 'items' (for merch items and concerts)
     if (key === "cart") {
-      console.log("Processing 'cart' cookie...");
 
       let arrS = decodeURIComponent(cookiePair[1]);  // Decode the cookie value
 
@@ -212,7 +210,6 @@ async function insertStuffs() {
         arr.forEach(item => {
           // Check if the item is merch or a concert and create the appropriate element
           if (item.type === "merch") {
-            console.log("Inserting merch item...");
             let itemElement = document.createElement('checkout-item-c');
             itemElement.setAttribute("name", item.name);
             itemElement.setAttribute("extra", item.description);  // Description for merch
@@ -220,7 +217,6 @@ async function insertStuffs() {
             itemElement.setAttribute("price", item.price);  // Price for the merch item
             ins.appendChild(itemElement);  // Append it to the container
           } else if (item.type === "concert") {
-            console.log("Inserting concert item...");
             let concertElement = document.createElement('checkout-item-c');
             let concertDetails = `${item.loc}, ${item.date}, ${item.seatType}`;
             concertElement.setAttribute("name", `${item.city} Concert`);  // Concert city
@@ -245,6 +241,7 @@ function enterFiscalInfo () {
   insertStuffs();
 }
 
+/*
 // Example Usage:
 
 // Example Usage:
@@ -274,3 +271,4 @@ console.log("view cart")
 console.log(viewCart());
 
 console.log("Total Cart Price: $" + calculateCartTotal());
+*/
