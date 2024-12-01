@@ -5,67 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <script type="text/javascript" src="../bootstrap-5.3.3-dist/js/bootstrap.min.js" defer></script>
+    <script src="/pages/js/merchviewer.js"></script>
+    <script src="js/cartmanagment.js"></script>
+
     <title>Stage Fright</title>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000;">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/pages/index.html">
-            <img src="https://i.pinimg.com/474x/a6/88/ed/a688ed959f6807916e0b509f0b9be69a.jpg" 
-            alt="Stage Fright" width="18" height="24">
-            Stage Fright
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/pages/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/merch.html">Merch</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/tourdates.html">Tour Dates</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/members.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="">More</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/merch.html">Cart</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="  background-image: url('https://images.pexels.com/photos/416831/pexels-photo-416831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+<style>
+  body {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+    border: none;
+  }
+
+  .form-control {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+  }
+
+  .form-control:focus {
+    background-color: #333;
+    box-shadow: none;
+  }
+
+  * {
+    color: #fff;
+  }
+
+  ::-webkit-input-placeholder{
+    color: grey !important;
+  }
+</style>
+<style>
+	body {
+      background-color: #000;
+      color: #fff;
+    }
+    .section-divider {
+      border-top: 2px solid #fff;
+      margin: 3rem 0;
+    }
+    .btn-custom {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease-in-out;
+      font-weight: bold;
+    }
+    .btn-custom:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+    .album-cover {
+      width: 100%;
+      height: auto;
+      border: 2px solid #fff;
+      transition: transform 0.3s ease;
+    }
+    .album-cover:hover {
+      transform: scale(1.05);
+    }
+    .album-title {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    .image-container {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .section {
+      padding: 4rem 2rem;
+      color: #fff;
+    }
+	.timeline-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+  </style>
+</style>
+<body class="bg-black">
+  <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cart Items Table -->
+      <table class="table table-sm table-dark" style="background: #000;">
+        <thead>
+          <tr>
+            <th style="width: 20%"></th>
+            <th style="width: 40%"></th>
+            <th style="width: 40%"></th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Dynamically populated cart items -->
+        </tbody>
+      </table>
+      <hr>
+      <!-- Total Price -->
+      <div class="d-flex justify-content-between">
+        <strong>Total:</strong>
+        <span id="total-price">$0.00</span>
+      </div>
+    </div>
+    <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+  </div>
+    <nav-bar  page="home"></nav-bar>
+    <script src="js/navBar.js"></script>
+      <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="  background-image: url('../assets/cover.jpg');
     background-position: center;
 background-size:cover;  
 background-repeat:no-repeat">
 	<div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 class="fw-bolder display-3">Stage Fright</h2>
+				<h2 style="text-shadow: 3px 3px 6px black" class="fw-bolder display-1">Stage Fright</h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-12">
 			<div editable="rich">
-				<p class="lead">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.
+				<p style="text-shadow: 6px 6px 9px black" class=" fw-bolder text-white">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to challenge the status quo, to shake things up, and to make some noise.
 				</p>
 			</div>
 		</div>
 		<div class="lc-block">
-			<a class="btn btn-dark" href="#" role="button">Click me, I'm a button</a>
+			<a class="btn btn-dark" href="members.html" role="button">More About Us!</a>
 		</div>
 	</div>
     <br><br><br>
 
     
 </div>
+<section class="section py-5 text-white text-center">
+	<h2 class="mb-4">American 2024 Tour</h2>
+	<p class="mb-5">Experience the thrill as Stage Fright takes the stage across the nation! Mark your calendars and join us for unforgettable nights.</p>
+	
+	<!-- Timeline -->
+	<div class="container">
+	  <div class="row justify-content-center">
+		<!-- Timeline Item 1 -->
+		<div class="col-md-4 mb-4">
+		  <div class="timeline-item p-4">
+			<h4 class="fw-bold">New York City</h4>
+			<p>March 15, 2024</p>
+		  </div>
+		</div>
+		<!-- Timeline Item 2 -->
+		<div class="col-md-4 mb-4">
+		  <div class="timeline-item p-4">
+			<h4 class="fw-bold">Chicago</h4>
+			<p>April 3, 2024</p>
+		  </div>
+		</div>
+		<!-- Timeline Item 3 -->
+		<div class="col-md-4 mb-4">
+		  <div class="timeline-item p-4">
+			<h4 class="fw-bold">Los Angeles</h4>
+			<p>May 10, 2024</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  
+	<!-- Call to Action -->
+	<a href="tourdates.html" class="btn btn-custom mt-4">View All Tour Dates</a>
+  </section>
+
+  <hr class="section-divider w-75" style="margin:auto;color:white;height: 2px; border-color: var(--bs-white); background-color: var(--bs-white); opacity: 1;"/>
+
+  <!-- Merch Call to Action Section -->
+  <section class="section d-flex flex-column flex-lg-row align-items-center justify-content-center text-center text-lg-start py-3 ">
+	<!-- Image -->
+	<div id="carouselExampleControls" class="carousel slide col-lg-6" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="../assets/merch-img/beanie.jpg" class="d-block w-100"	 alt="Beanie">
+		  </div>
+		  <div class="carousel-item">
+			<img src="../assets/merch-img/crewneck.jpg" class="d-block w-100" alt="Crewneck">
+		  </div>
+		  <div class="carousel-item">
+			<img src="../assets/merch-img/guitarpick.jpg" class="d-block w-100" alt="Guitar Pick">
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	<!-- Text Content -->
+	<div class="col-lg-6  py-3 d-flex flex-column justify-content-center">
+	  <h2 class="mb-3 display-5 fw-bolder">Official Stage Fright Merchandise</h2>
+	  <p class="mb-4">Rock in style with our exclusive merch. From tees to hoodies, we’ve got everything you need to show your love for Stage Fright.</p>
+	  <a href="merch.html" class="btn btn-custom">Shop Now</a>
+	</div>
+  </section>
+
+  <hr class="section-divider w-75 my-5" style="margin:auto;color:white;height: 2px; border-color: var(--bs-white); background-color: var(--bs-white); opacity: 1;"/>
+
+  <!-- Latest Albums Section -->
+  <section class="section text-center">
+    <h2 class="mb-4 display-5 fw-bolder">Our Latest Albums</h2>
+	<br><br>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <img src="../assets/diamond-eyes.jpg" alt="Album 1" class="album-cover w-75 h-75"> <!-- Replace with album 1 image -->
+        <p class="album-title">Diamond Eyes</p>
+      </div>
+      <div class="col-md-4">
+        <img src="../assets/Walk" alt="Album 2" class="album-cover w-75 h-75"> <!-- Replace with album 2 image -->
+        <p class="album-title">Walk</p>
+      </div>
+      <div class="col-md-4">
+        <img src="../assets/get-dirty.webp" alt="Album 3" class="album-cover w-75 h-75"> <!-- Replace with album 3 image -->
+        <p class="album-title">Get Dirty</p>
+      </div>
+    </div>
+  </section>
+<footer-c></footer-c>
+<script src="js/footerC.js"></script>
 </body>
 </html>

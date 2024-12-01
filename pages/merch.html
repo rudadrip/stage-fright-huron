@@ -7,6 +7,9 @@
   <title>Merch</title>
   <!-- Bootstrap 5 CSS -->
   <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/cartmanagment.js"></script>
+  <script src="/pages/js/merchviewer.js"></script>
+  <script src="js/navBar.js"></script>
 </head>
 <style>
   body {
@@ -33,86 +36,49 @@
   * {
     color: #fff;
   }
+
+  ::-webkit-input-placeholder{
+    color: grey !important;
+  }
 </style>
-<body>
-<div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
-    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <table class="table table-sm table-dark" style="background: #000;">
-      <tbody>
+<body class="bg-black">
+  <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cart Items Table -->
+      <table class="table table-sm table-dark" style="background: #000;">
         <thead>
           <tr>
-            <th style="width: 30%"></th>
+            <th style="width: 20%"></th>
             <th style="width: 40%"></th>
-            <th style="width: 30%"></th>
+            <th style="width: 40%"></th>
           </tr>
         </thead>
-        <tr>
-          <td><img src="../assets/merch-img/beanie.jpg" alt="" srcset="" class="img-fluid"></td>
-          <td>
-            <p>Band Beanie</p>
-            <p class="py-2">$5.00</p>
-          </td>
-          <td>
-            <input type="number" id="foodQtyC" onchange="editVal(this)" class="form-control form-control-lg text-center align-middle bg-dark" value="1" min="1">
-            <p class="text-center py-1">Remove</p>
-          </td>
-        </tr>
-        <tr>
-          <td>lorem</td>
-          <td>lorem</td>
-          <td>lorem</td>
-        </tr>
-        <tr>
-          <td>lorem</td>
-          <td>lorem</td>
-          <td>lorem</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/pages/index.html">Stage Fright</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Merch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/tourdates.html">Tour Dates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/members.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">More</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Cart</a>
-          </li>
-        </ul>
+        <tbody id="cart-items">
+          <!-- Dynamically populated cart items -->
+        </tbody>
+      </table>
+      <hr>
+      <!-- Total Price -->
+      <div class="d-flex justify-content-between">
+        <strong>Total:</strong>
+        <span id="total-price">$0.00</span>
       </div>
     </div>
-  </nav>
+    <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+  </div>
+  <!-- Navbar -->
+   <nav-bar page="merch"></nav-bar>
+  
 
   <!-- Hero Section -->
-  <div class="container mt-5 text-center">
+  <div class="container mt-5 text-center text-white">
     <h1 class="display-4">Official Merch</h1>
     <p class="lead">Grab your favorite items below and represent!</p>
-    <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name">
+    <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name" style="color:white">
   </div>
 
   <!-- Merch Items List -->
@@ -121,11 +87,11 @@
       <!-- Merch Item Card 1 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../assets/merch-img/crewneck.jpg" class="card-img-top" alt="T-shirt">
+          <img src="../assets/merch-img/tshirtbgblack.jpg" class="card-img-top" alt="T-shirt">
           <div class="card-body">
             <h5 class="card-title text-white">Band T-shirt</h5>
             <p class="card-text">$25.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
           </div>
         </div>
       </div>
@@ -133,11 +99,11 @@
       <!-- Merch Item Card 2 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../assets/merch-img/beanie.jpg" class="card-img-top" alt="Hoodie">
+          <img src="../assets/merch-img/crewneck.jpg" class="card-img-top" alt="Hoodie">
           <div class="card-body">
-            <h5 class="card-title text-white">Band Hoodie</h5>
+            <h5 class="card-title text-white">Band Crewneck</h5>
             <p class="card-text">$45.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
           </div>
         </div>
       </div>
@@ -147,9 +113,9 @@
         <div class="card">
           <img src="../assets/merch-img/guitarpick.jpg" class="card-img-top" alt="Cap">
           <div class="card-body">
-            <h5 class="card-title text-white">Band Cap</h5>
+            <h5 class="card-title text-white">Guitar Pick</h5>
             <p class="card-text">$15.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
           </div>
         </div>
       </div>
@@ -157,11 +123,11 @@
       <!-- Merch Item Card 4 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../assets/merch-img/tshirt.jpg" class="card-img-top" alt="Poster">
+          <img src="../assets/merch-img/beanie.jpg" class="card-img-top" alt="Poster">
           <div class="card-body">
-            <h5 class="card-title text-white">Band Poster</h5>
+            <h5 class="card-title text-white">Band Beanie</h5>
             <p class="card-text">$10.00</p>
-            <a href="#" class="btn btn-danger">Add to Cart</a>
+            <a href="#" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
           </div>
         </div>
       </div>
@@ -170,14 +136,8 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2025 Stage. All rights reserved.</p>
-  </footer>
-
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
   <script>
     // Search functionality
     const searchInput = document.getElementById('searchInput');
@@ -195,6 +155,8 @@
       }
     });
   </script>
+  <footer-c></footer-c>
+  <script src="js/footerC.js"></script>
 </body>
 
 </html>

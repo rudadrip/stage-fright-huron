@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- TODO: make buying tickets redirect -->
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tour Dates</title>
   <!-- Bootstrap 5 CSS -->
   <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js" defer></script>
+  <script src="../bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/ticketviewer.js"></script>
+
+  <script src="js/cartmanagment.js"></script>
 
 
 </head>
@@ -31,48 +38,50 @@
     .form-control:focus {
       background-color: #333;
       color: #fff;
-      border-color: #6200ea;
+      border-color: red;
       box-shadow: none;
     }
     
     * {
         color: #fff
     }
-  </style>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Tour Dates</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/merch.html">Merch</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link  active" href="#">Tour Dates</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/pages/members.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">More</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cart</a>
 
-          </li>
-        </ul>
+    ::-webkit-input-placeholder{
+    color: grey !important;
+    }
+  </style>
+<body class="bg-black">
+  <!-- Navbar -->
+  <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- Cart Items Table -->
+      <table class="table table-sm table-dark" style="background: #000;">
+        <thead>
+          <tr>
+            <th style="width: 20%"></th>
+            <th style="width: 40%"></th>
+            <th style="width: 40%"></th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- Dynamically populated cart items -->
+        </tbody>
+      </table>
+      <hr>
+      <!-- Total Price -->
+      <div class="d-flex justify-content-between">
+        <strong>Total:</strong>
+        <span id="total-price">$0.00</span>
       </div>
     </div>
-  </nav>
+    <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+  </div>
+  <nav-bar page="td"></nav-bar>
+  <script src="js/navBar.js"></script>
 
   <!-- Hero Section -->
   <div class="container mt-5 text-center">
@@ -91,7 +100,7 @@
             <h5 class="card-title text-white">New York, NY</h5>
             <p class="card-text">Madison Square Garden</p>
             <p class="card-text">November 10, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -104,8 +113,7 @@
             <h5 class="card-title text-white">Los Angeles, CA</h5>
             <p class="card-text">The Forum</p>
             <p class="card-text">November 20, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
-
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -117,7 +125,7 @@
             <h5 class="card-title text-white">Chicago, IL</h5>
             <p class="card-text">United Center</p>
             <p class="card-text">December 1, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -130,7 +138,7 @@
             <h5 class="card-title text-white">Houston, TX</h5>
             <p class="card-text">Toyota Center</p>
             <p class="card-text">December 5, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -143,7 +151,7 @@
             <h5 class="card-title text-white">Dallas, TX</h5>
             <p class="card-text">American Airlines Center</p>
             <p class="card-text">December 10, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -156,7 +164,7 @@
             <h5 class="card-title text-white">Atlanta, GA</h5>
             <p class="card-text">State Farm Arena</p>
             <p class="card-text">December 15, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -169,7 +177,7 @@
             <h5 class="card-title text-white">Miami, FL</h5>
             <p class="card-text">Kaseya Center</p>
             <p class="card-text">December 20, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -182,7 +190,7 @@
             <h5 class="card-title text-white">Orlando, FL</h5>
             <p class="card-text">Amway Center</p>
             <p class="card-text">December 22, 2024</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -195,7 +203,7 @@
             <h5 class="card-title text-white">Boston, MA</h5>
             <p class="card-text">TD Garden</p>
             <p class="card-text">January 5, 2025</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -208,7 +216,7 @@
             <h5 class="card-title text-white">Philadelphia, PA</h5>
             <p class="card-text">Wells Fargo Center</p>
             <p class="card-text">January 10, 2025</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -221,7 +229,7 @@
             <h5 class="card-title text-white">Washington, DC</h5>
             <p class="card-text">Capital One Arena</p>
             <p class="card-text">January 15, 2025</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -234,7 +242,7 @@
             <h5 class="card-title text-white">Seattle, WA</h5>
             <p class="card-text">Climate Pledge Arena</p>
             <p class="card-text">January 20, 2025</p>
-            <a href="#" class="btn btn-danger">Buy Tickets</a>
+            <a href="#" class="btn btn-danger" onclick="to_ticket_view(event)">Buy Tickets</a>
 
           </div>
         </div>
@@ -245,13 +253,11 @@
   </div>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p>&copy; 2025 Stage. All rights reserved.</p>
-  </footer>
+  <footer-c></footer-c>
+    <script src="js/footerC.js"></script>
 
   <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
   <script>
     // Search functionality
     const searchInput = document.getElementById('searchInput');

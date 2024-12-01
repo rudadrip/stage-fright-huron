@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stage Fright</title>
+    <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="/pages/js/merchviewer.js"></script>
+    <script>display_venue()</script>
+    <script src="js/allthatfunstuff.js"></script>
+    <script src="js/cartmanagment.js"></script>
+
+    </head>
+    <style>
+        body {
+          background-color: #121212;
+          color: #fff;
+        }
+      
+        .card {
+          background-color: #1e1e1e;
+          border: none;
+        }
+      
+        .form-control {
+          background-color: #2a2a2a;
+          color: #fff;
+          border: 1px solid #444;
+        }
+      
+        .form-control:focus {
+          background-color: #333;
+          box-shadow: none;
+        }
+      
+        * {
+          color: #fff;
+        }
+      
+        ::-webkit-input-placeholder{
+          color: grey !important;
+        }
+      </style>
+    <style>
+        body {
+            color: white;
+        }
+
+        #alt-gutter-x .g-5, .gx-5{
+            --bs-gutter-x: 7rem;
+        }
+    </style>
+    <body class="bg-black">
+        <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- Cart Items Table -->
+              <table class="table table-sm table-dark" style="background: #000;">
+                <thead>
+                  <tr>
+                    <th style="width: 20%"></th>
+                    <th style="width: 40%"></th>
+                    <th style="width: 40%"></th>
+                  </tr>
+                </thead>
+                <tbody id="cart-items">
+                  <!-- Dynamically populated cart items -->
+                </tbody>
+              </table>
+              <hr>
+              <!-- Total Price -->
+              <div class="d-flex justify-content-between">
+                <strong>Total:</strong>
+                <span id="total-price">$0.00</span>
+              </div>
+            </div>
+            <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+          </div>
+        <nav-bar></nav-bar>
+        <script src="js/navBar.js"></script>
+        <div class="bg-black">
+            <div class="container text-left">
+                <div class="row" style="margin-top: 1rem">
+                    <div style="display: inline-block;">
+                        <a href="/pages/merch.html" style="text-decoration: none; color: white; display: inline-block; vertical-align: middle;">
+                            <img src="/assets/left-arrow.png" width="24" height="24">
+                        </a>
+                        <a href="/pages/merch.html" style="text-decoration: none; color: white; display: inline-block; font-size: 28px; vertical-align: middle;">
+                            All Merch
+                        </a>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <img src="" id="merch-image" style="width: 100%; padding-top: 3.5rem;">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                            <h2 id="title">
+                                [Merch name]
+                            </h2>
+                            <hr style="height: 3px; border-color: var(--bs-danger); background-color: var(--bs-danger); opacity: 1;">
+                            <h2 id="price">
+                                $xx.xx
+                            </h4>
+                            <br>
+                            <h4 style="padding-bottom: 0.5rem;">
+                                Size
+                            </h4>
+                            <select class="form-select text-bg-dark" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;">
+                                <option selected>Select One</option>
+                                <option value="XXL">XXL</option>
+                                <option value="XL">XL</option>
+                                <option value="L">L</option>
+                                <option value="M">M</option>
+                                <option value="X">S</option>
+                                <option value="XS">XS</option>
+                                <option value="XXS">XXS</option>
+                            </select>
+                            <h4 style="padding-bottom: 0.5rem;">
+                                Quantity
+                            </h4>
+                            <input type="number" id="merchQuantity" class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" style="color: white; width: 25%; margin-bottom: 0.75rem;">  
+                            <h5 style="padding-bottom: 1%;">
+                                Item Description
+                            </h5>
+                            <p id="merch-details">
+                                Lorem ipsum dolor sit amet
+                            </p>       
+                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderMerch()">
+                                Add to cart!
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-c></footer-c>
+        <script src="js/footerC.js"></script>
+    </body>
+</html>
