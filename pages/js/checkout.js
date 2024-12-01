@@ -93,7 +93,7 @@ insertStuffs ()
 grabNumberItems()
 insertTotPrice()
 */
-
+/*
 function calculateCartTotal() {
   let total = 0;
 
@@ -143,3 +143,4 @@ function enterFiscalInfo () {
 }
 
 enterFiscalInfo()
+*/

@@ -245,10 +245,11 @@ function enterFiscalInfo () {
 
 function orderMerch () {
   const input = document.getElementById("merchQuantity");
-  const inputValue = input.value;
+  const inputValue = input.value.toString();
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
   addMerchItem(inputValue2,inputValue)
+  window.location.href = "index.html"
 }
 
 function orderConcert () {
@@ -261,7 +262,9 @@ function orderConcert () {
   const start = inputValue2.indexOf("in")+3
   const end = inputValue2.indexOf(",")+4
   var city = inputValue2.substring(start,end).trim()
+    // addConcertItem(city, quantity, seatType)
   addConcertItem(city,inputValue,text)
+  window.location.href = "index.html"
 }
 
 /*
