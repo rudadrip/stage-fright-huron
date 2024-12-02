@@ -2,73 +2,73 @@
     {
         "city": "New York, NY",
         "loc": "Madison Square Garden",
-        "date": "November 10, 2024",
+        "date": "December 10, 2024",
         "image": "/assets/locations/Madison_Square_Garden.jpg",
         "description": "Known as \"The World's Most Famous Arena,\" Madison Square Garden hosts world-class concerts, sports, and entertainment events in the heart of Manhattan. Its rich history includes iconic performances by legendary artists and unforgettable moments in sports. The Garden's state-of-the-art facilities make it a bucket-list destination for fans worldwide."
     }, {
         "city": "Los Angeles, CA",
         "loc": "The Forum",
-        "date": "November 20, 2024",
+        "date": "December 20, 2024",
         "image": "/assets/locations/The_Forum.jpg",
         "description": "A historic entertainment venue in Inglewood, The Forum is famed for its intimate atmosphere and outstanding acoustics, making it a favorite for concerts. Once the home of the Lakers and Kings, it retains its cultural significance as a landmark for music and live events. Its iconic architecture and rich history make every visit special."
     }, {
         "city": "Chicago, IL",
         "loc": "United Center",
-        "date": "December 1, 2024",
+        "date": "January 1, 2024",
         "image": "/assets/locations/United_Center.jpg",
         "description": "As the home of the Chicago Bulls and Blackhawks, the United Center is a bustling hub for sports and entertainment in the Windy City. With its massive seating capacity, it also hosts top-tier concerts and events. The stadium's lively atmosphere and modern amenities ensure a memorable experience for fans."
     }, {
         "city": "Houston, TX",
         "loc": "Toyota Center",
-        "date": "December 5, 2024",
+        "date": "January 5, 2024",
         "image": "/assets/locations/Toyota_Center.jpg",
         "description": "Located in downtown Houston, the Toyota Center is a state-of-the-art venue and home to the Houston Rockets. Known for its stunning visuals and cutting-edge technology, it offers a top-notch experience for sports and live entertainment. Its central location makes it a vibrant centerpiece for the city's events scene."
     }, {
         "city": "Dallas, TX",
         "loc": "American Airlines Center",
-        "date": "December 10, 2024",
+        "date": "January 10, 2024",
         "image": "/assets/locations/American_Airlines_Center.jpg",
         "description": "This sleek and modern arena in Dallas hosts the Mavericks and the Stars, alongside world-renowned concerts and shows. Its distinctive design and superior acoustics make it a standout among sports and entertainment venues. Located in Victory Park, it's surrounded by bustling nightlife and dining options."
     }, {
         "city": "Atlanta, GA",
         "loc": "State Farm Arena",
-        "date": "December 15, 2024",
+        "date": "January 15, 2024",
         "image": "/assets/locations/State_Farm_Arena.jpg",
         "description": "Nestled in downtown Atlanta, State Farm Arena is home to the Atlanta Hawks and a frequent stop for major artists on tour. The venue's dynamic design and fan-friendly features create a lively, engaging atmosphere. Its central location makes it a cornerstone of Atlanta's entertainment district."
     }, {
         "city": "Miami, FL",
         "loc": "Kaseya Center",
-        "date": "December 20, 2024",
+        "date": "January 20, 2024",
         "image": "/assets/locations/Kaseya_Center.jpg",
         "description": "Overlooking Biscayne Bay, Kaseya Center is a striking waterfront venue that serves as the home of the Miami Heat. Known for its vibrant energy and cutting-edge features, it hosts premier sports events and concerts. Its stunning location adds a touch of Miami flair to every event."
     }, {
         "city": "Orlando, FL",
         "loc": "Amway Center",
-        "date": "December 22, 2024",
+        "date": "January 22, 2024",
         "image": "/assets/locations/Amway_Center.jpg",
         "description": "The Amway Center, home to the Orlando Magic, is a modern and versatile venue for sports and entertainment. With its high-tech features and fan-centric design, it offers an immersive experience for attendees. Situated in downtown Orlando, it's a hub for excitement and activity."
     }, {
         "city": "Boston, MA",
         "loc": "TD Garden",
-        "date": "January 5, 2025",
+        "date": "February 5, 2025",
         "image": "/assets/locations/TD_Garden.jpg",
         "description": "TD Garden, home to the Boston Celtics and Bruins, is an iconic venue in the heart of Boston. Its storied history and passionate fan base create an electric atmosphere for sports and concerts. The Garden's location near Boston's historic sites adds to its charm."
     }, {
         "city": "Philadelphia, PA",
         "loc": "Wells Fargo Center",
-        "date": "January 10, 2025",
+        "date": "February 10, 2025",
         "image": "/assets/locations/Wells_Fargo_Center.jpg",
         "description": "As the home of the Philadelphia Flyers and 76ers, the Wells Fargo Center is a hotspot for sports and entertainment in the city of brotherly love. Its modern amenities and enthusiastic crowds make it a thrilling destination. Located in the South Philadelphia Sports Complex, it's surrounded by vibrant energy on game days."
     }, {
         "city": "Washington, DC",
         "loc": "Capital One Arena",
-        "date": "January 15, 2025",
+        "date": "February 15, 2025",
         "image": "/assets/locations/Capital_One_Arena.jpg",
         "description": "Situated in the heart of Washington, DC, Capital One Arena is home to the Wizards and Capitals. This multipurpose venue hosts everything from sports to concerts, making it a central hub for entertainment in the capital. Its location in Chinatown adds cultural vibrancy to every visit."
     }, {
         "city": "Seattle, WA",
         "loc": "Climate Pledge Arena",
-        "date": "January 20, 2025",
+        "date": "February 20, 2025",
         "image": "/assets/locations/Climate_Pledge_Arena.jpg",
         "description": "Climate Pledge Arena is a cutting-edge, environmentally focused venue and home to the NHL's Seattle Kraken. With its iconic design and emphasis on sustainability, it redefines the modern arena experience. Located at Seattle Center, it's surrounded by the city's landmarks and attractions."
     }
