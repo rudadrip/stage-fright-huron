@@ -39,7 +39,7 @@
     ::-webkit-input-placeholder{
       color: grey !important;
     }
-    
+
     @font-face {
       font-family: "Julius Sans One";
       src: url("/assets/fonts/JuliusSansOne-Regular.ttf");
@@ -76,6 +76,16 @@
       margin-bottom: 20x; 
       max-width: 100%; 
       max-height: auto;
+    }
+
+    input.no-arrows::-webkit-outer-spin-button,
+    input.no-arrows::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number].no-arrows {
+      -moz-appearance: textfield;
     }
   </style>
   <body class="bg-black">

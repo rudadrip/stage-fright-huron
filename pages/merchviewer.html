@@ -8,7 +8,6 @@
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="/pages/js/merchviewer.js"></script>
     <script>display_venue()</script>
-    <script src="js/allthatfunstuff.js"></script>
     <script src="js/cartmanagment.js"></script>
 
     </head>
@@ -41,14 +40,23 @@
         ::-webkit-input-placeholder{
           color: grey !important;
         }
-      </style>
-    <style>
+
         body {
             color: white;
         }
 
         #alt-gutter-x .g-5, .gx-5{
             --bs-gutter-x: 7rem;
+        }
+
+        input.no-arrows::-webkit-outer-spin-button,
+        input.no-arrows::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number].no-arrows {
+            -moz-appearance: textfield;
         }
     </style>
     <body class="bg-black">

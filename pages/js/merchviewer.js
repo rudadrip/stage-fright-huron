@@ -1,6 +1,5 @@
 function to_merch_view(event){
     document.cookie = `current_merch_item=${event.srcElement.parentNode.getElementsByTagName("h5")[0].innerHTML}`;
-    window.location.href = "/pages/merchviewer.html";
 }
 
 async function display_venue(){

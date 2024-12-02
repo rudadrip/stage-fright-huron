@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
         actionCell.innerHTML = `
           <div class="input-group">
             <button class="btn btn-outline-secondary" onclick="changeQuantity(${index}, -1)">-</button>
-            <input style="input::placeholder{color: #fff;}input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}input[type=number] {-moz-appearance: textfield;}" type="number" class="form-control text-center text-white" min="1" value="${item.quantity}">
+            <input style="input::placeholder{color: #fff;}input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}input[type=number] {-moz-appearance: textfield;}" type="number" class="form-control text-center text-white no-arrows" min="1" value="${item.quantity}">
             <button class="btn btn-outline-secondary" onclick="changeQuantity(${index}, 1)">+</button>
           </div>
           <p class="text-center py-1 text-danger" onclick="removeItem(${index})" style="cursor: pointer;">Remove</p>
