@@ -1,5 +1,5 @@
 // Seating and Location Data
-const seating = [
+const seating_management = [
     { "loc": "VIP Box/Suite", "price": "3000" },
     { "loc": "Club Seating", "price": "750" },
     { "loc": "Lower Bowl", "price": "250" },
@@ -8,7 +8,7 @@ const seating = [
     { "loc": "Standing Room", "price": "20" }
   ];
   
-  const locations = [
+  const locations_management = [
     { "city": "New York, NY", "loc": "Madison Square Garden", "date": "November 10, 2024", "image": "Madison_Square_Garden.jpg" },
     { "city": "Los Angeles, CA", "loc": "The Forum", "date": "November 20, 2024", "image": "The_Forum.jpg" },
     { "city": "Chicago, IL", "loc": "United Center", "date": "December 1, 2024", "image": "United_Center.jpg" },
@@ -24,7 +24,7 @@ const seating = [
   ];
   
   // Merchandise Data
-  const merch = [
+  const merch_management = [
     { "name": "Band T-shirt", "desc": "Show your love for Stage Fright with this soft comfy T-shirt featuring our bold logo. Perfect for any fan!", "price": "12.99","img":"tshirt.jpg" },
     { "name": "Band Crewneck", "desc": "Stay cozy with the Stage Fright crewneck designed for comfort and style. A must-have for cooler days!", "price": "29.99","img":"crewneck.jpg" },
     { "name": "Guitar Pick", "desc": "Grab a Stage Fright guitar pick for that extra touch of rock—durable sleek and logo branded.", "price": "5.99", "img": "guitarpick.jpg" },
@@ -52,7 +52,7 @@ const seating = [
   // Add Merch Item to Cart
   function addMerchItem(name, quantity) {
       // Find the merch item details from the merch array
-      const item = merch.find(m => m.name === name);
+      const item = merch_management.find(m => m.name === name);
       
       if (!item) {
           console.error("Item not found.");
@@ -81,8 +81,8 @@ const seating = [
   // Add Concert Ticket to Cart
   function addConcertItem(city, quantity, seatType) {
       // Find the corresponding location and seat price
-      const location = locations.find(loc => loc.city === city);
-      const seat = seating.find(seat => seat.loc === seatType);
+      const location = locations_management.find(loc => loc.city === city);
+      const seat = seating_management.find(seat => seat.loc === seatType);
   
       if (!location || !seat) {
         console.log(city, quantity, seatType)
@@ -219,17 +219,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const imgCell = document.createElement("td");
         if (item.type == "concert") {
             var insertImg = 0
-            for (var i=0;i<locations.length;i++) {
-                if (locations[i].city == item.city) {
-                    insertImg = locations[i].image;
+            for (var i=0;i<locations_management.length;i++) {
+                if (locations_management[i].city == item.city) {
+                    insertImg = locations_management[i].image;
                 }
             }
             imgCell.innerHTML = `<img src="../assets/locations/${insertImg}" alt="${item.city}" class="img-fluid">`;
         } else if (item.type == "merch") {
             var insertImg = 0
-            for (var i=0;i<merch.length;i++) {
-                if (merch[i].name == item.name) {
-                    insertImg = merch[i].img;
+            for (var i=0;i<merch_management.length;i++) {
+                if (merch_management[i].name == item.name) {
+                    insertImg = merch_management[i].img;
                 }
             }
             imgCell.innerHTML = `<img src="../assets/merch-img/${insertImg}" alt="${item.name}" class="img-fluid">`;
