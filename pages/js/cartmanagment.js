@@ -47,7 +47,7 @@ const seating_management = [
   }
   
   // Initialize the cart from cookies or use an empty cart if none exists
-  let cart = getCartFromCookies();
+  let cart_management = getCartFromCookies();
   
   // Add Merch Item to Cart
   function addMerchItem(name, quantity) {
@@ -60,12 +60,12 @@ const seating_management = [
       }
   
       // Check if the item already exists in the cart
-      let existingItem = cart.find(item => item.name === name && item.type === 'merch');
+      let existingItem = cart_management.find(item => item.name === name && item.type === 'merch');
       
       if (existingItem) {
           existingItem.quantity = parseInt(quantity) + parseInt(existingItem.quantity);
       } else {
-          cart.push({
+          cart_management.push({
               name: item.name,
               description: item.desc,
               quantity: quantity,
@@ -75,7 +75,7 @@ const seating_management = [
       }
   
       // Save the updated cart to cookies
-      saveCartToCookies(cart);
+      saveCartToCookies(cart_management);
   }
   
   // Add Concert Ticket to Cart
@@ -91,12 +91,12 @@ const seating_management = [
           return;
       }
   
-      let existingConcert = cart.find(item => item.city === city && item.seatType === seatType && item.type === 'concert');
+      let existingConcert = cart_management.find(item => item.city === city && item.seatType === seatType && item.type === 'concert');
       
       if (existingConcert) {
           existingConcert.quantity += quantity;
       } else {
-          cart.push({
+          cart_management.push({
               city: city,
               loc: location.loc,
               date: location.date,
@@ -108,24 +108,24 @@ const seating_management = [
       }
   
       // Save the updated cart to cookies
-      saveCartToCookies(cart);
+      saveCartToCookies(cart_management);
   }
   
   // Delete a specific merch item from the cart
   function deleteMerchItem(name) {
-      cart = cart.filter(item => item.name !== name || item.type !== 'merch');
-      saveCartToCookies(cart);
+      cart_management = cart_management.filter(item => item.name !== name || item.type !== 'merch');
+      saveCartToCookies(cart_management);
   }
   
   // Delete a specific concert item from the cart
   function deleteConcertItem(city, seatType) {
-      cart = cart.filter(item => item.city !== city || item.seatType !== seatType || item.type !== 'concert');
-      saveCartToCookies(cart);
+      cart_management = cart_management.filter(item => item.city !== city || item.seatType !== seatType || item.type !== 'concert');
+      saveCartToCookies(cart_management);
   }
   
   // Function to view the current cart
   function viewCart() {
-      return cart;
+      return cart_management;
   }
   /*
   function calculateCartTotal() {

@@ -10,7 +10,7 @@
     <script>display_venue()</script>
     <script src="js/allthatfunstuff.js"></script>
     <script src="js/cartmanagment.js"></script>
-    
+    <script src="js/priceChangerForTicketsBecauseWeLoveSpaghetti.js"></script>
     
 
     </head>
@@ -121,12 +121,15 @@
                                 Tickets for [location] on [date]
                             </h2>
                             <hr style="height: 3px; border-color: var(--bs-danger); background-color: var(--bs-danger); opacity: 1;">
+                            <h4 id="price">
+                                No seat selected
+                            </h4>
                             <h4 style="padding-bottom: 0.5rem;">
                                 Seat Type
                             </h4>
-                            <select id="seat" class="form-select" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;">
+                            <select id="seat" class="form-select" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;" onchange="price_change(event)">
                                 <option selected>Select One</option>
-                                <option value="Standing">Standing</option>
+                                <option value="Standing">Standing Room</option>
                                 <option value="Upper Bowl">Upper Bowl</option>
                                 <option value="Mezzanine">Mid-Level/Mezzanine</option>
                                 <option value="Lower Bowl">Lower Bowl</option>

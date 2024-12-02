@@ -249,7 +249,7 @@ function orderMerch () {
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
   addMerchItem(inputValue2,inputValue)
-  window.location.href = "index.html"
+  window.location.href = "merch.html"
 }
 
 function orderConcert () {
@@ -264,7 +264,7 @@ function orderConcert () {
   var city = inputValue2.substring(start,end).trim()
     // addConcertItem(city, quantity, seatType)
   addConcertItem(city,inputValue,text)
-  window.location.href = "index.html"
+  window.location.href = "tourdates.html"
 }
 
 /*
