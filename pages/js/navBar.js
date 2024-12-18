@@ -41,6 +41,9 @@ class navBar extends HTMLElement {
             <a id="td" class="nav-link" href="tourdates.html">Tour Dates</a>
           </li>
           <li class="nav-item">
+            <a id="faq" class="nav-link" href="faqs.html">FAQs</a>
+          </li>
+          <li class="nav-item">
             <a id="au" class="nav-link" href="members.html">About Us</a>
           </li>
           <li class="nav-item">
