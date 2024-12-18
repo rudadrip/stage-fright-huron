@@ -28,6 +28,9 @@ class navBar extends HTMLElement {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item" style="width=0px;">
+            <a id="run" class="nav-link" href="contactus.html"> </a>
+          </li>
           <li class="nav-item">
             <a id="home" class="nav-link" href="index.html">Home</a>
           </li>
