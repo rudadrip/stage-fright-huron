@@ -28,6 +28,9 @@ class navBar extends HTMLElement {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item" style="width=0px;">
+            <a id="run" class="nav-link" href="contactus.html"> </a>
+          </li>
           <li class="nav-item">
             <a id="home" class="nav-link" href="index.html">Home</a>
           </li>
@@ -36,6 +39,9 @@ class navBar extends HTMLElement {
           </li>
           <li class="nav-item">
             <a id="td" class="nav-link" href="tourdates.html">Tour Dates</a>
+          </li>
+          <li class="nav-item">
+            <a id="faq" class="nav-link" href="faqs.html">FAQs</a>
           </li>
           <li class="nav-item">
             <a id="au" class="nav-link" href="members.html">About Us</a>

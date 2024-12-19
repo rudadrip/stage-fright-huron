@@ -19,7 +19,9 @@ class footerC extends HTMLElement {
       <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
       <li class="nav-item"><a href="merch.html" class="nav-link px-2 text-white">Merch</a></li>
       <li class="nav-item"><a href="tourdates.html" class="nav-link px-2 text-white">Tour Dates</a></li>
+      <li class="nav-item"><a href="faqs.html" class="nav-link px-2 text-white">FAQs</a></li>
       <li class="nav-item"><a href="members.html" class="nav-link px-2 text-white">About Us</a></li>
+      <li class="nav-item"><a href="contactus.html" class="nav-link px-2 text-white">Contact Us</a></li>
     </ul>
   </footer>
 </div>
