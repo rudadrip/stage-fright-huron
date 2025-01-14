@@ -11,12 +11,38 @@
       <title>Stage Fright</title>
     </head>
     <style>
+        a {
+          text-decoration: none;
+        }
+
+        #not-the-navbar a:link{
+          color: var(--bs-danger);
+          text-decoration: none;
+        }
+        
+        #not-the-navbar a:visited{
+          color: var(--bs-danger);
+          opacity: none;
+        }
+
+        #not-the-navbar a:hover{
+          color: #a61f2c;
+        }
+
         .accordion{
-          --bs-accordion-border-color: gray;
+          --bs-accordion-border-color: black;
         }
 
         .accordion-button:focus{
           box-shadow: none;
+        }
+
+        .accordion-button {
+          color: #dadada;
+        }
+
+        .accordion-button:not(.collapsed) {
+          color: lightgray;
         }
 
         .container{
@@ -83,7 +109,18 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse">
                     <div class="accordion-body" style="background-color: #212529; color: #dddddd">
-                      Thermonuclear bomb :3
+                      <h5>
+                        1. How long will it take for my product to arrive?
+                      </h4>
+                      <p>
+                        Depending on current product stocks and purchase time, it may take up to 2 weeks for us to deliver your goods. If you believe your order is taking longer than usual to arrive, you should call our shipping provider at +1 (517)-123-4567 or visit their tracking website at <span><a href="#">www.mailtracking.com</a></span>, be sure to have your order confirmation number ready!
+                      </p>
+                      <h5>
+                        2. How can I return a product I have purchased?
+                      </h5>
+                      <p>
+                        
+                      </p>
                     </div>
                   </div>
                 </div>
