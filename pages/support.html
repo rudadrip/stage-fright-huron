@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
       <link rel="icon" href="/assets/logo.jpg">
       <script type="text/javascript" src="../bootstrap-5.3.3-dist/js/bootstrap.min.js" defer></script>
-      <script src="/pages/js/merchviewer.js"></script>
+      <script src="/pages/js/supportmanager.js" defer></script>
       <script src="js/cartmanagment.js"></script>
       <title>Stage Fright</title>
     </head>
@@ -64,6 +64,7 @@
         </div>
         <nav-bar page=""></nav-bar>
         <script src="js/navBar.js"></script>
+        <div data-bs-theme="dark" id="alert" style="position: fixed; z-index: 999; width:100%"></div>
         <div class="container">
             <form class="needs-validation" novalidate="">
                 <h1>
@@ -72,7 +73,7 @@
                 <hr style="height: 3px; border-color: var(--bs-danger); background-color: var(--bs-danger); opacity: 1;">
                 <div class="row pb-4">
                     <label for="ticket-type" class="form-label">Ticket Type</label>
-                    <select class="form-select" id="ticket-type" required="" style="width:30rem">
+                    <select class="form-select" id="ticket-type" required="" style="width:30rem" onchange="type_change()">
                         <option value= "" selected="" disabled="">Select A Ticket Type</option>
                         <option value= "merch">Merchandise Inquiry</option>
                         <option value = "ticket">Ticket Inquiry</option>
@@ -81,34 +82,82 @@
                         <option value = "general">General Inquiry</option>
                     </select>
                 </div>
-                <div class="row pb-4">
+                <div class="row pb-4" id="email-parent" style="display: none;">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" class="form-control" id="email" placeholder="you@example.com" required="" style="width: 20rem">
                     <div class="invalid-feedback">
                         Please enter a valid email so we can get back to you!
                     </div>
                 </div>
-                <div class="row pb-4">
+                <div class="row pb-4" id="merch-parent" style="display: none;">
                     <label for="merch-id" class="form-label" style="text-align: left; vertical-align: top;">Merchandise Order ID</label>
-                    <input type="text" class="form-control" id="merch-id" placeholder="(XXXXXX-XXXXXX)" required="" style="width:20rem">
+                    <input type="text" class="form-control" id="merch-id" placeholder="ME-XXXXXX-XXXXXX" pattern="ME-[0-9]{6}-[0-9]{6}" style="width:20rem">
                     <div class="invalid-feedback">
-                        Please enter an order number!
+                        Please enter a valid order number!
                     </div>
                 </div>
-                <div class="row pb-4">
+                <div class="row pb-4" id="ticket-parent" style="display: none;">
                     <label for="ticket-id" class="form-label" style="text-align: left; vertical-align: top;">Ticket Order ID</label>
-                    <input type="text" class="form-control" id="merch-id" placeholder="(T-XXXXXXX-XXXXXXX)" required="" style="width:20rem">
+                    <input type="text" class="form-control" id="ticket-id" placeholder="T-XXXXXX-XXXXXX" pattern="T-[0-9]{6}-[0-9]{6}" style="width:20rem">
                     <div class="invalid-feedback">
-                        Please enter an order number!
+                        Please enter a valid order number!
                     </div>
                 </div>
-                <div class="row pb-4">
+                <div class="row pb-4" id="music-parent" style="display: none;">
+                    <label for="music-id" class="form-label" style="text-align: left; vertical-align: top;">Music Order ID</label>
+                    <input type="text" class="form-control" id="music-id" placeholder="MU-XXXXXX-XXXXXX" pattern="MU-[0-9]{6}-[0-9]{6}" style="width:20rem">
+                    <div class="invalid-feedback">
+                        Please enter a valid order number!
+                    </div>
+                </div>
+                <div class="row pb-4" id="business-parent" style="display: none;">
+                    <label for="business-id" class="form-label" style="text-align: left; vertical-align: top;">Subject of Inquiry</label>
+                    <input type="text" class="form-control" id="business-id" placeholder="Subject Name" style="width:20rem">
+                    <div class="invalid-feedback">
+                        Please enter the nature of your inquiry
+                    </div>
+                </div>
+                <div class="row pb-4" id="general-parent" style="display: none;">
+                    <label for="general-id" class="form-label" style="text-align: left; vertical-align: top;">Subject</label>
+                    <input type="text" class="form-control" id="general-id" placeholder="Subject Name" style="width:20rem">
+                    <div class="invalid-feedback">
+                        Please enter the subject of what you need help with.
+                    </div>
+                </div>
+                <div class="row pb-4" id="add-info" style="display: none;">
                     <label for="info-input" class="form-label" style="text-align: left; vertical-align: top;">Additional Info</label>
                     <textarea class="form-control" id="info-input" placeholder="Please provide as much detail and information as possible to ensure the fastest possible resolution time." style="height:30vh; width:75%"></textarea>
                 </div>
+                <button type="submit" class="btn btn-danger" id="the-button" style="display: none;">
+                    Send!
+                </button>
             </form>
         </div>
         <footer-c></footer-c>
         <script src="js/footerC.js"></script>
+        <script>
+            (() => {
+              'use strict'
+          
+              const forms = document.querySelectorAll('.needs-validation')
+            
+              Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                  if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                  } else {
+                    event.preventDefault();
+                    appendAlert("Success! We've received your message and will respond as soon as possible! Page will redirect soon.", "info");
+                    window.setTimeout(function(){window.location.href="index.html";}, 8000);
+
+                  }
+            
+                  form.classList.add('was-validated')
+                }, false)
+              })
+          
+            })()
+          </script>
     </body>
 </html>

@@ -1,25 +1,34 @@
-const info_data = [
-    {
-        "type": "merch",
-        "data": "For Merchandise "
-    }
-];
+const alertPlaceholder = document.getElementById('alert');
+const appendAlert = (message, type) => {
+  const wrapper = document.createElement('div');
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('');
 
-async function hide_element(){
-    return;
+  alertPlaceholder.append(wrapper);
 }
 
-async function show_element(){
-    return;
-}
 
-async function ticket_change(event){
+var prev_selection = null;
+
+async function type_change(event){
     let cur_selection = document.getElementById("ticket-type").options[document.getElementById("ticket-type").selectedIndex].value;
-    for (let i = 0; i < info_data.length; i++){
-        if (info_data[i].loc === cur_selection){
-            document.getElementById("price").innerHTML = `$${seat_data[i].price}.00`;
-            return;
-        }
+    if (prev_selection == null){
+        document.getElementById(`${cur_selection}-parent`).style.display = "block";
+        document.getElementById(`${cur_selection}-id`).required = true;
+        document.getElementById(`email-parent`).style.display = "block";
+        document.getElementById(`add-info`).style.display = "block";
+        document.getElementById(`the-button`).style.display = "block";
+        prev_selection = cur_selection;
+    } else {
+        document.getElementById(`${prev_selection}-parent`).style.display = "none";
+        document.getElementById(`${prev_selection}-id`).required = false;
+        document.getElementById(`${cur_selection}-parent`).style.display = "block";
+        document.getElementById(`${cur_selection}-id`).required = true
+        prev_selection = cur_selection;
     }
-    document.getElementById("price").innerHTML = `No seat selected`;
+    // console.log(cur_selection);
 }
