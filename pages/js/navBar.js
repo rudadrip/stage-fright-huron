@@ -14,7 +14,11 @@ class navBar extends HTMLElement {
             this.querySelector("#td").classList.add("active");
         } else if (page == "au") {
             this.querySelector("#au").classList.add("active");
-        }
+        } else if (page == "faq") {
+          this.querySelector("#faq").classList.add("active");
+        } else if (page == "not-in-navbar") {
+          this.querySelector("#not-in-navbar").classList.add("active");
+        } 
     }
     render () {
         this.innerHTML=
@@ -29,7 +33,7 @@ class navBar extends HTMLElement {
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item" style="width=0px;">
-            <a id="run" class="nav-link" href="contactus.html"> </a>
+            <a id="not-in-navbar" class="nav-link" href="contactus.html"> </a>
           </li>
           <li class="nav-item">
             <a id="home" class="nav-link" href="index.html">Home</a>

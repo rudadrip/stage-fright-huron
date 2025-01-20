@@ -257,6 +257,10 @@ function orderConcert () {
   const inputValue = input.value;
   var e = document.getElementById("seat");
   var text = e.options[e.selectedIndex].text;
+  if (text === "Select One"){
+    alert("Please select a seat type before adding it to cart");
+    return;
+  }
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
   const start = inputValue2.indexOf("in")+3
