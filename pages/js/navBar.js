@@ -1,3 +1,4 @@
+//puts a functional navbar at the top of every page
 class navBar extends HTMLElement {
     constructor () {
         super();
@@ -17,7 +18,7 @@ class navBar extends HTMLElement {
         } else if (page == "faq") {
           this.querySelector("#faq").classList.add("active");
         } else if (page == "not-in-navbar") {
-          this.querySelector("#not-in-navbar").classList.add("active");
+          this.querySelector("#not-in-navbar").classList.add("active"); //used for pages that exist but can't be accessed from the navbar
         } 
     }
     render () {

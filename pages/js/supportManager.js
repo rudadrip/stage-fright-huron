@@ -1,3 +1,4 @@
+//creates the notification that appears when you submit a valid ticket
 const alertPlaceholder = document.getElementById('alert');
 const appendAlert = (message, type) => {
   const wrapper = document.createElement('div');
@@ -11,9 +12,9 @@ const appendAlert = (message, type) => {
   alertPlaceholder.append(wrapper);
 }
 
+var prev_selection = null; //To figure out which element to hide if the user switches ticket types
 
-var prev_selection = null;
-
+//Handles field visibility and whether it will be checked upon submission
 async function type_change(event){
     let cur_selection = document.getElementById("ticket-type").options[document.getElementById("ticket-type").selectedIndex].value;
     if (prev_selection == null){

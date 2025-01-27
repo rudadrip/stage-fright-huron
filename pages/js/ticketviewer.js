@@ -1,7 +1,9 @@
+//add cookie to retain which venue was selected
 function to_ticket_view(event){
     document.cookie = `venue=${event.srcElement.parentNode.getElementsByTagName("p")[0].innerHTML}`;
 }
 
+//extracts and reads the venue cookie then populates the page accordingly
 async function display_venue(){
     let data = await fetch("/pages/veryrealdatabase/locations.json");
     const all_locations = await data.json();
@@ -23,7 +25,8 @@ async function display_venue(){
         }
     }
 
-    alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at issues@stagefright.com");
+    //for if the user somehow visits the page without a venue cookie set/valid
+    alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at csupport@stagefright.com");
     window.location.href = "/pages/tourdates.html"
 
     //await console.log(JSON.stringify(cookies))
