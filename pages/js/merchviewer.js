@@ -1,8 +1,10 @@
+//set merch cookie before redirect
 function to_merch_view(event){
     document.cookie = `current_merch_item=${event.srcElement.parentNode.getElementsByTagName("h5")[0].innerHTML}`;
 }
 
-async function display_venue(){
+//called on page load and populates the page according to the set cookie
+async function display_merch(){
     let data = await fetch("/pages/veryrealdatabase/merch.json");
     const all_merch = await data.json();
     //console.log(all_merch); 
@@ -24,7 +26,7 @@ async function display_venue(){
         }
     }
 
-    alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at issues@stagefright.com");
+    alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at csupport@stagefright.com");
     window.location.href = "/pages/merch.html"
 
     //await console.log(JSON.stringify(cookies))

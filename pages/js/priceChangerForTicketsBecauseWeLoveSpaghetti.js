@@ -20,6 +20,7 @@ const seat_data = [
     }
 ]
 
+//called whenever the user changes the ticket type, dynamically updates the price displayed to match the ticket
 async function price_change(event){
     let cur_selection = document.getElementById("seat").options[document.getElementById("seat").selectedIndex].text;
     for (let i = 0; i < seat_data.length; i++){

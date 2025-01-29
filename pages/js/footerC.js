@@ -1,3 +1,4 @@
+//puts the footer on the bottom of every page
 class footerC extends HTMLElement {
     constructor() {
       super();
@@ -10,7 +11,7 @@ class footerC extends HTMLElement {
 <div class="container bg-black text-white">
   <footer class="d-flex flex-wrap justify-content-center text-center align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-center">© 2024-2025 Stage Fright
-    <a href="#" class="nav-link text-white">Terms of Service</a><a href="#" class="nav-link text-white">Privacy Policy</a></p>
+    <a href="tos.html" class="nav-link text-white">Terms of Service</a><a href="privacy.html" class="nav-link text-white">Privacy Policy</a></p>
 
     <a href="index.html" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
       <img alt="Stage Fright Logo" class="img-fluid w-50 h-50" src="../assets/logo.jpg"/ >
