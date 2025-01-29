@@ -1,3 +1,4 @@
+//puts the footer on the bottom of every page
 class footerC extends HTMLElement {
     constructor() {
       super();
