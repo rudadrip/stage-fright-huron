@@ -24,6 +24,14 @@ class navBar extends HTMLElement {
     render () {
         this.innerHTML=
 `
+  <style>
+  .nav-item {
+      transition: transform 0.5s ease
+  }
+  .nav-item:hover {
+      background-color: #041733;
+  }
+  </style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
       <a class="navbar-brand" href="/pages/index.html">Stage Fright</a>
