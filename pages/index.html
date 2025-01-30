@@ -37,7 +37,7 @@
     }
 
     100% {
-      transform: translateX(2vw);
+      transform: translateX(4vw);
     }
   }
 
@@ -47,7 +47,7 @@
     }
     
     100% {
-      transform: translateX(-2vw);
+      transform: translateX(-4vw);
     }
   }
 
@@ -61,6 +61,18 @@
     }
   }
 
+  @keyframes fadeIn {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .stage-left {
     animation: fromLeft 0.3s both ease-in;
   }
@@ -70,10 +82,17 @@
   }
   
   .shakeLeft {
-    animation: shakeLeft 0.1s both linear 0.3s 2 alternate;
+    animation: shakeLeft 0.15s both linear 0.3s 2 alternate;
   }
 
-  .shakeRight 
+  .shakeRight {
+    animation: shakeRight 0.15s both linear 0.2s 2 alternate;
+  }
+
+  .fadeIn.fadeIn {
+    opacity: 1 !important;
+    animation: fadeIn 3s forwards ease-out;
+  }
 
   body {
     background-color: #121212;
@@ -84,6 +103,10 @@
   .card {
     background-color: #1e1e1e;
     border: none;
+  }
+
+  .no-opacity{
+    opacity: 0;
   }
 
   .form-control {
@@ -176,8 +199,7 @@
 		-moz-appearance: textfield;
 	}
 </style>
-<body class="bg-black">
-  <span id="hell">
+<body class="bg-black shakeLeft no-opacity">
   <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
@@ -208,7 +230,7 @@
   </div>
     <nav-bar page="home"></nav-bar>
     <script src="js/navBar.js"></script>
-      <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="  background-image: url('../assets/cover.jpg');
+      <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center fadeIn" style="  background-image: url('../assets/cover.jpg');
     background-position: center;
 background-size:cover;  
 background-repeat:no-repeat; overflow: hidden;">
@@ -324,6 +346,6 @@ background-repeat:no-repeat; overflow: hidden;">
   </section>
 <footer-c></footer-c>
 <script src="js/footerC.js"></script>
-</span>
+<script src="js/animateMain.js"></script>
 </body>
 </html>
