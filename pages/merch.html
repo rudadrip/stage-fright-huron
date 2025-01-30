@@ -13,6 +13,14 @@
   <script src="js/navBar.js"></script>
 </head>
 <style>
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family:"Old London";
+  src: url("../assets/fonts/OldLondon.ttf") format("truetype");
+}
   body {
     background-color: #121212;
     color: #fff;
@@ -28,6 +36,55 @@
     color: #fff;
     border: 1px solid #444;
   }
+
+  .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#searchInput {
+  width: 50%;
+  margin: auto;
+  border: 2px solid #444;
+}
+
+#searchInput:focus {
+  border-color: red;
+  box-shadow: 0 0 10px red;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+.hero-section h1 {
+  font-family: 'Old London', serif; /* Replace with your chosen Gothic font */
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */
+  color: white;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  color: #ccc; /* Softer contrast for the supporting text */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section h1 {
+  animation: fadeIn 1.5s ease-out;
+}
+
 
   .form-control:focus {
     background-color: #333;
@@ -86,10 +143,36 @@
   
 
   <!-- Hero Section -->
-  <div class="container mt-5 text-center text-white">
-    <h1 class="display-4">Official Merch</h1>
-    <p class="lead">Grab your favorite items below and represent!</p>
-    <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name" style="color:white">
+  
+
+  <style>
+    .hero-section {
+  background: url('https://cdn.pixabay.com/photo/2023/04/03/12/59/crowd-7896788_640.jpg') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+  </style>
+  <div class="hero-section">
+    <div class="hero-content">
+      <h1 class="display-4 fw-bold">Official Merch</h1>
+      <p class="lead">Grab your favorite items below and represent!</p>
+      <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name" style="color:white">
+    </div>
   </div>
 
   <!-- Merch Items List -->

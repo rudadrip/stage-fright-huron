@@ -25,6 +25,13 @@ class navBar extends HTMLElement {
         this.innerHTML=
 `
   <style>
+  @font-face {
+  font-family:"Old London";
+  src: url("../../assets/fonts/OldLondon.ttf") format("truetype");
+}
+  .navbar-brand, .nav-item {  
+    font-family: 'Old London', serif; 
+  }
   .nav-item {
       transition: transform 0.5s ease
   }
