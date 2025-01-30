@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
     <head>
         <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -118,7 +118,7 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Size
                             </h4>
-                            <select class="form-select text-bg-dark" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;">
+                            <select id="size" class="form-select text-bg-dark" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem; border-width: 3px; border-color: var(--bs-primary-text-emphasis);">
                                 <option selected>Select One</option>
                                 <option value="XXL">XXL</option>
                                 <option value="XL">XL</option>
@@ -131,14 +131,14 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Quantity
                             </h4>
-                            <input type="number" id="merchQuantity" class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" style="color: white; width: 25%; margin-bottom: 0.75rem;">  
+                            <input type="number" id="merchQuantity" class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" style="color: white; width: 25%; margin-bottom: 0.75rem; border-width: 3px; border-color: var(--bs-primary-text-emphasis);">  
                             <h5 style="padding-bottom: 1%;">
                                 Item Description
                             </h5>
                             <p id="merch-details">
                                 Lorem ipsum dolor sit amet
                             </p>       
-                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderMerch()">
+                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderMerch()" style="border-color: var(--bs-primary-text-emphasis)">
                                 Add to cart!
                             </button>
                     </div>

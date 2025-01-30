@@ -11,9 +11,69 @@
     <title>Stage Fright</title>
 </head>
 <style>
+  @keyframes fromLeft {
+    0% {
+      transform: translateX(-100vw);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fromRight {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes shakeLeft {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(2vw);
+    }
+  }
+
+  @keyframes shakeRight {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(-2vw);
+    }
+  }
+
+  @keyframes crush {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0.97);
+    }
+  }
+
+  .stage-left {
+    animation: fromLeft 0.3s both ease-in;
+  }
+
+  .stage-right {
+    animation: fromRight 0.3s both ease-in 0.5s;
+  }
+
   body {
     background-color: #121212;
     color: #dddddd;
+    animation: shakeLeft 1s linear 1s 2 alternate both, shakeRight 1s linear 5s 2 alternate both;
+    overflow-x: hidden;
   }
 
   .card {
@@ -40,10 +100,6 @@
     color: grey !important;
   }
 
-	body {
-      background-color: #000;
-      color: #dddddd;
-    }
     .section-divider {
       border-top: 2px solid #fff;
       margin: 3rem 0;
@@ -149,11 +205,11 @@
       <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="  background-image: url('../assets/cover.jpg');
     background-position: center;
 background-size:cover;  
-background-repeat:no-repeat">
+background-repeat:no-repeat; overflow: hidden;">
 	<div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee" class="fw-bolder display-1">Stage Fright</h2>
+				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee;" class="fw-bolder display-1"><span class="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span class="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-12">

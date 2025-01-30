@@ -248,6 +248,11 @@ function orderMerch () {
   const inputValue = input.value.toString();
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
+  let text = document.getElementById("size").options[document.getElementById("size").selectedIndex].text;
+  if (text === "Select One"){
+    alert("Please select a clothing size before adding it to cart");
+    return;
+  }
   addMerchItem(inputValue2,inputValue)
   window.location.href = "merch.html"
 }
