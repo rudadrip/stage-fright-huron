@@ -28,7 +28,7 @@ class navBar extends HTMLElement {
   .nav-item {
       transition: transform 0.5s ease
   }
-  .nav-item:hover {
+  .nav-item:hover:not(.is-footer) {
       background-color: #041733;
   }
   </style>

@@ -29,10 +29,14 @@
             margin-bottom: 0.2rem;
         }
 
-        input, select, textarea {
-            margin-left: 12px
+        input.form-control, select.form-select, textarea.form-control {
+            margin-left: 12px;
+            border: 3px solid var(--bs-primary-text-emphasis);
         }
 
+        input.form-control:focus, select.form-select:focus, textarea.form-control:focus {
+            border: 3px solid initial;
+        }
 
         input.no-arrows::-webkit-outer-spin-button,
         input.no-arrows::-webkit-inner-spin-button {
