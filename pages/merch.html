@@ -264,6 +264,9 @@ html {
 
       <!-- Additional merch items can be added here -->
     </div>
+    <h5 id="no-results" style="display: none">
+      Oh No! It looks like we don't have any tours for that location :(
+    </h5>
   </div>
 
   <!-- Bootstrap 5 JS -->
@@ -271,7 +274,10 @@ html {
   <script>
     // Search functionality
     const searchInput = document.getElementById('searchInput');
+    const non = document.getElementById("no-results");
+    let l = 0;
     searchInput.addEventListener('input', function () {
+      l = 0;
       const filter = searchInput.value.toLowerCase();
       const merchItems = document.getElementById('merchItems').getElementsByClassName('card');
       for (let i = 0; i < merchItems.length; i++) {
@@ -281,6 +287,12 @@ html {
           card.parentElement.style.display = '';
         } else {
           card.parentElement.style.display = 'none';
+          l++;
+        }
+        if (l >= 4) {
+          non.style.display = "";
+        } else {
+          non.style.display = "none";
         }
       }
     });
