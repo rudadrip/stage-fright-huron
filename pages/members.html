@@ -18,7 +18,7 @@
   
     .card {
       background-color: #1e1e1e;
-      border: none;
+      border-color: var(--bs-primary-text-emphasis) !important;
     }
   
     .form-control {
@@ -43,6 +43,11 @@
     @font-face {
       font-family: "Julius Sans One";
       src: url("/assets/fonts/JuliusSansOne-Regular.ttf");
+    }
+
+    @font-face {
+      font-family: "Cinzel";
+      src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
     }
 
     .card{
@@ -119,14 +124,19 @@
     </div>
     <nav-bar page="au"></nav-bar>
     <script src="js/navBar.js"></script>
-    <div lc-helper="background" class="container-fluid py-5 h-100 d-flex justify-content-center" style="  background-image: url('/assets/cover.jpg');
+    <div lc-helper="background" class="container-fluid py-5 h-100 d-flex justify-content-center" style="  background-image: url('/assets/aboutus.png');
       background-position: center;
       background-size:cover;  
       background-repeat:no-repeat;">
       <div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
         <div class="lc-block">
           <div editable="rich">
-            <h2 class="fw-bolder display-3" style="font-family: Julius Sans One; color: crimson;">Meet The Band!</h2>
+            <h1 class="fw-bolder display-3" style="font-family: Cinzel; font-size: 69px; color: white; text-shadow: 6px 6px 9px var(--bs-danger);">MEET THE BAND!</h1>
+          </div>
+          <div>
+            <p style="font-size: 20px; text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis);">
+              Get to know the heart and soul of our band — our journey, and the stories behind the songs that resonate with us.
+            </p>
           </div>
         </div>
 	    </div>
@@ -187,7 +197,7 @@ Sarah's journey with Stage Fright has been filled with unforgettable moments, fr
             <div class="col-md-12 col-lg-6" id="topRight">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="/assets/members/Drummer.png" class="center" alt="..." style="max-width: 100%">
+                  <img src="/assets/members/Drummer.png" class="center" alt="..." style="max-width: 93%">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-center" style="font-family: Julius Sans One;">Alex Thompson</h5>
@@ -281,7 +291,7 @@ A true performer at heart, Sam lives for the thrill of the live show. Their dyna
             <div class="col-md-12 col-lg-6 make-me-short" id="middleRight">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="/assets/members/Guitar2.jpg" class="center" alt="..." style="width: 100%">
+                  <img src="/assets/members/Guitar2.jpg" class="center" alt="..." style="width: 65%">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-center" style="font-family: Julius Sans One;">Jamie Parker</h5>
@@ -376,7 +386,7 @@ Jamie's dedication to their craft and their charismatic presence make them an in
             <div class="col-md-12 col-lg-8 col-xl-4">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="/assets/members/Terrain.jpg" class="center" alt="..." style="max-width: 100%">
+                  <img src="/assets/members/Terrain.jpg" class="center" alt="..." style="max-width: 70%">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-center" style="font-family: Julius Sans One;">Terrian "Terry" Sun</h5>
@@ -422,7 +432,7 @@ Life, to me, is about continuous learning and growth, whether it's through profe
             <div class="col-md-12 col-lg-8 col-xl-4">
               <div class="card text-bg-dark border-danger w-auto h-auto">
                 <div class="card-header">
-                  <img src="/assets/members/Rayerbans.png" class="center" alt="..." style="max-width: 100%;">
+                  <img src="/assets/members/Rayerbans.png" class="center" alt="..." style="max-width: 65%;">
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-center" style="font-family: Julius Sans One;">Rudradip "Rudra" Ray</h5>

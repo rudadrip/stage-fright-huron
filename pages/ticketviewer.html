@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
     <head>
         <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,7 +125,7 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Seat Type
                             </h4>
-                            <select id="seat" class="form-select" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem;" onchange="price_change(event)">
+                            <select id="seat" class="form-select text-bg-dark" aria-label="Default select example" style="width: 65%; margin-bottom: 1rem; border-width: 3px; border-color: var(--bs-primary-text-emphasis);" onchange="price_change(event)">
                                 <option value="NO" selected>Select One</option>
                                 <option value="Standing">Standing Room</option>
                                 <option value="Upper Bowl">Upper Bowl</option>
@@ -137,14 +137,14 @@
                             <h4 style="padding-bottom: 0.5rem;">
                                 Quantity
                             </h4>
-                            <input type="number" id="ticketQuantity"  class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" max="10" style="color: white; width: 25%; margin-bottom: 0.75rem;">
+                            <input type="number" id="ticketQuantity"  class="form-control form-control-md text-center align-middle bg-dark" value="1" min="1" max="10" style="color: white; width: 25%; margin-bottom: 0.75rem; border-width: 3px; border-color: var(--bs-primary-text-emphasis);">
                             <h5 style="padding-bottom: 1%;">
                                 Venue Details
                             </h5>
                             <p id="venue-details">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quam mauris, porta id accumsan sed, venenatis nec urna. Phasellus metus velit, congue eget lobortis sit amet, ultricies non est. Donec ornare porta tempus. Etiam at pretium dui. Aenean commodo ipsum semper nunc tristique, molestie suscipit metus volutpat. Suspendisse sed gravida turpis. Morbi a dolor id diam lobortis dapibus eget id magna. Sed vestibulum luctus neque. Nam tincidunt laoreet nisl ac faucibus.
                             </p>
-                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderConcert()">
+                            <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderConcert()" style="border-color: var(--bs-primary-text-emphasis);">
                                 Add to cart!
                             </button>
                             <script src="js/allthatfunstuff.js" ></script>              

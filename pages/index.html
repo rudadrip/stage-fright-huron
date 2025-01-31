@@ -11,9 +11,157 @@
     <title>Stage Fright</title>
 </head>
 <style>
+  @font-face {
+  font-family:"Cinzel";
+  src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }
+
+  @font-face {
+  font-family:"Julius Sans One";
+  src: url("../assets/fonts/JuliusSansOne-Regular.ttf");
+  }
+
+  @font-face {
+  font-family:"Rubik Mono One";
+  src: url("../assets/fonts/RubikMonoOne-Regular.ttf");
+  }
+
+  @keyframes fromLeft {
+    0% {
+      transform: translateX(-100vw);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fromRight {
+    0% {
+      transform: translateX(100vw);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fromCenter {
+    0% {
+      opacity: 0;
+      transform: scale(8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shakeLeft {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(5vw);
+    }
+  }
+
+  @keyframes shakeRight {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(-4vw);
+    }
+  }
+
+  @keyframes crush {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(0.95);
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes highlight {
+    0% {
+      color: #ff0000;
+    }
+
+    100% {
+      color: #fff4f4;
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .stage-left {
+    animation: fromLeft 0.3s both ease-in 6s;
+  }
+
+  .stage-right {
+    animation: fromRight 0.3s both ease-in 7.8s;
+  }
+
+  .stage-center {
+    animation: fromCenter 2s both cubic-bezier(0.7, 0.05, 0.855, 0.06) 9s;
+  }
+
+  .shakeLeft {
+    animation: shakeLeft 0.15s both ease-out 6.3s 2 alternate;
+  }
+
+  .shakeRight {
+    animation: shakeRight 0.15s both ease-out 2 alternate;
+  }
+
+  .crush {
+    transform-origin: 50% 10%;
+    animation: crush 0.15s both ease-out 2 alternate;
+  }
+
+  .no-opacity{
+    animation: opacity 2s both linear 18.3s;
+  }
+
+  .fadeIn {
+    -webkit-animation: fadeIn 3s both ease-out 1s;
+    animation: fadeIn 3s both ease-out 1s;
+  }
+
+  .highlight {
+    animation: highlight 1.5s forwards linear;
+  }
+
   body {
     background-color: #121212;
-    color: #fff;
+    color: #dddddd;
+    overflow-x: hidden;
   }
 
   .card {
@@ -33,17 +181,13 @@
   }
 
   * {
-    color: #fff;
+    color: #dddddd;
   }
 
   ::-webkit-input-placeholder{
     color: grey !important;
   }
 
-	body {
-      background-color: #000;
-      color: #fff;
-    }
     .section-divider {
       border-top: 2px solid #fff;
       margin: 3rem 0;
@@ -51,7 +195,7 @@
     .btn-custom {
       background-color: transparent;
       color: #fff;
-      border: 2px solid #fff;
+      border: 2px solid var(--bs-primary-text-emphasis);
       padding: 0.75rem 1.5rem;
       transition: all 0.3s ease-in-out;
       font-weight: bold;
@@ -64,7 +208,7 @@
     .album-cover {
       width: 100%;
       height: auto;
-      border: 2px solid #fff;
+      border: 2px solid var(--bs-primary-text-emphasis);
       transition: transform 0.3s ease;
     }
     .album-cover:hover {
@@ -87,9 +231,15 @@
       padding: 4rem 2rem;
       color: #fff;
     }
+
+    .section-divider {
+      color: var(--bs-danger);
+      border-color: var(--bs-danger);
+    }
+
 	.timeline-item {
 		background-color: rgba(255, 255, 255, 0.1);
-		border: 1px solid #fff;
+		border: 1px solid var(--bs-primary-text-emphasis);
 		border-radius: 8px;
 		transition: transform 0.3s ease, background-color 0.3s ease;
 	}
@@ -109,7 +259,7 @@
 		-moz-appearance: textfield;
 	}
 </style>
-<body class="bg-black">
+<body class="bg-black" style="display: inline-block; opacity: 0">
   <div style="background: #000;" class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
@@ -140,24 +290,24 @@
   </div>
     <nav-bar page="home"></nav-bar>
     <script src="js/navBar.js"></script>
-      <div lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="  background-image: url('../assets/cover.jpg');
+      <div id="fadeIn" lc-helper="background" class="container-fluid py-5 h-100 mb-4 d-flex justify-content-center" style="background-image: url('../assets/cover.jpg');
     background-position: center;
 background-size:cover;  
-background-repeat:no-repeat">
+background-repeat:no-repeat; overflow: hidden;">
 	<div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 style="text-shadow: 3px 3px 6px black" class="fw-bolder display-1">Stage Fright</h2>
+				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee; font-family: Cinzel;" class="fw-bolder display-1"><span id="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span id="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-12">
 			<div editable="rich">
-				<p style="text-shadow: 6px 6px 9px black" class=" fw-bolder text-white">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to challenge the status quo, to shake things up, and to make some noise.
+				<p style="text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis); color: #eeeeee;" class=" fw-bolder text-white"><span id="stage-center" style="color: white; display: inline-block;">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to <span id="one" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 12.8s">challenge the status quo</span>, to <span id="two" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 14.05s">shake things up</span>, and to <span id="three" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 15.3s">make some noise</span></span>.
 				</p>
 			</div>
 		</div>
 		<div class="lc-block">
-			<a class="btn btn-dark" href="members.html" role="button">More About Us!</a>
+			<a id="memberButton" class="btn btn-dark" href="members.html" role="button" style="border-width: 3px; border-color: var(--bs-primary-text-emphasis);">More About Us!</a>
 		</div>
 	</div>
     <br><br><br>
@@ -175,21 +325,21 @@ background-repeat:no-repeat">
 		<div class="col-md-4 mb-4">
 		  <div class="timeline-item p-4">
 			<h4 class="fw-bold">New York City</h4>
-			<p>December 10, 2024</p>
+			<p>April 10, 2025</p>
 		  </div>
 		</div>
 		<!-- Timeline Item 2 -->
 		<div class="col-md-4 mb-4">
 		  <div class="timeline-item p-4">
 			<h4 class="fw-bold">Chicago</h4>
-			<p>December 20, 2024</p>
+			<p>April 20, 2025</p>
 		  </div>
 		</div>
 		<!-- Timeline Item 3 -->
 		<div class="col-md-4 mb-4">
 		  <div class="timeline-item p-4">
 			<h4 class="fw-bold">Los Angeles</h4>
-			<p>January 1, 2024</p>
+			<p>May 1, 2025</p>
 		  </div>
 		</div>
 	  </div>
@@ -199,10 +349,10 @@ background-repeat:no-repeat">
 	<a href="tourdates.html" class="btn btn-custom mt-4">View All Tour Dates</a>
   </section>
 
-  <hr class="section-divider w-75" style="margin:auto;color:white;height: 2px; border-color: var(--bs-white); background-color: var(--bs-white); opacity: 1;"/>
+  <hr class="section-divider w-75" style="margin:auto; height: 2px; opacity: 1;"/>
 
   <!-- Merch Call to Action Section -->
-  <section class="section d-flex flex-column flex-lg-row align-items-center justify-content-center text-center text-lg-start py-3 ">
+  <section class="section d-flex flex-column flex-lg-row align-items-center justify-content-center text-center text-lg-start py-3">
 	<!-- Image -->
 	<div id="carouselExampleControls" class="carousel slide col-lg-6" data-bs-ride="carousel" style="width: 30%; padding-right: 1rem;">
 		<div class="carousel-inner">
@@ -233,7 +383,7 @@ background-repeat:no-repeat">
 	</div>
   </section>
 
-  <hr class="section-divider w-75 my-5" style="margin:auto;color:white;height: 2px; border-color: var(--bs-white); background-color: var(--bs-white); opacity: 1;"/>
+  <hr class="section-divider w-75 my-5" style="margin:auto; height: 2px; opacity: 1;"/>
 
   <!-- Latest Albums Section -->
   <section class="section text-center">
@@ -256,5 +406,6 @@ background-repeat:no-repeat">
   </section>
 <footer-c></footer-c>
 <script src="js/footerC.js"></script>
+<script src="js/animateMain.js"></script>
 </body>
 </html>
