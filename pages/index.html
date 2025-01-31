@@ -11,6 +11,21 @@
     <title>Stage Fright</title>
 </head>
 <style>
+  @font-face {
+  font-family:"Cinzel";
+  src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }
+
+  @font-face {
+  font-family:"Julius Sans One";
+  src: url("../assets/fonts/JuliusSansOne-Regular.ttf");
+  }
+
+  @font-face {
+  font-family:"Rubik Mono One";
+  src: url("../assets/fonts/RubikMonoOne-Regular.ttf");
+  }
+
   @keyframes fromLeft {
     0% {
       transform: translateX(-100vw);
@@ -282,12 +297,12 @@ background-repeat:no-repeat; overflow: hidden;">
 	<div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee;" class="fw-bolder display-1"><span id="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span id="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
+				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee; font-family: Cinzel;" class="fw-bolder display-1"><span id="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span id="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-12">
 			<div editable="rich">
-				<p style="text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis); color: #eeeeee" class=" fw-bolder text-white"><span id="stage-center" style="color: white; display: inline-block">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to <span id="one" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 12.8s">challenge the status quo</span>, to <span id="two" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 14.05s">shake things up</span>, and to <span id="three" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 15.3s">make some noise</span></span>.
+				<p style="text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis); color: #eeeeee;" class=" fw-bolder text-white"><span id="stage-center" style="color: white; display: inline-block;">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to <span id="one" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 12.8s">challenge the status quo</span>, to <span id="two" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 14.05s">shake things up</span>, and to <span id="three" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 15.3s">make some noise</span></span>.
 				</p>
 			</div>
 		</div>
@@ -387,9 +402,6 @@ background-repeat:no-repeat; overflow: hidden;">
         <img src="../assets/get-dirty.webp" alt="Album 3" class="album-cover w-75 h-75"> <!-- Replace with album 3 image -->
         <p class="album-title">Get Dirty</p>
       </div>
-    </div>
-    <div>
-      <a class="btn btn-dark" role="button" style="border-width: 3px; border-color: var(--bs-primary-text-emphasis); background-color: var(--bs-primary-text-emphasis);" onclick="resetAnimation()">Replay Home Animation</a>
     </div>
   </section>
 <footer-c></footer-c>

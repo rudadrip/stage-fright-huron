@@ -28,6 +28,10 @@
         #not-the-navbar a:hover{
           color: #a61f2c;
         }
+        
+        #redirect:hover {
+          color: var(--bs-primary) !important;
+        }
 
         .accordion{
           --bs-accordion-border-color: var(--bs-primary-text-emphasis);
@@ -104,6 +108,7 @@
                 Here you can find answers to all of our most Frequently Asked Questions, neatly arranged into categories for your benefit.
               </h4>
             </div>
+            <section class="py-2"></section>
             <div class="accordion" id="faqAccordian">
                 <div class="accordion-item">
                   <h2 class="accordion-header">
@@ -280,6 +285,15 @@
                         Because we're not done here! Our values for functionality over looks and a massively successful first song combined and forced us to release a very simple website for our fans. Now that the crunch is over, we're working hard to improve its visual appeal. Unfortunately, adding more visuals causes a website to become more distracting and harder to use so we have to tread lightly in order to keep the website up to our standards. We appreciate your understanding!<br>
                         <span style="font-size: 8px;">This is a meta joke :3</span>
                       </p>
+                      <h5>
+                        8. That was a really cool home page animation! Can I see it again?
+                      </h5>
+                      <p>
+                        You sure can! Just press the button below and you'll be redirected to the home page!
+                      </p>
+                      <div>
+                        <a id="redirect" class="btn btn-dark" role="button" style="border-width: 3px; border-color: var(--bs-primary-text-emphasis); background-color: var(--bs-primary-text-emphasis);" onclick="resetAnimation()">Replay Home Animation</a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -288,5 +302,11 @@
         </div>
         <footer-c></footer-c>
         <script src="js/footerC.js"></script>
+        <script>
+          function resetAnimation(){
+            localStorage.setItem("finishedHomeAnimate", "no");
+            window.location.replace("index.html");
+          }
+        </script>
     </body>
 </html>

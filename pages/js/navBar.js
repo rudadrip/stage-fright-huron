@@ -28,7 +28,7 @@ class navBar extends HTMLElement {
   @font-face {
   font-family:"Old London";
   src: url("../../assets/fonts/OldLondon.ttf") format("truetype");
-}
+  }
   .navbar-brand, .nav-item {  
     font-family: 'Old London', serif; 
   }
@@ -38,6 +38,11 @@ class navBar extends HTMLElement {
   .nav-item:hover:not(.is-footer) {
       background-color: #041733;
   }
+
+  #not-in-navbar-parent:hover {
+      background-color: black;
+  }
+
   </style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
@@ -48,7 +53,7 @@ class navBar extends HTMLElement {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item" style="width=0px;">
+          <li id="not-in-navbar-parent" class="nav-item" style="width=0px;">
             <a id="not-in-navbar" class="nav-link" href="contactus.html"> </a>
           </li>
           <li class="nav-item">
