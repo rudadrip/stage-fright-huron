@@ -46,13 +46,13 @@ class navBar extends HTMLElement {
   </style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/pages/index.html">Stage Fright</a>
+      <a class="navbar-brand" href="/pages/index.html" style="font-size: 24px;">Stage Fright</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav ms-auto" style="font-size: 20px">
           <li id="not-in-navbar-parent" class="nav-item" style="width=0px;">
             <a id="not-in-navbar" class="nav-link" href="contactus.html"> </a>
           </li>

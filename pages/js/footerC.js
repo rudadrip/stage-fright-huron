@@ -17,7 +17,7 @@ class footerC extends HTMLElement {
       <img alt="Stage Fright Logo" class="img-fluid w-50 h-50" src="../assets/logo.jpg"/ >
     </a>
 
-    <ul class="nav col-md-4 justify-content-center text-center">
+    <ul class="nav col-md-4 justify-content-center text-center" style="font-size: 20px">
       <li class="nav-item is-footer"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
       <li class="nav-item is-footer"><a href="merch.html" class="nav-link px-2 text-white">Merch</a></li>
       <li class="nav-item is-footer"><a href="tourdates.html" class="nav-link px-2 text-white">Tour Dates</a></li>
