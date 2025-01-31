@@ -100,14 +100,29 @@
         <script src="js/navBar.js"></script>
         <div class="bg-black">
           <div class="container" id="not-the-navbar">
-            <div class="row text-center" style="color: #dddddd">
-              <h1>
-                Welcome to our FAQ page!
-              </h1>
-              <h4>
-                Here you can find answers to all of our most Frequently Asked Questions, neatly arranged into categories for your benefit.
-              </h4>
-            </div>
+            <style>
+              @font-face {
+    font-family:"Cinzel";
+  src: url("../assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }
+              .hero-section {
+                text-align:center;
+                font-family: 'Cinzel'; /* Replace with your chosen Gothic font */
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */
+  color: white;
+  margin-bottom: 20px;
+              }
+              
+          </style>
+      </head>
+      <body>
+      <section class="py-2"></section>
+        <div class="hero-section">
+          <h1 class="display-3">Frequently Asked Questions</h1>
+          <p class="lead">Find answers to the most commonly asked questions here. If you need further assistance, don't hesitate to reach out.</p>
+        </div>
             <section class="py-2"></section>
             <div class="accordion" id="faqAccordian">
                 <div class="accordion-item">
@@ -186,8 +201,7 @@
                       <h5>
                         1. What are the differences between ticket/seat types?
                       </h5>
-                      <p>
-                        Tickets come with increasing benefits like access to your mom's bed
+                      <p>Tickets come in different tiers, each offering increasing benefits such as early entry, exclusive merchandise, and VIP meet-and-greets.
                       </p>
                       <h5>
                         2. What time do doors open for performances?
