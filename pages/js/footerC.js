@@ -25,6 +25,11 @@ class footerC extends HTMLElement {
       <li class="nav-item is-footer"><a href="members.html" class="nav-link px-2 text-white">About Us</a></li>
       <li class="nav-item is-footer"><a href="contactus.html" class="nav-link px-2 text-white">Contact Us</a></li>
     </ul>
+    <a href="https://discord.com" class="nav-link px-2 text-white"><img src="/assets/discord.png" width="40px"></a>
+    <a href="https://instagram.com" class="nav-link px-2 text-white"><img src="/assets/instagram.png" width="40px"></a>
+    <a href="https://x.com" class="nav-link px-2 text-white"><img src="/assets/xformerlyknownastwitter.png" width="40px"></a>
+    <a href="https://tiktok.com" class="nav-link px-2 text-white"><img src="/assets/tiktok.png" width="40px"></a>
+    <a href="https://spotify.com" class="nav-link px-2 text-white"><img src="/assets/spotify.png" width="40px"></a>
   </footer>
 </div>
       `

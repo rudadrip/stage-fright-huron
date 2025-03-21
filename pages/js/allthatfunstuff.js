@@ -177,7 +177,8 @@ function calculateSalesTax() {
 }
 
 function calculateTotPrice () {
-  return (parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2);
+  console.log(Number((parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2)).toLocaleString("en-US"));
+  return Number((parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2)).toLocaleString("en-US");
 }
 
 function calculateTotalItems() {
@@ -249,11 +250,12 @@ function orderMerch () {
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
   let text = document.getElementById("size").options[document.getElementById("size").selectedIndex].text;
-  if (text === "Select One"){
+  if (text === "Select One" && text !== "Not a clothing item"){
     alert("Please select a clothing size before adding it to cart");
     return;
   }
   addMerchItem(inputValue2,inputValue)
+  localStorage.setItem("merchSuccess?", "yes")
   window.location.href = "merch.html"
 }
 
@@ -273,6 +275,7 @@ function orderConcert () {
   var city = inputValue2.substring(start,end).trim()
     // addConcertItem(city, quantity, seatType)
   addConcertItem(city,inputValue,text)
+  localStorage.setItem("tourSuccess?", "yes")
   window.location.href = "tourdates.html"
 }
 
