@@ -26,6 +26,11 @@
   src: url("../assets/fonts/RubikMonoOne-Regular.ttf");
   }
 
+  @font-face {
+    font-family: "Pirata One";
+    src: url("/assets/fonts/PirataOne-Regular.ttf");
+  }
+
   @keyframes fromLeft {
     0% {
       transform: translateX(-100vw);
@@ -121,19 +126,19 @@
   }
 
   .stage-left {
-    animation: fromLeft 0.3s both ease-in 6s;
+    animation: fromLeft 0.3s both ease-in 4s;
   }
 
   .stage-right {
-    animation: fromRight 0.3s both ease-in 7.8s;
+    animation: fromRight 0.3s both ease-in 5.8s;
   }
 
   .stage-center {
-    animation: fromCenter 2s both cubic-bezier(0.7, 0.05, 0.855, 0.06) 9s;
+    animation: fromCenter 1.5s both cubic-bezier(0.7, 0.05, 0.855, 0.06) 7s;
   }
 
   .shakeLeft {
-    animation: shakeLeft 0.15s both ease-out 6.3s 2 alternate;
+    animation: shakeLeft 0.15s both ease-out 4.3s 2 alternate;
   }
 
   .shakeRight {
@@ -146,12 +151,12 @@
   }
 
   .no-opacity{
-    animation: opacity 2s both linear 18.3s;
+    animation: opacity 2s both linear 15.8s;
   }
 
   .fadeIn {
-    -webkit-animation: fadeIn 3s both ease-out 1s;
-    animation: fadeIn 3s both ease-out 1s;
+    -webkit-animation: fadeIn 2.5s both ease-out 1s;
+    animation: fadeIn 2.5s both ease-out 1s;
   }
 
   .highlight {
@@ -297,12 +302,12 @@ background-repeat:no-repeat; overflow: hidden;">
 	<div class="p-5 mb-4 lc-block col-xxl-7 col-lg-8 col-12 text-center text-white">
 		<div class="lc-block">
 			<div editable="rich">
-				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee; font-family: Cinzel;" class="fw-bolder display-1"><span id="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span id="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
+				<h2 style="text-shadow: 3px 3px 6px var(--bs-primary-text-emphasis); color: #eeeeee; font-family: Pirata One;" class="fw-bolder display-1"><span id="stage-left" style="color: #eeeeee; display: inline-block;">Stage</span> <span id="stage-right" style="color: #eeeeee; display: inline-block;">Fright</span></h2>
 			</div>
 		</div>
 		<div class="lc-block col-md-12">
 			<div editable="rich">
-				<p style="text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis); color: #eeeeee;" class=" fw-bolder text-white"><span id="stage-center" style="color: white; display: inline-block;">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to <span id="one" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 12.8s">challenge the status quo</span>, to <span id="two" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 14.05s">shake things up</span>, and to <span id="three" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger); animation-delay: 15.3s">make some noise</span></span>.
+				<p style="text-shadow: 6px 6px 9px var(--bs-primary-text-emphasis), 0px 0px 10px  black; color: #eeeeee;" class=" fw-bolder text-white"><span id="stage-center" style="color: white; display: inline-block;">We don’t follow the rules. We break them. Stage Fright is punk rock rebellion, pure and simple. We’re here to <span id="one" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger), 0px 0px 20px black; animation-delay: 10.05s">challenge the status quo</span>, to <span id="two" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger), 0px 0px 20px black; animation-delay: 11.05s">shake things up</span>, and to <span id="three" style="color: #fff4f4; text-shadow: 6px 6px 9px var(--bs-danger), 0px 0px 20px black; animation-delay: 12.05s">make some noise</span></span>.
 				</p>
 			</div>
 		</div>

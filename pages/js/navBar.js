@@ -26,11 +26,11 @@ class navBar extends HTMLElement {
 `
   <style>
   @font-face {
-  font-family:"Old London";
-  src: url("../../assets/fonts/OldLondon.ttf") format("truetype");
+  font-family:"Friz Quadrata";
+  src: url("../../assets/fonts/friz-quadrata.ttf") format("truetype");
   }
   .navbar-brand, .nav-item {  
-    font-family: 'Old London', serif; 
+    font-family: 'Friz Quadrata', serif; 
   }
   .nav-item {
       transition: transform 0.5s ease

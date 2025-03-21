@@ -15,7 +15,7 @@ class checkoutitemC extends HTMLElement {
       this.querySelector("#qtyX").innerHTML=`Qty: ${qty}`;
 
       const price = this.getAttribute('price');
-      this.querySelector("#priceX").innerHTML=`$${Math.abs(parseFloat(price) * parseFloat(qty) ).toFixed(2)}`;
+      this.querySelector("#priceX").innerHTML=`$${Number(Math.abs(parseFloat(price) * parseFloat(qty) ).toFixed(2)).toLocaleString("en-US")}`;
       
     }
     render(){

@@ -11,7 +11,7 @@
   <script type="text/javascript" src="js/ticketviewer.js"></script>
 
   <script src="js/cartmanagment.js"></script>
-  <script src="js/animateTours.js" defer></script>
+  <script src="js/baseTourManager.js" defer></script>
 
 
 </head>
@@ -48,11 +48,19 @@
     }
 
     #searchInput {
+      width: 75%;
+      margin: auto;
+      border: 2px solid var(--bs-primary-text-emphasis);
       animation-name: search-anim;
       animation-duration: 0.5s;
       animation-delay: 0.5s;
       animation-timing-function: ease-out;
       animation-fill-mode: both;
+    }
+
+    #searchInput:focus {
+      border-color: var(--bs-danger);
+      box-shadow: 0 0 10px var(--bs-danger);
     }
 
     @keyframes card-anim {
@@ -79,6 +87,12 @@
     .card {
       background-color: #1e1e1e;
       border-color: var(--bs-primary-text-emphasis);
+      transition: transform 0.3s ease, box-shadow 0.3s ease
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(13, 110, 253, 0.5);
     }
 
     .form-control {
@@ -179,12 +193,12 @@
   text-transform: uppercase ;
 }
   </style>
-
+  <div data-bs-theme="dark" id="tourAlert" style="position: fixed; z-index: 999; width:15rem; bottom: 0; right: 1rem;"></div>
   <div class="hero-section">
-    <div class="hero-content">
-      <h1 class="display-4" id="title">UPCOMING TOUR DATES</h1>
-    <p class="lead" id="subtitle">Catch us live in your city! Check out the dates below.</p>
-    <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by city or date">
+    <div class="container hero-content text-center" style="text-align:center">
+      <h1 class="display-4 fw-bold" id="title">UPCOMING TOUR DATES</h1>
+      <p class="lead" id="subtitle">Catch us live in your city! Check out the dates below.</p>
+      <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by city or date">
     </div>
   </div>
 

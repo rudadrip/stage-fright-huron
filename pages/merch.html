@@ -11,6 +11,7 @@
   <script src="js/cartmanagment.js"></script>
   <script src="/pages/js/merchviewer.js"></script>
   <script src="js/navBar.js"></script>
+  <script src="/pages/js/baseMerchManager.js" defer></script>
 </head>
 <style>
 html {
@@ -46,8 +47,9 @@ html {
   .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 #searchInput {
-  width: 50%;
+  width: 75%;
   margin: auto;
   border: 2px solid var(--bs-primary-text-emphasis);
 }
@@ -203,6 +205,7 @@ html {
   z-index: 2;
 }
   </style>
+  <div data-bs-theme="dark" id="merchAlert" style="position: fixed; z-index: 999; width:15rem; bottom: 0; right: 1rem;"></div>
   <div class="hero-section">
     <div class="hero-content">
       <h1 class="display-4 fw-bold">Official Merch</h1>
