@@ -7,7 +7,7 @@ const seating_management = [
     { "loc": "Upper Bowl", "price": "40" },
     { "loc": "Standing Room", "price": "20" }
   ];
-  
+
   const locations_management = [
     { "city": "New York, NY", "loc": "Madison Square Garden", "date": "November 10, 2024", "image": "Madison_Square_Garden.jpg" },
     { "city": "Los Angeles, CA", "loc": "The Forum", "date": "November 20, 2024", "image": "The_Forum.jpg" },
@@ -23,14 +23,44 @@ const seating_management = [
     { "city": "Seattle, WA", "loc": "Climate Pledge Arena", "date": "January 20, 2025", "image": "Climate_Pledge_Arena.jpg" }
   ];
   
-  // Merchandise Data
+//Merch data
   const merch_management = [
     { "name": "Band T-shirt", "desc": "Show your love for Stage Fright with this soft comfy T-shirt featuring our bold logo. Perfect for any fan!", "price": "12.99","img":"tshirt.jpg" },
     { "name": "Band Crewneck", "desc": "Stay cozy with the Stage Fright crewneck designed for comfort and style. A must-have for cooler days!", "price": "29.99","img":"crewneck.jpg" },
     { "name": "Guitar Pick", "desc": "Grab a Stage Fright guitar pick for that extra touch of rock—durable sleek and logo branded.", "price": "5.99", "img": "guitarpick.jpg" },
     { "name": "Band Beanie", "desc": "Top off your look with the Stage Fright beanie featuring our logo for a stylish warm fit.", "price": "11.99", "img":"beanie.jpg" }
   ];
-  
+
+//Music data
+  const albums_management = [
+      {
+          "name": "Diamond Eyes",
+          "desc": "Diamond Eyes by Stage Fright is a powerful mix of raw emotion and electrifying rock. The album blends gripping guitar riffs with melodic vocals to tell stories of resilience, vulnerability, and life's ups and downs. With its mix of high-energy anthems and heartfelt ballads, Diamond Eyes is a sparkling gem that leaves a lasting impact.",
+          "image": "/assets/diamond-eyes.jpg"
+      }, {
+          "name": "Walk",
+          "desc": "Walk by Stage Fright invites listeners to embark on a deeply personal and transformative musical journey. Each song feels like a step forward, exploring themes of courage, healing, and self-discovery. With its soulful melodies and dynamic energy, Walk captures the spirit of pushing through challenges and finding your path, making it a soundtrack for life’s most meaningful strides.",
+          "image": "/assets/Walk.webp"
+      }, {
+          "name": "Get Dirty",
+          "desc": "Get Dirty by Stage Fright is an unapologetic, high-octane dive into the raw and unfiltered sides of life. Packed with thunderous riffs, fiery vocals, and fearless energy, the album embraces chaos, passion, and rebellion. Get Dirty is a celebration of living untamed and embracing the messy, beautiful imperfections that define us.",
+          "image": "/assets/get-dirty.webp"
+      }
+  ]
+
+  const format_management = [
+    {
+        "type": "Digital",
+        "price": "29.99"
+    }, {
+        "type": "Vinyl",
+        "price": "44.99"
+    }, {
+        "type": "Digital & Vinyl",
+        "price": "69.99"
+    }
+]
+
   // Function to get the cart from cookies (returns parsed object or an empty array if not found)
   function getCartFromCookies() {
       let cartData = document.cookie
@@ -69,7 +99,7 @@ const seating_management = [
               name: item.name,
               description: item.desc,
               quantity: quantity,
-              price: item.price,
+              price: Number(item.price).toLocaleString("en-US"),
               type: 'merch'
           });
       }
@@ -102,7 +132,7 @@ const seating_management = [
               date: location.date,
               quantity: quantity,
               seatType: seatType,
-              price: seat.price,
+              price: Number(seat.price).toLocaleString("en-US"),
               type: 'concert'
           });
       }
@@ -171,7 +201,7 @@ const seating_management = [
     });
 
     // Return the total price
-    return total.toFixed(2);  // Returns the total with two decimal places
+    return Number(total.toFixed(2)).toLocaleString("en-US");  // Returns the total with two decimal places
 }
   /*
   function calculateTotalItems() {
@@ -244,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         infoCell.innerHTML = `
           <p>${insertName}</p>
-          <p class="py-2">$${item.price}</p>
+          <p class="py-2">$${Number(item.price).toLocaleString("en-US")}</p>
         `;
   
         const actionCell = document.createElement("td");

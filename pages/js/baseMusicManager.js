@@ -1,12 +1,10 @@
 //creates success notification
-
 document.addEventListener("DOMContentLoaded", () => {
-    let generate = localStorage.getItem("merchSuccess?");
+    let generate = localStorage.getItem("musicSuccess?");
     console.log(generate);
-
     if (generate === "yes"){
         appendAlert("Item successfully added to cart!", "info");
-        localStorage.setItem("merchSuccess?", "none invoked");
+        localStorage.setItem("musicSuccess?", "none invoked");
         try {
         window.setTimeout(function(){document.getElementById("alert").classList.add("alert-fade")}, 8000);
         } catch {
@@ -18,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 )
 
-const alertPlaceholder = document.getElementById('merchAlert');
+const alertPlaceholder = document.getElementById('musicAlert');
 const appendAlert = (message, type) => {
   const wrapper = document.createElement('div');
   console.log(wrapper);

@@ -5,6 +5,7 @@ function to_ticket_view(event){
 
 //extracts and reads the venue cookie then populates the page accordingly
 async function display_venue(){
+    window.setTimeout(function(){return;}, 100);
     let data = await fetch("/pages/veryrealdatabase/locations.json");
     const all_locations = await data.json();
     console.log(all_locations); 
@@ -26,6 +27,7 @@ async function display_venue(){
     }
 
     //for if the user somehow visits the page without a venue cookie set/valid
+    //apparently sometimes this fails and the page never gets populated properly but I'm not sure why
     alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at csupport@stagefright.com");
     window.location.href = "/pages/tourdates.html"
 

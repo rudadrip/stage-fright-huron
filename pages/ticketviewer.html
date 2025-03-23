@@ -88,7 +88,7 @@
                 <span id="total-price">$0.00</span>
               </div>
             </div>
-            <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+            <a class="btn btn-danger m-2" href="checkout.html" onclick="return ensureNotEmpty();" role="button">Continue to Checkout</a>
           </div>
         <nav-bar page="td"></nav-bar>
         <script src="js/navBar.js"></script>
@@ -146,8 +146,7 @@
                             </p>
                             <button type="button" class="btn btn-danger" data-bs-target="#" onclick="orderConcert()" style="border-color: var(--bs-primary-text-emphasis);">
                                 Add to cart!
-                            </button>
-                            <script src="js/allthatfunstuff.js" ></script>              
+                            </button>           
                     </div>
                 </div>
             </div>

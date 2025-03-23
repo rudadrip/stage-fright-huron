@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stage Fright Merch</title>
+  <title>Stage Fright Music</title>
   <!-- Bootstrap 5 CSS -->
   <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="icon" href="/assets/logo.jpg">
   <script src="js/cartmanagment.js"></script>
-  <script src="/pages/js/merchviewer.js"></script>
+  <script src="/pages/js/musicviewer.js"></script>
   <script src="js/navBar.js"></script>
-  <script src="/pages/js/baseMerchManager.js" defer></script>
+  <script src="/pages/js/baseMusicManager.js" defer></script>
 </head>
 <style>
 html {
@@ -193,7 +193,7 @@ html {
     <a class="btn btn-danger m-2" href="checkout.html" onclick="return ensureNotEmpty();" role="button">Continue to Checkout</a>
   </div>
   <!-- Navbar -->
-   <nav-bar page="merch"></nav-bar>
+   <nav-bar page="music"></nav-bar>
   
 
   <!-- Hero Section -->
@@ -221,55 +221,55 @@ html {
   z-index: 2;
 }
   </style>
-  <div data-bs-theme="dark" id="merchAlert" style="position: fixed; z-index: 999; width:15rem; bottom: 0; right: 1rem;"></div>
+  <div data-bs-theme="dark" id="musicAlert" style="position: fixed; z-index: 999; width:15rem; bottom: 0; right: 1rem;"></div>
   <div class="hero-section">
     <div class="hero-content">
-      <h1 class="display-4 fw-bold">Official Merch</h1>
-      <p class="lead" style="color: white">Grab your favorite items below and represent!</p>
+      <h1 class="display-4 fw-bold">Our Finest Music</h1>
+      <p class="lead" style="color: white">Listen to some samples then take home a copy!</p>
       <input type="text" class="form-control my-4" id="searchInput" placeholder="Search by item name" style="color:white">
     </div>
   </div>
 
-  <!-- Merch Items List -->
+  <!-- Music Items List -->
   <div class="container mt-4">
-    <div class="row" id="merchItems">
-      <!-- Merch Item Card 1 -->
+    <div class="row" id="musicItems">
+      <!-- Music Item Card 1 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../assets/merch-img/tshirtbgblack.jpg" class="card-img-top" alt="T-shirt">
+          <img src="../assets/diamond-eyes.jpg" class="card-img-top" alt="Diamond Eyes Album Cover">
           <div class="card-body">
-            <h5 class="card-title text-white">Band T-shirt</h5>
-            <p class="card-text">$12.99</p>
-            <a href="/pages/merchviewer.html" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Merch Item Card 2 -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <img src="../assets/merch-img/crewneck.jpg" class="card-img-top" alt="Hoodie">
-          <div class="card-body">
-            <h5 class="card-title text-white">Band Crewneck</h5>
+            <h5 class="card-title text-white">Diamond Eyes</h5>
             <p class="card-text">$29.99</p>
-            <a href="/pages/merchviewer.html" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
+            <a href="/pages/musicviewer.html" class="btn btn-danger" onclick="to_music_view(event)">View</a>
           </div>
         </div>
       </div>
 
-      <!-- Merch Item Card 3 -->
+      <!-- Music Item Card 2 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
-          <img src="../assets/merch-img/guitarpick.jpg" class="card-img-top" alt="Cap">
+          <img src="../assets/Walk.webp" class="card-img-top" alt="Walk Album Cover">
           <div class="card-body">
-            <h5 class="card-title text-white">Guitar Pick</h5>
-            <p class="card-text">$5.99</p>
-            <a href="/pages/merchviewer.html" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
+            <h5 class="card-title text-white">Walk</h5>
+            <p class="card-text">$29.99</p>
+            <a href="/pages/musicviewer.html" class="btn btn-danger" onclick="to_music_view(event)">View</a>
           </div>
         </div>
       </div>
 
-      <!-- Merch Item Card 4 -->
+      <!-- Music Item Card 3 -->
+      <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card">
+          <img src="../assets/get-dirty.webp" class="card-img-top" alt="Get Dirty Album Cover">
+          <div class="card-body">
+            <h5 class="card-title text-white">Get Dirty</h5>
+            <p class="card-text">$29.99</p>
+            <a href="/pages/musicviewer.html" class="btn btn-danger" onclick="to_music_view(event)">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Music Item Card 4 -->
       <div class="col-md-6 col-lg-4 mb-4">
         <div class="card">
           <img src="../assets/merch-img/beanie.jpg" class="card-img-top" alt="Poster">
@@ -281,7 +281,7 @@ html {
         </div>
       </div>
 
-      <!-- Additional merch items can be added here -->
+      <!-- Additional music items can be added here -->
     </div>
     <h5 id="no-results" style="display: none">
       Oh No! It looks like we don't have any tours for that location :(
@@ -298,9 +298,9 @@ html {
     searchInput.addEventListener('input', function () {
       l = 0;
       const filter = searchInput.value.toLowerCase();
-      const merchItems = document.getElementById('merchItems').getElementsByClassName('card');
-      for (let i = 0; i < merchItems.length; i++) {
-        const card = merchItems[i];
+      const musicItems = document.getElementById('musicItems').getElementsByClassName('card');
+      for (let i = 0; i < musicItems.length; i++) {
+        const card = musicItems[i];
         const title = card.getElementsByClassName('card-title')[0].textContent.toLowerCase();
         if (title.includes(filter)) {
           card.parentElement.style.display = '';

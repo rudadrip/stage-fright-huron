@@ -1,4 +1,19 @@
 //puts a functional navbar at the top of every page
+function ensureNotEmpty(){
+  let raw_cookies = document.cookie;
+    raw_cookies = raw_cookies.toString().split("; ");
+    const cookies = {};
+    for (let i = 0; i < raw_cookies.length; i++){
+        let current = raw_cookies[i].split("=");
+        cookies[current[0]] = current[1];
+    }
+  if (cookies.cart == ""){
+    alert("You don't have anything in your cart to checkout with!");
+    return false
+  }
+  return true
+}
+
 class navBar extends HTMLElement {
     constructor () {
         super();
@@ -13,6 +28,8 @@ class navBar extends HTMLElement {
             this.querySelector("#merch").classList.add("active");
         } else if (page == "td") {
             this.querySelector("#td").classList.add("active");
+        } else if (page == "music") {
+            this.querySelector("#music").classList.add("active");
         } else if (page == "au") {
             this.querySelector("#au").classList.add("active");
         } else if (page == "faq") {
@@ -64,6 +81,9 @@ class navBar extends HTMLElement {
           </li>
           <li class="nav-item">
             <a id="td" class="nav-link" href="tourdates.html">Tour Dates</a>
+          </li>
+          <li class="nav-item">
+            <a id="music" class="nav-link" href="music.html">Music</a>
           </li>
           <li class="nav-item">
             <a id="faq" class="nav-link" href="faqs.html">FAQs</a>
