@@ -31,6 +31,9 @@ const merch = [
   { "name": "Band Beanie", "desc": "Top off your look with the Stage Fright beanie featuring our logo for a stylish warm fit.", "price": "11.99" }
 ];
 
+//promo code multiplier
+var discount = 1;
+
 // Function to get the cart from cookies (returns parsed object or an empty array if not found)
 function getCartFromCookies() {
     let cartData = document.cookie
@@ -176,9 +179,13 @@ function calculateSalesTax() {
   return (calculateCartTotal()*0.06).toFixed(2);
 }
 
-function calculateTotPrice () {
+function calculateTotPrice (i = false) {
   console.log(Number((parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2)).toLocaleString("en-US"));
-  return Number((parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())).toFixed(2)).toLocaleString("en-US");
+  if (!i){
+    return Number(((parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax())) * parseFloat(discount)).toFixed(2)).toLocaleString("en-US");
+  } else {
+    return parseFloat(calculateCartTotal()) + parseFloat(calculateSalesTax());
+  }
 }
 
 function calculateTotalItems() {
@@ -277,6 +284,28 @@ function orderConcert () {
   addConcertItem(city,inputValue,text)
   localStorage.setItem("tourSuccess?", "yes")
   window.location.href = "tourdates.html"
+}
+
+function applyPromo(){
+  let code = document.getElementById("promo-code").value;
+  let status = document.getElementById("validity");
+  //the inputted code would be compared against a list of valid codes but for demonstration purposes
+  //the only valid code will be hard coded
+  if (code === "WorldTour2025") {
+    discount = 0.8;
+    status.style.color = "var(--bs-success)";
+    status.innerHTML = "Promo Code Applied!";
+    status.style.display = "block";
+    document.getElementById("was-text").style.display = "block";
+    document.getElementById("orig-price").style.display = "block";
+    document.getElementById("orig-price").innerHTML = `$${Number(calculateTotPrice(true).toFixed(2)).toLocaleString("en-US")}`;
+  } else {
+    status.style.color = "var(--bs-danger)";
+    status.innerHTML = "Invalid Promo Code! <br>For judges testing functionality: The promo code is \"WorldTour2025\"";
+    status.style.display = "block";
+  }
+  const ins1 = document.getElementById("tot-price");
+  ins1.innerHTML = `$${calculateTotPrice()}`;
 }
 
 /*

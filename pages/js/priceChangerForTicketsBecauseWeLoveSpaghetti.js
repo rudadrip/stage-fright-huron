@@ -1,7 +1,7 @@
-const seat_data = [
+seat_data = [
     {
         "loc":"VIP Box/Suite",
-        "price": "3000"
+        "price": "3,000"
     }, {
         "loc": "Club Seating",
         "price": "750"

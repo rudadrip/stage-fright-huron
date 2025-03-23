@@ -35,16 +35,26 @@
           <div id="insert-items"></div>
           <script src="js/checkoutitemC.js"></script>
           <li class="list-group-item d-flex justify-content-between">
+            <div>
             <span>Total (USD)</span>
+            <p id="was-text" style="font-size: 0.75rem; opacity: 0.75; display: none; margin-bottom: 0;">
+              Was (USD)
+            </p>
+            </div>
+            <div>
             <strong id="tot-price"></strong>
+            <br style="display: none">
+            <p id="orig-price" style="font-size: 0.75rem; font-weight: bold; opacity: 0.75; display: none; margin-bottom: 0;"><p>
+            </div>
           </li>
         </ul>
 
         <form class="card p-2">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code">
-            <button type="submit" class="btn btn-secondary">Redeem</button>
+            <input id="promo-code" type="text" class="form-control" placeholder="Promo code">
+            <button id="promo" class="btn btn-secondary">Redeem</button>
           </div>
+          <span id="validity" style="font-size: 10px; color: var(--bs-danger); display: none; padding-top: 0.5rem;">Invalid Promo Code!</span>
         </form>
       </div>
       <div class="col-md-7 col-lg-8">
@@ -276,6 +286,12 @@
     })
 
   })()
+</script>
+<script>
+  document.getElementById("promo").addEventListener("click", event => {
+    event.preventDefault();
+    applyPromo();
+  })
 </script>
 </body>
 </html>

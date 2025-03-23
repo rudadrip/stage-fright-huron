@@ -22,10 +22,16 @@ async function display_merch(){
             document.getElementById("merch-details").innerHTML = all_merch[i].desc;
             document.getElementById("merch-image").src = all_merch[i].image;
             document.getElementById("price").innerHTML = `$${all_merch[i].price}`;
+            if (!all_merch[i].clothes){
+                document.getElementById("size").style.display = "none";
+                document.getElementById("size-header").style.display = "none";
+            }
             return;
         }
     }
 
+    //for if the user somehow visits this page without a valid merch item set
+    //apparently sometimes this fails and the page never gets populated correctly but I'm not sure why
     alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at csupport@stagefright.com");
     window.location.href = "/pages/merch.html"
 
