@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (generate === "yes"){
         appendAlert("Item successfully added to cart!", "info");
         localStorage.setItem("merchSuccess?", "none invoked");
-        window.setTimeout(function(){document.getElementById("alert").remove()}, 8000)
+        window.setTimeout(function(){document.getElementById("alert").classList.add("alert-fade")}, 8000);
     }
 }
 

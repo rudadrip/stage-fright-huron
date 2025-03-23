@@ -1,4 +1,19 @@
 //puts a functional navbar at the top of every page
+function ensureNotEmpty(){
+  let raw_cookies = document.cookie;
+    raw_cookies = raw_cookies.toString().split("; ");
+    const cookies = {};
+    for (let i = 0; i < raw_cookies.length; i++){
+        let current = raw_cookies[i].split("=");
+        cookies[current[0]] = current[1];
+    }
+  if (cookies.cart == ""){
+    alert("You don't have anything in your cart to checkout with!");
+    return false
+  }
+  return true
+}
+
 class navBar extends HTMLElement {
     constructor () {
         super();

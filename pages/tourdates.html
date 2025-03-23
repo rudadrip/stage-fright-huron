@@ -73,6 +73,22 @@
       animation-fill-mode: both;
     }
 
+    @keyframes alerts {
+      0% {
+        opacity: 1;
+        display: block;
+      }
+
+      100% {
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    .alert-fade {
+      animation: alerts 3s forwards linear;
+    }
+
     .col-md-6 {
       opacity: 0;
     }
@@ -83,7 +99,10 @@
     }
 
     .card {
-      background-color: #1e1e1e;
+      background-color: rgba(0, 0, 0, 0.6);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-blend-mode: darken;
       border-color: var(--bs-primary-text-emphasis);
       transition: transform 0.3s ease, box-shadow 0.3s ease
     }
@@ -152,7 +171,7 @@
         <span id="total-price">$0.00</span>
       </div>
     </div>
-    <a class="btn btn-danger m-2" href="checkout.html" role="button">Continue to Checkout</a>
+    <a class="btn btn-danger m-2" href="checkout.html" onclick="return ensureNotEmpty();" role="button">Continue to Checkout</a>
   </div>
   <nav-bar page="td"></nav-bar>
 
@@ -204,7 +223,7 @@
     <div class="row" id="tourDates">
       <!-- Tour Date Card 1 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Madison_Square_Garden.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">New York, NY</h5>
             <p class="card-text">Madison Square Garden</p>
@@ -217,7 +236,7 @@
 
       <!-- Tour Date Card 2 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/The_Forum.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Los Angeles, CA</h5>
             <p class="card-text">The Forum</p>
@@ -229,7 +248,7 @@
 
       <!-- Tour Date Card 3 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/United_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Chicago, IL</h5>
             <p class="card-text">United Center</p>
@@ -242,7 +261,7 @@
 
       <!-- Tour Date Card 4 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Toyota_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Houston, TX</h5>
             <p class="card-text">Toyota Center</p>
@@ -255,7 +274,7 @@
 
       <!-- Tour Date Card 5 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/American_Airlines_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Dallas, TX</h5>
             <p class="card-text">American Airlines Center</p>
@@ -268,7 +287,7 @@
 
       <!-- Tour Date Card 6 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/State_Farm_Arena.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Atlanta, GA</h5>
             <p class="card-text">State Farm Arena</p>
@@ -281,7 +300,7 @@
 
       <!-- Tour Date Card 7 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Kaseya_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Miami, FL</h5>
             <p class="card-text">Kaseya Center</p>
@@ -294,7 +313,7 @@
 
       <!-- Tour Date Card 8 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Amway_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Orlando, FL</h5>
             <p class="card-text">Amway Center</p>
@@ -307,7 +326,7 @@
 
       <!-- Tour Date Card 9 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/TD_Garden.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Boston, MA</h5>
             <p class="card-text">TD Garden</p>
@@ -320,7 +339,7 @@
 
       <!-- Tour Date Card 10 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Wells_Fargo_Center.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Philadelphia, PA</h5>
             <p class="card-text">Wells Fargo Center</p>
@@ -333,7 +352,7 @@
 
       <!-- Tour Date Card 11 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Capital_One_Arena.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Washington, DC</h5>
             <p class="card-text">Capital One Arena</p>
@@ -346,7 +365,7 @@
 
       <!-- Tour Date Card 12 -->
       <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
+        <div class="card" style="background-image: url('/assets/locations/Climate_Pledge_Arena.jpg');">
           <div class="card-body">
             <h5 class="card-title text-white">Seattle, WA</h5>
             <p class="card-text">Climate Pledge Arena</p>
