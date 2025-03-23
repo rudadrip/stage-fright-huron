@@ -28,6 +28,8 @@ class navBar extends HTMLElement {
             this.querySelector("#merch").classList.add("active");
         } else if (page == "td") {
             this.querySelector("#td").classList.add("active");
+        } else if (page == "music") {
+            this.querySelector("#music").classList.add("active");
         } else if (page == "au") {
             this.querySelector("#au").classList.add("active");
         } else if (page == "faq") {
@@ -79,6 +81,9 @@ class navBar extends HTMLElement {
           </li>
           <li class="nav-item">
             <a id="td" class="nav-link" href="tourdates.html">Tour Dates</a>
+          </li>
+          <li class="nav-item">
+            <a id="music" class="nav-link" href="music.html">Music</a>
           </li>
           <li class="nav-item">
             <a id="faq" class="nav-link" href="faqs.html">FAQs</a>

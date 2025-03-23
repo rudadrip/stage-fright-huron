@@ -31,6 +31,36 @@ const merch = [
   { "name": "Band Beanie", "desc": "Top off your look with the Stage Fright beanie featuring our logo for a stylish warm fit.", "price": "11.99" }
 ];
 
+// Music Data
+const albums = [
+  {
+      "name": "Diamond Eyes",
+      "desc": "Diamond Eyes by Stage Fright is a powerful mix of raw emotion and electrifying rock. The album blends gripping guitar riffs with melodic vocals to tell stories of resilience, vulnerability, and life's ups and downs. With its mix of high-energy anthems and heartfelt ballads, Diamond Eyes is a sparkling gem that leaves a lasting impact.",
+      "image": "/assets/diamond-eyes.jpg"
+  }, {
+      "name": "Walk",
+      "desc": "Walk by Stage Fright invites listeners to embark on a deeply personal and transformative musical journey. Each song feels like a step forward, exploring themes of courage, healing, and self-discovery. With its soulful melodies and dynamic energy, Walk captures the spirit of pushing through challenges and finding your path, making it a soundtrack for life’s most meaningful strides.",
+      "image": "/assets/Walk.webp"
+  }, {
+      "name": "Get Dirty",
+      "desc": "Get Dirty by Stage Fright is an unapologetic, high-octane dive into the raw and unfiltered sides of life. Packed with thunderous riffs, fiery vocals, and fearless energy, the album embraces chaos, passion, and rebellion. Get Dirty is a celebration of living untamed and embracing the messy, beautiful imperfections that define us.",
+      "image": "/assets/get-dirty.webp"
+  }
+]
+
+const music_formats = [
+  {
+      "type": "Digital",
+      "price": "29.99"
+  }, {
+      "type": "Vinyl",
+      "price": "44.99"
+  }, {
+      "type": "Digital & Vinyl",
+      "price": "69.99"
+  }
+]
+
 //promo code multiplier
 var discount = 1;
 
@@ -84,6 +114,7 @@ function addMerchItem(name, quantity) {
 // Add Concert Ticket to Cart
 function addConcertItem(city, quantity, seatType) {
     // Find the corresponding location and seat price
+    console.log(city);
     const location = locations.find(loc => loc.city === city);
     const seat = seating.find(seat => seat.loc === seatType);
 
@@ -114,6 +145,31 @@ function addConcertItem(city, quantity, seatType) {
     saveCartToCookies(cart);
 }
 
+function addMusicItem(album, type, quant){
+  const music = albums.find(mus => mus.name === album);
+  const medium = music_formats.find(form => form.type === type);
+  if (!music || !medium) {
+    console.log(album, type, quant);
+    console.log(music, medium);
+    console.error("Invalid music type or album name");
+    return;
+  }
+  let existingAlbum = cart.find(item => item.name === album && item.FormatType === type && item.type === "music");
+  if (existingAlbum) {
+    existingAlbum.quantity += quantity;
+  } else {
+    cart.push({
+      name: album,
+      formatType: type,
+      quantity: quant,
+      price: medium.price,
+      type: "music"
+    })
+  }
+
+  saveCartToCookies(cart);
+}
+
 // Delete a specific merch item from the cart
 function deleteMerchItem(name) {
     cart = cart.filter(item => item.name !== name || item.type !== 'merch');
@@ -124,6 +180,11 @@ function deleteMerchItem(name) {
 function deleteConcertItem(city, seatType) {
     cart = cart.filter(item => item.city !== city || item.seatType !== seatType || item.type !== 'concert');
     saveCartToCookies(cart);
+}
+
+function deleteMusicItem(name, type) {
+  cart = cart.filter(item => item.name !== name || item.formatType !== type || item.type !== "music");
+  saveCartToCookies(cart);
 }
 
 // Function to view the current cart
@@ -137,39 +198,8 @@ function calculateCartTotal() {
   // Loop through each item in the cart
   cart.forEach(item => {
       let itemTotalPrice = 0;
-
-      // If the item is a merch item
-      if (item.type === 'merch') {
-          itemTotalPrice = parseFloat(item.price) * item.quantity;
-      }
-      // If the item is a concert ticket
-      else if (item.type === 'concert') {
-          itemTotalPrice = parseFloat(item.price) * item.quantity;
-      }
-
-      total += itemTotalPrice;  // Add the item's total price to the overall total
-  });
-
-  return total.toFixed(2);  // Return total price rounded to two decimal places
-}
-
-function calculateCartTotal() {
-  let total = 0;
-
-  // Loop through each item in the cart
-  cart.forEach(item => {
-      let itemTotalPrice = 0;
-
-      // If the item is a merch item
-      if (item.type === 'merch') {
-          itemTotalPrice = parseFloat(item.price) * item.quantity;
-      }
-      // If the item is a concert ticket
-      else if (item.type === 'concert') {
-          itemTotalPrice = parseFloat(item.price) * item.quantity;
-      }
-
-      total += itemTotalPrice;  // Add the item's total price to the overall total
+      itemTotalPrice = parseFloat(item.price) * item.quantity;
+      total += itemTotalPrice;
   });
 
   return total.toFixed(2);  // Return total price rounded to two decimal places
@@ -234,6 +264,14 @@ async function insertStuffs() {
             concertElement.setAttribute("qty", item.quantity);  // Concert quantity
             concertElement.setAttribute("price", item.price);  // Price for the seat type
             ins.appendChild(concertElement);  // Append it to the container
+          } else if (item.type === "music") {
+            let musicElement = document.createElement("checkout-item-c");
+            let musicType = `${item.formatType}`;
+            musicElement.setAttribute("name", `${item.name} Album`);
+            musicElement.setAttribute("extra", musicType);
+            musicElement.setAttribute("qty", item.quantity);
+            musicElement.setAttribute("price", item.preice);
+            ins.appendChild(musicElement);
           }
         });
       } catch (e) {
@@ -284,6 +322,21 @@ function orderConcert () {
   addConcertItem(city,inputValue,text)
   localStorage.setItem("tourSuccess?", "yes")
   window.location.href = "tourdates.html"
+}
+
+function orderMusic() {
+  const input = document.getElementById("musicQuantity");
+  let inputValue = input.value;
+  var e = document.getElementById("type");
+  var text = e.options[e.selectedIndex].text;
+  if (text === "Select One"){
+    alert("Please select an audio format before adding it to cart");
+    return;
+  }
+  const album = document.getElementById("title").innerHTML;
+  addMusicItem(album, text, inputValue);
+  localStorage.setItem("musicSuccess?", "yes");
+  window.location.href = "music.html";
 }
 
 function applyPromo(){

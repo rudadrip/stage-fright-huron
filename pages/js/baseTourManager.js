@@ -7,7 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (generate === "yes"){
         appendAlert("Item successfully added to cart!", "info");
         localStorage.setItem("tourSuccess?", "none invoked");
+        try {
         window.setTimeout(function(){document.getElementById("alert").classList.add("alert-fade")}, 8000);
+        } catch {
+            //noop because if an error occurs then the user has closed the notification early and we don't need to do anything
+            Function.prototype();
+        }
     }
 }
 
@@ -33,7 +38,7 @@ function add_anim(i) {
     cards[i].parentNode.classList.add("card-anim");
 }
 
-
+document.addEventListener("DOMContentLoaded", event =>{
 setTimeout(() => {
     let index = 0;
     let spaghetti = setInterval(() => {
@@ -44,3 +49,4 @@ setTimeout(() => {
     }
 }, 150);
 }, 500)
+})

@@ -5,6 +5,7 @@ function to_ticket_view(event){
 
 //extracts and reads the venue cookie then populates the page accordingly
 async function display_venue(){
+    window.setTimeout(function(){return;}, 100);
     let data = await fetch("/pages/veryrealdatabase/locations.json");
     const all_locations = await data.json();
     console.log(all_locations); 
