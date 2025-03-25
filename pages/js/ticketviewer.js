@@ -5,7 +5,6 @@ function to_ticket_view(event){
 
 //extracts and reads the venue cookie then populates the page accordingly
 async function display_venue(){
-    window.setTimeout(function(){return;}, 100);
     let data = await fetch("/pages/veryrealdatabase/locations.json");
     const all_locations = await data.json();
     console.log(all_locations); 
@@ -33,3 +32,29 @@ async function display_venue(){
 
     //await console.log(JSON.stringify(cookies))
 }
+
+window.setTimeout(async function(){
+    if (document.getElementById("title").innerHTML == "Tickets for [location] on [date]"){
+        let data = await fetch("/pages/veryrealdatabase/locations.json");
+        const all_locations = await data.json();
+        console.log(all_locations); 
+        let raw_cookies = document.cookie;
+        raw_cookies = raw_cookies.toString().split("; ");
+        const cookies = {};
+        for (let i = 0; i < raw_cookies.length; i++){
+            let current = raw_cookies[i].split("=");
+            cookies[current[0]] = current[1];
+        }
+
+        for (let i = 0; i < all_locations.length; i++){
+            if (all_locations[i].loc === cookies.venue){
+                document.getElementById("title").innerHTML = `Tickets for ${cookies["venue"]} in ${all_locations[i].city} on ${all_locations[i].date}`;
+                document.getElementById("venue-image").src = all_locations[i].image;
+                document.getElementById("venue-details").innerHTML = all_locations[i].description;
+                return;
+            }
+        }
+    } else {
+        return;
+    }
+}, 1000);

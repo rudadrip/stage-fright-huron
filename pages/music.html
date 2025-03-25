@@ -7,7 +7,7 @@
   <title>Stage Fright Music</title>
   <!-- Bootstrap 5 CSS -->
   <link href="../bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="icon" href="/assets/logo.jpg">
+  <link rel="icon" href="/assets/icons/logo.jpg">
   <script src="js/cartmanagment.js"></script>
   <script src="/pages/js/musicviewer.js"></script>
   <script src="js/navBar.js"></script>
@@ -34,6 +34,7 @@ html {
   }
 
   .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #1e1e1e;
     border: none;
   }
@@ -43,10 +44,6 @@ html {
     color: #fff;
     border: 1px solid #444;
   }
-
-  .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 #searchInput {
   width: 75%;
@@ -89,16 +86,53 @@ html {
   }
 }
 
-@keyframes merchFade {
+@keyframes fadeRight {
   0% {
+    transform: translateX(-60px);
     opacity: 0;
   }
 
   100% {
+    transform: translateX(0px);
     opacity: 1;
   }
 }
 
+@keyframes fadeUp {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.fadeRight {
+  animation: fadeRight 1.5s forwards linear;
+}
+
+.fadeUp {
+  animation: fadeUp 1.5s forwards linear;
+}
+
+.fadeLeft {
+  animation: fadeLeft 1.5s forwards linear;
+}
 @keyframes alerts {
     0% {
       opacity: 1;
@@ -113,10 +147,6 @@ html {
 
 .alert-fade {
   animation: alerts 3s forwards linear;
-}
-
-.col-md-6 {
-  animation: 1.5s ease-out both merchFade 0.5s;
 }
 
 .hero-section h1 {
@@ -234,7 +264,7 @@ html {
   <div class="container mt-4">
     <div class="row" id="musicItems">
       <!-- Music Item Card 1 -->
-      <div class="col-md-6 col-lg-4 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4 fadeRight">
         <div class="card">
           <img src="../assets/diamond-eyes.jpg" class="card-img-top" alt="Diamond Eyes Album Cover">
           <div class="card-body">
@@ -246,9 +276,9 @@ html {
       </div>
 
       <!-- Music Item Card 2 -->
-      <div class="col-md-6 col-lg-4 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4 fadeUp">
         <div class="card">
-          <img src="../assets/Walk.webp" class="card-img-top" alt="Walk Album Cover">
+          <img src="../assets/Walk.png" class="card-img-top" alt="Walk Album Cover">
           <div class="card-body">
             <h5 class="card-title text-white">Walk</h5>
             <p class="card-text">$29.99</p>
@@ -258,25 +288,13 @@ html {
       </div>
 
       <!-- Music Item Card 3 -->
-      <div class="col-md-6 col-lg-4 mb-4">
+      <div class="col-md-6 col-lg-4 mb-4 fadeLeft">
         <div class="card">
-          <img src="../assets/get-dirty.webp" class="card-img-top" alt="Get Dirty Album Cover">
+          <img src="../assets/get-dirty.jpg" class="card-img-top" alt="Get Dirty Album Cover">
           <div class="card-body">
             <h5 class="card-title text-white">Get Dirty</h5>
             <p class="card-text">$29.99</p>
             <a href="/pages/musicviewer.html" class="btn btn-danger" onclick="to_music_view(event)">View</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Music Item Card 4 -->
-      <div class="col-md-6 col-lg-4 mb-4">
-        <div class="card">
-          <img src="../assets/merch-img/beanie.jpg" class="card-img-top" alt="Poster">
-          <div class="card-body">
-            <h5 class="card-title text-white">Band Beanie</h5>
-            <p class="card-text">$11.99</p>
-            <a href="/pages/merchviewer.html" class="btn btn-danger" onclick="to_merch_view(event)">View</a>
           </div>
         </div>
       </div>
