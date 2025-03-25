@@ -68,3 +68,30 @@ async function price_change(event){
     }
     document.getElementById("price").innerHTML = `No Audio Medium Selected`;
 }
+
+setTimeout(async function(){
+    if (document.getElementById("title").innerHTML == "[Music name]"){
+        let data = await fetch("/pages/veryrealdatabase/music.json");
+        const all_music = await data.json();
+        //console.log(all_music); 
+        let raw_cookies = document.cookie;
+        raw_cookies = raw_cookies.toString().split("; ");
+        const cookies = {};
+        for (let i = 0; i < raw_cookies.length; i++){
+            let current = raw_cookies[i].split("=");
+            cookies[current[0]] = current[1];
+        }
+
+        for (let i = 0; i < all_music.length; i++){
+
+            if (all_music[i].name === cookies.current_music_item){
+                document.getElementById("title").innerHTML = all_music[i].name;
+                document.getElementById("music-details").innerHTML = all_music[i].desc;
+                document.getElementById("music-image").src = all_music[i].image;
+                return;
+            }
+        }
+    } else {
+        return;
+    }
+}, 1000);

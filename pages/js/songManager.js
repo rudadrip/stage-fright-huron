@@ -1,0 +1,38 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+    //let music = document.getElementsByClassName("music-container")[0].children[2].children[0];
+    let music = Array.from(document.getElementsByClassName("music-container"));
+    console.log(music);
+
+    music.forEach(function(grouping, index){
+        const bar = grouping.children[2].children[1];
+        const button = grouping.children[2].children[0];
+        const track = grouping.children[1];
+
+        button.addEventListener("click", event => {
+            console.log(button.src);
+            if (String(button.src).includes("/assets/icons/play.png")){
+                for (let l = 0; l < music.length; l++){
+                    music[l].children[2].children[0].src = "/assets/icons/play.png";
+                    music[l].children[1].pause();
+                }
+                button.src = "/assets/icons/pause.png";
+                track.play();
+            } else {
+                button.src = "/assets/icons/play.png";
+                track.pause();
+            }
+        })
+
+        track.addEventListener("timeupdate", event => {
+            bar.style.width = `${(track.currentTime/track.duration)*100.0}%`;
+        })
+    })
+
+    /*
+    for (let i = 0; i < music.length; i++){
+        music[i].children[2].children[0].addEventListener("timeupdate", event => {
+            track1.style.width = `${(music.currentTime/30.0)*100.0}%`;
+        })
+    }
+        */
+})
