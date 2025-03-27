@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         track.addEventListener("ended", event => {
             button.src = "/assets/icons/play.png";
         })
+
+        bar.addEventListener("click", event => {
+            console.log(`attempting to set time to ${Math.max(0, (event.clientX - event.currentTarget.getBoundingClientRect().left)/event.currentTarget.clientWidth) * track.duration}`);
+            track.currentTime = String(Math.max(0, (event.clientX - event.currentTarget.getBoundingClientRect().left)/event.currentTarget.clientWidth) * track.duration);
+        })
     })
 
     /*
