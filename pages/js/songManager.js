@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         const bar = grouping.children[2].children[1];
         const button = grouping.children[2].children[0];
         const track = grouping.children[1];
+        const duration = grouping.children[3];
+
+        track.addEventListener("loadedmetadata", event => {
+            duration.innerHTML = `0:00/${Math.floor(track.duration/60)}:${Math.floor(track.duration%60)}`;
+        })
 
         button.addEventListener("click", event => {
             console.log(button.src);
@@ -24,7 +29,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
 
         track.addEventListener("timeupdate", event => {
-            bar.style.width = `${(track.currentTime/track.duration)*100.0}%`;
+            //console.log("white at ", (track.currentTime/track.duration)*50.0);
+            //console.log("not white at ", 50.0-((track.currentTime/track.duration)*50.0));
+            bar.style.background = `linear-gradient(to right, white 0% ${(track.currentTime/track.duration)*100.0}%, var(--bs-primary-text-emphasis) ${((track.currentTime/track.duration)*100.0)}% 50%)`;
+            duration.innerHTML = `${Math.floor(track.currentTime/60)}:${String(Math.floor(track.currentTime%60)).padStart(2, "0")}/${Math.floor(track.duration/60)}:${Math.floor(track.duration%60)}`
+            //console.log(bar.style.background);
+        })
+
+        track.addEventListener("ended", event => {
+            button.src = "/assets/icons/play.png";
         })
     })
 

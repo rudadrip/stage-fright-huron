@@ -123,15 +123,15 @@ html {
 }
 
 .fadeRight {
-  animation: fadeRight 1.5s forwards linear;
+  animation: fadeRight 1.5s forwards ease-out;
 }
 
 .fadeUp {
-  animation: fadeUp 1.5s forwards linear;
+  animation: fadeUp 1.5s forwards ease-out;
 }
 
 .fadeLeft {
-  animation: fadeLeft 1.5s forwards linear;
+  animation: fadeLeft 1.5s forwards ease-out;
 }
 @keyframes alerts {
     0% {
@@ -302,7 +302,7 @@ html {
       <!-- Additional music items can be added here -->
     </div>
     <h5 id="no-results" style="display: none">
-      Oh No! It looks like we don't have any tours for that location :(
+      Oh No! It looks like we don't have any albums by that name :(
     </h5>
   </div>
 
@@ -326,7 +326,7 @@ html {
           card.parentElement.style.display = 'none';
           l++;
         }
-        if (l >= 4) {
+        if (l >= 3) {
           non.style.display = "";
         } else {
           non.style.display = "none";

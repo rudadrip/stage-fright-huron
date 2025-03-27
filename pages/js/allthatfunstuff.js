@@ -270,7 +270,7 @@ async function insertStuffs() {
             musicElement.setAttribute("name", `${item.name} Album`);
             musicElement.setAttribute("extra", musicType);
             musicElement.setAttribute("qty", item.quantity);
-            musicElement.setAttribute("price", item.preice);
+            musicElement.setAttribute("price", item.price);
             ins.appendChild(musicElement);
           }
         });

@@ -8,8 +8,6 @@
     <link rel="icon" href="/assets/icons/logo.jpg">
     <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="/pages/js/musicviewer.js"></script>
-    <script>display_music()</script>
-    <script src="/pages/js/songManager.js" defer></script>
     <script src="js/allthatfunstuff.js"></script>
     <script src="js/cartmanagment.js"></script>
 
@@ -53,10 +51,10 @@
         .progress-bar {
           position: absolute;
           transition: width 0.3s linear;
-          width: 0%;
+          width: 50%;
           height: 0.5rem;
-          background-color: white;
-          max-width: 75%;
+          background: linear-gradient(to right, white 0% 0%, var(--bs-primary-text-emphasis) 0% 50%);
+          max-width: 50%;
           left: calc(20% + 3.5rem + 0.75rem);
           top: 4rem;
         }
@@ -78,6 +76,12 @@
           margin-inline: auto;
           margin-top: 1rem;
           margin-bottom: 4.5rem;
+        }
+
+        .duration {
+          position: absolute;
+          right: 25%;
+          top: 4.5rem;
         }
 
         * {
@@ -190,34 +194,41 @@
                         Sample The Music!
                     </h3>
                     <div class="music-container">
-                      <h5 class="music-name">Threadbare Dreams</h5><audio preload src="/assets/music/threadbareDreams.mp3"></audio>
+                      <h5 class="music-name">Threadbare Dreams</h5><audio preload="metadata" src="/assets/music/threadbareDreams.mp3"></audio>
                       <span><image src="/assets/icons/play.png" alt="Play Button" class="play-button"></image>
                       <div class="progress-bar"></div></span>
+                      <p class="duration">xxxx</p>
                     </div>
                     <div class="music-container">
-                      <h5 class="music-name">Glass Wings</h5><audio preload src="/assets/music/glassWings.mp3"></audio>
+                      <h5 class="music-name">Glass Wings</h5><audio preload="metadata" src="/assets/music/glassWings.mp3"></audio>
                       <span style="text-align: left;"><image src="/assets/icons/play.png" alt="Play Button" class="play-button"></image>
                       <div class="progress-bar"></div></span>
+                      <p class="duration">xxxx</p>
                     </div>
                     <div class="music-container">
-                      <h5 class="music-name">Where Shadows Linger</h5><audio preload src="/assets/music/whereShadowsLinger.mp3"></audio>
+                      <h5 class="music-name">Where Shadows Linger</h5><audio preload="metadata" src="/assets/music/whereShadowsLinger.mp3"></audio>
                       <span><image src="/assets/icons/play.png" alt="Play Button" class="play-button"></image>
                       <div class="progress-bar"></div></span>
+                      <p class="duration">xxxx</p>
                     </div>
                     <div class="music-container">
-                      <h5 class="music-name">Burning Maps</h5><audio preload src="/assets/music/burningMaps.mp3"></audio>
+                      <h5 class="music-name">Burning Maps</h5><audio preload="metadata" src="/assets/music/burningMaps.mp3"></audio>
                       <span><image src="/assets/icons/play.png" alt="Play Button" class="play-button"></image>
                       <div class="progress-bar"></div></span>
+                      <p class="duration">xxxx</p>
                     </div>
                     <div class="music-container">
-                      <h5 class="music-name">The Reckless Pulse</h5><audio preload src="/assets/music/theRecklessPulse.mp3"></audio>
+                      <h5 class="music-name">The Reckless Pulse</h5><audio preload="metadata" src="/assets/music/theRecklessPulse.mp3"></audio>
                       <span><image src="/assets/icons/play.png" alt="Play Button" class="play-button"></image>
                       <div class="progress-bar"></div></span>
+                      <p class="duration">xxxx</p>
                     </div>
                 </div>
             </div>
         </div>
         <footer-c></footer-c>
         <script src="js/footerC.js"></script>
+        <script>display_music()</script>
+        <script src="/pages/js/songManager.js" defer></script>
     </body>
 </html>

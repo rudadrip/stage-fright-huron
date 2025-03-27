@@ -36,15 +36,15 @@ const seating_management = [
       {
           "name": "Diamond Eyes",
           "desc": "Diamond Eyes by Stage Fright is a powerful mix of raw emotion and electrifying rock. The album blends gripping guitar riffs with melodic vocals to tell stories of resilience, vulnerability, and life's ups and downs. With its mix of high-energy anthems and heartfelt ballads, Diamond Eyes is a sparkling gem that leaves a lasting impact.",
-          "image": "/assets/diamond-eyes.jpg"
+          "img": "diamond-eyes.jpg"
       }, {
           "name": "Walk",
           "desc": "Walk by Stage Fright invites listeners to embark on a deeply personal and transformative musical journey. Each song feels like a step forward, exploring themes of courage, healing, and self-discovery. With its soulful melodies and dynamic energy, Walk captures the spirit of pushing through challenges and finding your path, making it a soundtrack for life’s most meaningful strides.",
-          "image": "/assets/Walk.webp"
+          "img": "Walk.webp"
       }, {
           "name": "Get Dirty",
           "desc": "Get Dirty by Stage Fright is an unapologetic, high-octane dive into the raw and unfiltered sides of life. Packed with thunderous riffs, fiery vocals, and fearless energy, the album embraces chaos, passion, and rebellion. Get Dirty is a celebration of living untamed and embracing the messy, beautiful imperfections that define us.",
-          "image": "/assets/get-dirty.webp"
+          "img": "get-dirty.webp"
       }
   ]
 
@@ -141,6 +141,33 @@ const seating_management = [
       saveCartToCookies(cart_management);
   }
   
+  function addMusicItem(album, type, quant){
+    const music = albums_management.find(mus => mus.name === album);
+    const medium = format_management.find(form => form.type === type);
+    if (!music || !medium) {
+      console.log(album, type, quant);
+      console.log(music, medium);
+      console.error("Invalid music type or album name");
+      return;
+    }
+
+    let existingAlbum = cart_management.find(item => item.name === album && item.FormatType === type && item.type === "music");
+
+    if (existingAlbum) {
+      existingAlbum.quantity += quantity;
+    } else {
+      cart_management.push({
+        name: album,
+        formatType: type,
+        quantity: quant,
+        price: medium.price,
+        type: "music"
+      })
+    }
+  
+    saveCartToCookies(cart_management);
+  }
+
   // Delete a specific merch item from the cart
   function deleteMerchItem(name) {
       cart_management = cart_management.filter(item => item.name !== name || item.type !== 'merch');
@@ -151,6 +178,11 @@ const seating_management = [
   function deleteConcertItem(city, seatType) {
       cart_management = cart_management.filter(item => item.city !== city || item.seatType !== seatType || item.type !== 'concert');
       saveCartToCookies(cart_management);
+  }
+
+  function deleteMusicItem(name, type) {
+    cart_management = cart_management.filter(item => item.name !== name || item.formatType !== type || item.type !== "music");
+    saveCartToCookies(cart_management);
   }
   
   // Function to view the current cart
@@ -263,6 +295,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
             imgCell.innerHTML = `<img src="../assets/merch-img/${insertImg}" alt="${item.name}" class="img-fluid">`;
+        } else if (item.type == "music") {
+            var insertImg = 0;
+            for (var i = 0; i < albums_management.length; i++) {
+                if (albums_management[i].name == item.name) {
+                    insertImg = albums_management[i].img;
+                }
+            }
+            imgCell.innerHTML = `<img src="/assets/icons/${insertImg}" alt="${item.name}" class="img-fluid">`;
         }
   
         const infoCell = document.createElement("td");
@@ -271,6 +311,8 @@ document.addEventListener("DOMContentLoaded", () => {
             insertName = item.name;
         } else if (item.type == "concert") {
             insertName = `${item.city} Concert`;
+        } else if (item.type == "music") {
+            insertName = `${item.name} Album, ${item.formatType}`;
         }
         infoCell.innerHTML = `
           <p>${insertName}</p>
