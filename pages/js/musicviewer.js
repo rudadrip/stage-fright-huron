@@ -40,10 +40,10 @@ async function display_music(){
         }
     }
 
-    //for if the user somehow visits this page without a valid merch item set
+    //for if the user somehow visits this page without a valid music item set
     //apparently sometimes this fails and the page never gets populated correctly but I'm not sure why
     alert("Oops! Something went wrong! \nWe'll redirect you to the previous page, if this persists please email us at csupport@stagefright.com");
-    //window.location.href = "/pages/merch.html"
+    window.location.href = "/pages/music.html"
 
     //await console.log(JSON.stringify(cookies))
 }
