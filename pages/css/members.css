@@ -1,0 +1,81 @@
+body {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+    border-color: var(--bs-primary-text-emphasis) !important;
+  }
+
+  .form-control {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+  }
+
+  .form-control:focus {
+    background-color: #333;
+    box-shadow: none;
+  }
+
+  * {
+    color: #fff;
+  }
+
+  ::-webkit-input-placeholder{
+    color: grey !important;
+  }
+
+  @font-face {
+    font-family: "Julius Sans One";
+    src: url("/assets/fonts/JuliusSansOne-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "Cinzel";
+    src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }
+
+  .card{
+    --bs-card-cap-padding-y: 0px;
+    color: #eeeeee !important;
+  }
+  .modal-content{
+    color: #dddddd !important;
+  }
+
+  #alt-gutter-x .g-5, .gx-5{
+    --bs-gutter-x: 7rem;
+  }
+  #alt-gutter-y .g-5, .gy-5{
+    --bs-gutter-y: 5rem;  
+  }
+  .btn-primary,
+  #meet-the-real-team{
+    --bs-btn-bg:#D60CED;
+    --bs-btn-border-color:#D60CED;
+    --bs-btn-hover-bg:#B806CD;
+    --bs-btn-hover-border-color:#B806CD;
+    --bs-btn-active-bg:#B806CD;
+    --bs-btn-active-border-color:#B806CD;
+  }
+  .resize-me{
+    margin-top: 15px; 
+    margin-left: 10px; 
+    margin-right: 10px; 
+    padding-right: 10px; 
+    margin-bottom: 20x; 
+    max-width: 100%; 
+    max-height: auto;
+  }
+
+  input.no-arrows::-webkit-outer-spin-button,
+  input.no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number].no-arrows {
+    -moz-appearance: textfield;
+  }

@@ -64,6 +64,29 @@ window.addEventListener("load", () => {
 
         page.style.opacity = 1;
     } else {
+        console.log("We're out");
+        hl1.style.animationDelay = "1s";
+        hl2.style.animationDelay = "1s";
+        hl3.style.animationDelay = "1s";
+        button.style.animationDelay = "0s"
+        button.style.animationDuration = "3s";
+        button.style.animationTimingFunction = "ease-out";
+        stageLeft.classList.add("normal-left");
+        stageRight.classList.add("normal-right");
+        stageCenter.classList.add("normal-mid");
+        button.classList.add("no-opacity");
+        for (let i = 0; i < dividers.length; i++){
+            dividers[i].classList.add("normal-op");
+        }
+        for (let i = 0; i < sections.length; i++){
+            sections[i].classList.add("normal-op");
+        }
+
+        stageCenter.addEventListener("animationend", () => {
+            hl1.classList.add("highlight");
+            hl2.classList.add("highlight");
+            hl3.classList.add("highlight");
+        })
         page.style.opacity = 1;
     }
 

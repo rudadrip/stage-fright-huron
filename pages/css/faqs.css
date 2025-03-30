@@ -1,0 +1,60 @@
+a {
+    text-decoration: none;
+  }
+
+  #not-the-navbar a:link{
+    color: var(--bs-danger);
+    text-decoration: none;
+  }
+  
+  #not-the-navbar a:visited{
+    color: var(--bs-danger);
+    opacity: none;
+  }
+
+  #not-the-navbar a:hover{
+    color: #a61f2c;
+  }
+  
+  #redirect:hover {
+    color: var(--bs-primary) !important;
+  }
+
+  .accordion{
+    --bs-accordion-border-color: var(--bs-primary-text-emphasis);
+  }
+
+  .accordion-button:focus{
+    box-shadow: none;
+  }
+
+  .accordion-button {
+    color: #dadada;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: lightgray;
+  }
+
+  .container{
+    color: white;
+  }
+
+  h5 {
+    text-decoration-line: underline;
+  }
+
+  input.no-arrows::-webkit-outer-spin-button,
+  input.no-arrows::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  input[type=number].no-arrows {
+      -moz-appearance: textfield;
+  }
+
+  @font-face {
+    font-family: Cinzel;
+    src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }

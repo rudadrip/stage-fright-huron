@@ -1,0 +1,332 @@
+@font-face {
+    font-family:"Cinzel";
+    src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
+    }
+  
+    @font-face {
+    font-family:"Julius Sans One";
+    src: url("/assets/fonts/JuliusSansOne-Regular.ttf");
+    }
+  
+    @font-face {
+    font-family:"Rubik Mono One";
+    src: url("/assets/fonts/RubikMonoOne-Regular.ttf");
+    }
+  
+    @font-face {
+      font-family: "Pirata One";
+      src: url("/assets/fonts/PirataOne-Regular.ttf");
+    }
+  
+    @keyframes fromLeft {
+      0% {
+        transform: translateX(-100vw);
+      }
+  
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes fromRight {
+      0% {
+        transform: translateX(100vw);
+      }
+  
+      100% {
+        transform: translateX(0);
+      }
+    }
+  
+    @keyframes fromCenter {
+      0% {
+        opacity: 0;
+        transform: scale(8);
+      }
+  
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  
+    @keyframes shakeLeft {
+      0% {
+        transform: translateX(0);
+      }
+  
+      100% {
+        transform: translateX(5vw);
+      }
+    }
+  
+    @keyframes shakeRight {
+      0% {
+        transform: translateX(0);
+      }
+      
+      100% {
+        transform: translateX(-4vw);
+      }
+    }
+  
+    @keyframes crush {
+      0% {
+        transform: scale(1);
+      }
+  
+      100% {
+        transform: scale(0.95);
+      }
+    }
+  
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+  
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes highlight {
+      0% {
+        color: #ff0000;
+      }
+  
+      100% {
+        color: #fff4f4;
+      }
+    }
+  
+    @keyframes opacity {
+      0% {
+        opacity: 0;
+      }
+  
+      100% {
+        opacity: 1;
+      }
+    }
+  
+    @keyframes alerts {
+      0% {
+        opacity: 1;
+        display: block;
+      }
+  
+      100% {
+        opacity: 0;
+        display: none;
+      }
+    }
+  
+    .stage-left {
+      animation: fromLeft 0.3s both ease-in 4s;
+    }
+  
+    .stage-right {
+      animation: fromRight 0.3s both ease-in 5.8s;
+    }
+  
+    .stage-center {
+      animation: fromCenter 1.5s both cubic-bezier(0.7, 0.05, 0.855, 0.06) 7s;
+    }
+  
+    .shakeLeft {
+      animation: shakeLeft 0.15s both ease-out 4.3s 2 alternate;
+    }
+  
+    .shakeRight {
+      animation: shakeRight 0.15s both ease-out 2 alternate;
+    }
+  
+    .crush {
+      transform-origin: 50% 10%;
+      animation: crush 0.15s both ease-out 2 alternate;
+    }
+  
+    .no-opacity{
+      animation: opacity 2s both linear 15.8s;
+    }
+  
+    .fadeIn {
+      -webkit-animation: fadeIn 2.5s both ease-out 1s;
+      animation: fadeIn 2.5s both ease-out 1s;
+    }
+  
+    .highlight {
+      animation: highlight 1.5s forwards linear;
+    }
+  
+    .alert-fade {
+      animation: alerts 3s forwards linear;
+    }
+  
+    @keyframes normal-op {
+      0% {
+        transform: translateY(3rem);
+        opacity: 0
+      }
+  
+      100% {
+        transform: translateY(0rem);
+        opacity: 1
+      }
+    }
+  
+    @keyframes normal-left {
+      0% {
+        transform: translateX(-2rem);
+        opacity: 0
+      }
+  
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes normal-right {
+      0% {
+        transform: translateX(2rem);
+        opacity: 0;
+      }
+  
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  
+    @keyframes normal-mid {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      } 
+  
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  
+    .normal-op {
+      animation: normal-op 2s both ease-out;
+    }
+  
+    .normal-left {
+      animation: normal-left 2s both ease-out;
+    }
+  
+    .normal-right {
+      animation: normal-right 2s both ease-out;
+    }
+  
+    .normal-mid {
+      animation: normal-mid 2s both ease-out;
+    }
+  
+    body {
+      background-color: #121212;
+      color: #dddddd;
+      overflow-x: hidden;
+    }
+  
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+    }
+  
+    .form-control {
+      background-color: #2a2a2a;
+      color: #fff;
+      border: 1px solid #444;
+    }
+  
+    .form-control:focus {
+      background-color: #333;
+      box-shadow: none;
+    }
+  
+    * {
+      color: #dddddd;
+    }
+  
+    ::-webkit-input-placeholder{
+      color: grey !important;
+    }
+  
+      .section-divider {
+        border-top: 2px solid #fff;
+        margin: 3rem 0;
+      }
+      .btn-custom {
+        background-color: transparent;
+        color: #fff;
+        border: 2px solid var(--bs-primary-text-emphasis);
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease-in-out;
+        font-weight: bold;
+      }
+      .btn-custom:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #fff;
+      }
+      .album-cover {
+        width: 100%;
+        height: auto;
+        border: 2px solid var(--bs-primary-text-emphasis);
+        transition: transform 0.3s ease;
+      }
+      .album-cover:hover {
+        transform: scale(1.05);
+      }
+      .album-title {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .image-container {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      .section {
+        padding: 4rem 2rem;
+        color: #fff;
+      }
+  
+      .section-divider {
+        color: var(--bs-danger);
+        border-color: var(--bs-danger);
+      }
+  
+      .timeline-item {
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 1px solid var(--bs-primary-text-emphasis);
+          border-radius: 8px;
+          transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+  
+      .timeline-item:hover {
+          transform: scale(1.05);
+          background-color: rgba(255, 255, 255, 0.2);
+      }
+  
+      input.no-arrows::-webkit-outer-spin-button,
+      input.no-arrows::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+      }
+  
+      input[type=number].no-arrows {
+          -moz-appearance: textfield;
+      }

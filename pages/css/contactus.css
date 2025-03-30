@@ -1,0 +1,54 @@
+.container{
+    color: white;
+  }
+
+  #not-the-navbar a:link{
+    color: var(--bs-danger);
+    text-decoration: none;
+  }
+  
+  #not-the-navbar a:visited{
+    color: var(--bs-danger);
+    opacity: none;
+  }
+
+  #not-the-navbar a:hover{
+    color: #a61f2c;
+  }
+
+  .timeline-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .timeline-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  input.no-arrows::-webkit-outer-spin-button,
+  input.no-arrows::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  input[type=number].no-arrows {
+      -moz-appearance: textfield;
+  }
+
+  @font-face {
+    font-family:"Cinzel";
+  src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
+  }
+              .hero-section {
+                text-align:center;
+                font-family: 'Cinzel'; /* Replace with your chosen Gothic font */
+  font-size: 4rem;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */
+  color: white;
+  margin-bottom: 20px;
+              }
+              
