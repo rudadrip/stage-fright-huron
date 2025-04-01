@@ -298,7 +298,7 @@ function orderMerch () {
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
   const text = document.getElementById("size").options[document.getElementById("size").selectedIndex].text;
-  if (text === "Select One" && text !== "Not a clothing item"){
+  if (text === "Select One" && localStorage.getItem("pick") === "no"){
     alert("Please select a clothing size before adding it to cart");
     return;
   }

@@ -25,6 +25,9 @@ async function display_merch(){
             if (!all_merch[i].clothes){
                 document.getElementById("size").style.display = "none";
                 document.getElementById("size-header").style.display = "none";
+                localStorage.setItem("pick", "yes");
+            } else {
+                localStorage.setItem("pick", "no");
             }
             return;
         }
