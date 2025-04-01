@@ -22,6 +22,7 @@ window.addEventListener("load", () => {
     const hl3 = document.querySelector("#three");
     const dividers = document.querySelectorAll(".section-divider");
     const footer = document.querySelector("footer-c");
+    const accessButton = document.querySelector("dyslexia-b");
 
     console.log(localStorage.getItem("finishedHomeAnimate"));
 
@@ -39,11 +40,12 @@ window.addEventListener("load", () => {
         }
         hl1.classList.add("highlight");
         hl2.classList.add("highlight");
-        hl3.classList.add("highlight")
+        hl3.classList.add("highlight");
         for (let i = 0; i < dividers.length; i++){
             dividers[i].classList.add("no-opacity");
         }
         footer.classList.add("no-opacity");
+        accessButton.classList.add("no-opacity");
 
         console.log(document.body.offsetHeight);
         void(document.body.offsetHeight);
@@ -59,6 +61,11 @@ window.addEventListener("load", () => {
         })
     
         sections[0].addEventListener("animationend", () => {
+            page.classList.remove("crush");
+            footer.classList.remove("no-opacity");
+            for (let i = 0; i < sections.length; i++){
+                sections[i].classList.remove("no-opacity");
+            }
             localStorage.setItem("finishedHomeAnimate", "yes");
         })
 

@@ -80,7 +80,7 @@ const seating_management = [
   let cart_management = getCartFromCookies();
   
   // Add Merch Item to Cart
-  function addMerchItem(name, quantity) {
+  function addMercherItem(name, quantity, size) {
       // Find the merch item details from the merch array
       const item = merch_management.find(m => m.name === name);
       
@@ -99,6 +99,7 @@ const seating_management = [
               name: item.name,
               description: item.desc,
               quantity: quantity,
+              size: size,
               price: Number(item.price).toLocaleString("en-US"),
               type: 'merch'
           });
@@ -169,8 +170,8 @@ const seating_management = [
   }
 
   // Delete a specific merch item from the cart
-  function deleteMerchItem(name) {
-      cart_management = cart_management.filter(item => item.name !== name || item.type !== 'merch');
+  function deleteMerchItem(name, size) {
+      cart_management = cart_management.filter(item => (item.name !== name && item.size !== size)|| item.type !== 'merch');
       saveCartToCookies(cart_management);
   }
   
@@ -277,7 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cart.forEach((item, index) => {
         const row = document.createElement("tr");
 
-        console.log(item)
         const imgCell = document.createElement("td");
         if (item.type == "concert") {
             var insertImg = 0
@@ -308,7 +308,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const infoCell = document.createElement("td");
         var insertName = 0
         if (item.type == "merch") {
-            insertName = item.name;
+            insertName = `${item.name},<br>${item.size}`;
         } else if (item.type == "concert") {
             insertName = `${item.city} Concert`;
         } else if (item.type == "music") {

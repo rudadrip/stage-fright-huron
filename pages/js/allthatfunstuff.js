@@ -83,7 +83,7 @@ function saveCartToCookies(cart) {
 let cart = getCartFromCookies();
 
 // Add Merch Item to Cart
-function addMerchItem(name, quantity) {
+function addMerchItem(name, quantity, sizes) {
     // Find the merch item details from the merch array
     const item = merch.find(m => m.name === name);
     
@@ -93,7 +93,7 @@ function addMerchItem(name, quantity) {
     }
 
     // Check if the item already exists in the cart
-    let existingItem = cart.find(item => item.name === name && item.type === 'merch');
+    let existingItem = cart.find(item => (item.name === name && item.type === 'merch' && item.size === sizes));
     
     if (existingItem) {
         existingItem.quantity = parseInt(quantity) + parseInt(existingItem.quantity);
@@ -103,18 +103,19 @@ function addMerchItem(name, quantity) {
             description: item.desc,
             quantity: quantity,
             price: item.price,
+            size: sizes,
             type: 'merch'
         });
     }
 
     // Save the updated cart to cookies
     saveCartToCookies(cart);
+    return existingItem
 }
 
 // Add Concert Ticket to Cart
 function addConcertItem(city, quantity, seatType) {
     // Find the corresponding location and seat price
-    console.log(city);
     const location = locations.find(loc => loc.city === city);
     const seat = seating.find(seat => seat.loc === seatType);
 
@@ -171,8 +172,8 @@ function addMusicItem(album, type, quant){
 }
 
 // Delete a specific merch item from the cart
-function deleteMerchItem(name) {
-    cart = cart.filter(item => item.name !== name || item.type !== 'merch');
+function deleteMerchItem(name, size) {
+    cart = cart.filter(item => (item.name !== name && item.size !== size )|| item.type !== 'merch');
     saveCartToCookies(cart);
 }
 
@@ -251,6 +252,8 @@ async function insertStuffs() {
           // Check if the item is merch or a concert and create the appropriate element
           if (item.type === "merch") {
             let itemElement = document.createElement('checkout-item-c');
+            itemElement.setAttribute("type", "merch");
+            itemElement.setAttribute("size", item.size);
             itemElement.setAttribute("name", item.name);
             itemElement.setAttribute("extra", item.description);  // Description for merch
             itemElement.setAttribute("qty", item.quantity);  // Quantity
@@ -294,14 +297,14 @@ function orderMerch () {
   const inputValue = input.value.toString();
   const input2 = document.getElementById("title");
   const inputValue2 = input2.innerHTML;
-  let text = document.getElementById("size").options[document.getElementById("size").selectedIndex].text;
+  const text = document.getElementById("size").options[document.getElementById("size").selectedIndex].text;
   if (text === "Select One" && text !== "Not a clothing item"){
     alert("Please select a clothing size before adding it to cart");
     return;
   }
-  addMerchItem(inputValue2,inputValue)
-  localStorage.setItem("merchSuccess?", "yes")
-  window.location.href = "merch.html"
+  addMerchItem(inputValue2, inputValue, text);
+  localStorage.setItem("merchSuccess?", "yes");
+  window.location.href = "merch.html";
 }
 
 function orderConcert () {

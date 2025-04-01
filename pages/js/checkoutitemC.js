@@ -4,8 +4,13 @@ class checkoutitemC extends HTMLElement {
     }
     connectedCallback(){
       this.render();
-      
-      const itemName = this.getAttribute('name');
+      let itemName;
+
+      if (this.getAttribute("type") === "merch"){
+        itemName = `${this.getAttribute('name')}, ${this.getAttribute("size")}`;
+      } else {
+        itemName = this.getAttribute("name");
+      }
       this.querySelector("#nameX").innerHTML=`${itemName}`;
 
       const extraInfo = this.getAttribute('extra');
