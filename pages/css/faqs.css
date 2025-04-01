@@ -58,3 +58,8 @@ a {
     font-family: Cinzel;
     src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
   }
+
+  @font-face {
+    font-family: "dyslexia";
+    src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+  }

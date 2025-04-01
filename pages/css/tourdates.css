@@ -153,6 +153,12 @@
     font-family:"Cinzel";
     src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
     }
+
+    @font-face {
+      font-family: "dyslexia";
+      src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+    }
+
   .hero-section h1 {
     font-family: 'Cinzel'; /* Replace with your chosen Gothic font */
     text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */

@@ -9,9 +9,14 @@
   <link rel="icon" href="/assets/icons/logo.jpg">
   <title>Stage Fright</title>
   <style type="text/css">
+    @font-face {
+      font-family: "dyslexia";
+      src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+    }
     body { background: black !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
  </style>
 </head>
+<dyslexia-b></dyslexia-b>
 <body class="bg-body-dark" onload="enterFiscalInfo();">
 <br><br><br><h1 class="text-center text-white">Checkout</h1>
 
@@ -284,5 +289,6 @@
     applyPromo();
   })
 </script>
+<script src="js/injectAccessibility.js"></script>
 </body>
 </html>

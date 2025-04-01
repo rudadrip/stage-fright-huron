@@ -42,13 +42,19 @@
     font-family:"Cinzel";
   src: url("/assets/fonts/Cinzel-VariableFont_wght.ttf");
   }
-              .hero-section {
-                text-align:center;
-                font-family: 'Cinzel'; /* Replace with your chosen Gothic font */
-  font-size: 4rem;
-  letter-spacing: 3px;
-  text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */
-  color: white;
-  margin-bottom: 20px;
-              }
+  
+  .hero-section {
+    text-align:center;
+    font-family: 'Cinzel'; /* Replace with your chosen Gothic font */
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.6); /* Subtle red shadow */
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+  @font-face {
+    font-family: "dyslexia";
+    src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+  } 
               

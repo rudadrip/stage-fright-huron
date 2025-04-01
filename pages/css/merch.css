@@ -6,6 +6,11 @@ html {
     font-family:"Old London";
     src: url("/assets/fonts/OldLondon.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "dyslexia";
+    src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+  }
   
   @font-face {
     font-family:"Cinzel";

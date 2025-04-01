@@ -94,3 +94,8 @@ body {
   input[type=number].no-arrows {
       -moz-appearance: textfield;
   }
+
+  @font-face {
+    font-family: "dyslexia";
+    src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+  }

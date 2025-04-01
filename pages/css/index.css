@@ -17,6 +17,11 @@
       font-family: "Pirata One";
       src: url("/assets/fonts/PirataOne-Regular.ttf");
     }
+
+    @font-face {
+      font-family: "dyslexia";
+      src: url("/assets/fonts/OpenDyslexic3-Regular.ttf");
+    }
   
     @keyframes fromLeft {
       0% {

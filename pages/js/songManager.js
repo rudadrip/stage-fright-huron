@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
         })
 
         track.addEventListener("timeupdate", event => {
-            bar.style.background = `linear-gradient(to right, white 0% ${(track.currentTime/track.duration)*100.0}%, var(--bs-primary-text-emphasis) ${((track.currentTime/track.duration)*100.0)}% 50%)`;
+            bar.style.background = `linear-gradient(to right, white 0% ${((track.currentTime/track.duration)*100.0) || 0}%, var(--bs-primary-text-emphasis) ${((track.currentTime/track.duration)*100.0) || 0}% 55%)`;
             duration.innerHTML = `${Math.floor(track.currentTime/60)}:${String(Math.floor(track.currentTime%60)).padStart(2, "0")}/${Math.floor(track.duration/60)}:${Math.floor(track.duration%60)}`
         })
 
