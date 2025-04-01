@@ -9,18 +9,18 @@ const seating = [
 ];
 
 const locations = [
-  { "city": "New York, NY", "loc": "Madison Square Garden", "date": "November 10, 2024", "image": null },
-  { "city": "Los Angeles, CA", "loc": "The Forum", "date": "November 20, 2024", "image": null },
-  { "city": "Chicago, IL", "loc": "United Center", "date": "December 1, 2024", "image": null },
-  { "city": "Houston, TX", "loc": "Toyota Center", "date": "December 5, 2024", "image": null },
-  { "city": "Dallas, TX", "loc": "American Airlines Center", "date": "December 10, 2024", "image": null },
-  { "city": "Atlanta, GA", "loc": "State Farm Arena", "date": "December 15, 2024", "image": null },
-  { "city": "Miami, FL", "loc": "Kaseya Center", "date": "December 20, 2024", "image": null },
-  { "city": "Orlando, FL", "loc": "Amway Center", "date": "December 22, 2024", "image": null },
-  { "city": "Boston, MA", "loc": "TD Garden", "date": "January 5, 2025", "image": null },
-  { "city": "Philadelphia, PA", "loc": "Wells Fargo Center", "date": "January 10, 2025", "image": null },
-  { "city": "Washington, DC", "loc": "Capital One Arena", "date": "January 15, 2025", "image": null },
-  { "city": "Seattle, WA", "loc": "Climate Pledge Arena", "date": "January 20, 2025", "image": null }
+  { "city": "New York, NY", "loc": "Madison Square Garden", "date": "June 10, 2025", "image": null },
+  { "city": "Los Angeles, CA", "loc": "The Forum", "date": "June 20, 2025", "image": null },
+  { "city": "Chicago, IL", "loc": "United Center", "date": "July 1, 2025", "image": null },
+  { "city": "Houston, TX", "loc": "Toyota Center", "date": "July 5, 2025", "image": null },
+  { "city": "Dallas, TX", "loc": "American Airlines Center", "date": "July 10, 2025", "image": null },
+  { "city": "Atlanta, GA", "loc": "State Farm Arena", "date": "July 15, 2025", "image": null },
+  { "city": "Miami, FL", "loc": "Kaseya Center", "date": "July 20, 2025", "image": null },
+  { "city": "Orlando, FL", "loc": "Amway Center", "date": "July 22, 2025", "image": null },
+  { "city": "Boston, MA", "loc": "TD Garden", "date": "August 5, 2025", "image": null },
+  { "city": "Philadelphia, PA", "loc": "Wells Fargo Center", "date": "August 10, 2025", "image": null },
+  { "city": "Washington, DC", "loc": "Capital One Arena", "date": "August 15, 2025", "image": null },
+  { "city": "Seattle, WA", "loc": "Climate Pledge Arena", "date": "August 20, 2025", "image": null }
 ];
 
 // Merchandise Data
